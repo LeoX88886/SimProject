@@ -13,15 +13,24 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    private static GreenfootImage background = new GreenfootImage ("images/pacMan4 Maze.png");
+    private static GreenfootImage background = new GreenfootImage ("images/pacMan Maze.png");
     
+    Effects e = new Effects();
+    Games g = new Games();
+    Teams t = new Teams();
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 800, 1); 
-        background = new GreenfootImage ("images/pacMan4 Maze.png");
+        background = new GreenfootImage ("images/pacMan Maze.png");
         background.scale(1024, 800);
         setBackground (background);
+        
+        addObject(e, 100, 100);
+        addObject(g, 100, 200);
+        addObject(t, 100, 300);
+
+
         
     }
 }
