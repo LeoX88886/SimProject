@@ -13,7 +13,7 @@ public class Teams extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    private GreenfootImage teamImage = new GreenfootImage("images/TeamsPic/BlueTeam.png");
+    private GreenfootImage teamImage = new GreenfootImage("images/TeamsPic/GreenTeam.png");
     
     public Teams()
     {
