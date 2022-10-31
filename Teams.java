@@ -17,7 +17,7 @@ public class Teams extends Actor
     
     public Teams()
     {
-        teamImage.scale(100,100);
+        teamImage.scale(30,30);
         setImage(teamImage);
     }
     public void act()
