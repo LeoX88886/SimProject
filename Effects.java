@@ -13,7 +13,7 @@ public class Effects extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    private GreenfootImage effectImage = new GreenfootImage("images/coin.png");
+    private GreenfootImage effectImage = new GreenfootImage("images/Effects/coin.png");
     
     public Effects()
     {
