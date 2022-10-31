@@ -19,7 +19,7 @@ public class Games extends Actor
     {
         //gameImage.scale(80,80);
         setImage(gameImage);
-        //testing
+        
 
     }
     public void act()
