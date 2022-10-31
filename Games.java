@@ -13,12 +13,13 @@ public class Games extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    private GreenfootImage gameImage = new GreenfootImage("images/game.png");
+    private GreenfootImage gameImage = new GreenfootImage("images/GamesIcon/game.png");
     
     public Games()
     {
         //gameImage.scale(80,80);
         setImage(gameImage);
+        
 
     }
     public void act()
