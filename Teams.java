@@ -16,7 +16,8 @@ public class Teams extends Actor
     private GreenfootImage teamImage = new GreenfootImage("images/TeamsPic/GreenTeam.png");
     GreenfootImage img = getImage();
     Color wall = new Color(9,0,255);
-    protected int direction;// 1 = right, -1 = left
+    protected int directionR;// 1 = right, -1 = left
+    protected int directionL;
     protected int speed;
     //Teams t = (Teams)getOneObjectAtOffset(0,0,Teams.class);
     public Teams()
@@ -35,20 +36,22 @@ public class Teams extends Actor
     }
     public void Walk()
     {
-        direction = -1;
+        directionR = 1;
+        directionL = -1;
         speed = 1;
         Color right = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/2,getY()));
         Color left = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/-2,getY()));
-        if((right.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue())&& direction == 1)
+        if((right.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue())&& directionR == 1)
         {
             
         }
-        else if((left.getRed() == wall.getRed() && left.getGreen() == wall.getGreen() && left.getBlue() == wall.getBlue()) && direction == -1)
+        else if((left.getRed() == wall.getRed() && left.getGreen() == wall.getGreen() && left.getBlue() == wall.getBlue()) && directionL == -1)
         {
             
         }
         else{
-            move(speed * direction);
+            //move(speed * direction);
+            setLocation(getX()+1,getY());
         }
     }
     /**
