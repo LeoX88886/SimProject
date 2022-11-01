@@ -52,7 +52,7 @@ public class Games extends Actor
         
         if(Greenfoot.isKeyDown("4"))
         {
-            scoreTwo++;
+            scoreTwo--;
         }
     }
     
