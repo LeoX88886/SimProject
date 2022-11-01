@@ -17,7 +17,7 @@ public class Teams extends Actor
     GreenfootImage img = getImage();
     Color wall = new Color(9,0,255);
     protected int direction;// 1 = right, -1 = left
-    protected double speed;
+    protected int speed;
     //Teams t = (Teams)getOneObjectAtOffset(0,0,Teams.class);
     public Teams()
     {
@@ -35,14 +35,7 @@ public class Teams extends Actor
     }
     public void Walk()
     {
-        /*
-        if (getX() >= 800){
-               setLocation(getX()-50,getY()); 
-        }else{
-            setLocation(getX()+2,getY());
-        }
-        */
-        direction = 1;
+        direction = -1;
         speed = 1;
         Color right = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/2,getY()));
         Color left = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/-2,getY()));
@@ -55,7 +48,7 @@ public class Teams extends Actor
             
         }
         else{
-            setLocation(getX()-2,getY());
+            move(speed * direction);
         }
     }
     /**
