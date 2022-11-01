@@ -17,6 +17,7 @@ public class Teams extends Actor
     GreenfootImage img = getImage();
     Color wall = new Color(9,0,255);
     protected int direction;// 1 = right, -1 = left
+    protected double speed;
     //Teams t = (Teams)getOneObjectAtOffset(0,0,Teams.class);
     public Teams()
     {
@@ -26,7 +27,7 @@ public class Teams extends Actor
     //public void getImage()
     //{
     //    return teamImage;
-   // }
+    // }
     public void act()
     {
         // Add your action code here.
@@ -41,13 +42,15 @@ public class Teams extends Actor
             setLocation(getX()+2,getY());
         }
         */
+        direction = 1;
+        speed = 1;
         Color right = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/2,getY()));
         Color left = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/-2,getY()));
-        if(right.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue())
+        if((right.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue())&& direction == 1)
         {
             
         }
-        else if(left.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue())
+        else if((left.getRed() == wall.getRed() && left.getGreen() == wall.getGreen() && left.getBlue() == wall.getBlue()) && direction == -1)
         {
             
         }
