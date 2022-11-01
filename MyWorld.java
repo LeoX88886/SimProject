@@ -13,7 +13,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    private static GreenfootImage background = new GreenfootImage ("images/pacMan Maze.png");
+    protected static GreenfootImage background = new GreenfootImage ("images/pacMan Maze.png");
     
     Effects e = new Effects();
     Games g = new Games();
@@ -33,4 +33,5 @@ public class MyWorld extends World
 
         
     }
+    
 }

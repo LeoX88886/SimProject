@@ -14,7 +14,7 @@ public class Teams extends Actor
      */
     
     private GreenfootImage teamImage = new GreenfootImage("images/TeamsPic/GreenTeam.png");
-    
+    GreenfootImage img = getWorld().getBackground();
     public Teams()
     {
         teamImage.scale(30,30);
@@ -23,6 +23,21 @@ public class Teams extends Actor
     public void act()
     {
         // Add your action code here.
+        Walk();
+    }
+    public void Walk()
+    {
+        if (getX() >= 800){
+               setLocation(getX()-50,getY()); 
+        }else{
+            setLocation(getX()+2,getY());
+        }
         
     }
+    /**
+     * if(img.getColorAt(getX(),getY()) == color
+     * {
+     *     code
+     * }
+     */
 }
