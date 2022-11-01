@@ -2,21 +2,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Effects here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Justin Sin
+ * @version 1
  */
 public class Effects extends Actor
 {
-    /**
-     * Act - do whatever the Effects wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
     private GreenfootImage effectImage = new GreenfootImage("images/Effects/coin.png");
     
     public Effects()
     {
-        effectImage.scale(80,80);
+        effectImage.scale(50, 50);
         setImage(effectImage);
 
     }
