@@ -33,7 +33,7 @@ public class Teams extends Actor
     }
     public void Walk()
     {
-        /**
+        /*
         if (getX() >= 800){
                setLocation(getX()-50,getY()); 
         }else{
