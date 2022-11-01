@@ -16,6 +16,7 @@ public class Teams extends Actor
     private GreenfootImage teamImage = new GreenfootImage("images/TeamsPic/GreenTeam.png");
     GreenfootImage img = getImage();
     Color wall = new Color(9,0,255);
+    protected int direction;// 1 = right, -1 = left
     //Teams t = (Teams)getOneObjectAtOffset(0,0,Teams.class);
     public Teams()
     {
@@ -46,11 +47,10 @@ public class Teams extends Actor
         {
             
         }
-        /**
         else if(left.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue())
         {
             
-        }*/
+        }
         else{
             setLocation(getX()-2,getY());
         }
