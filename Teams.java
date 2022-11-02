@@ -37,10 +37,13 @@ public class Teams extends Actor
     public void Walk()
     {
         directionR = 1;
+        int f = 3;
         directionL = -1;
         speed = 1;
         Color right = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/2,getY()));
         Color left = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/-2,getY()));
+        Color up = (getWorld().getBackground().getColorAt(getX(),getY() + getImage().getHeight()/-2));
+        Color down = (getWorld().getBackground().getColorAt(getX(),getY() + getImage().getHeight()/2));
         if((right.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue())&& directionR == 1)
         {
             
@@ -49,9 +52,30 @@ public class Teams extends Actor
         {
             
         }
+        else if((up.getRed() == wall.getRed() && up.getGreen() == wall.getGreen() && up.getBlue() == wall.getBlue()) && directionL == -1)
+        {
+            
+        }
+        else if((down.getRed() == wall.getRed() && down.getGreen() == wall.getGreen() && down.getBlue() == wall.getBlue()) && directionR == 1)
+        {
+            
+        }
         else{
             //move(speed * direction);
-            setLocation(getX()+1,getY());
+            if(f == 1)
+            {
+                setLocation(getX()+1,getY());
+            }else if(f == 2)
+            {
+                setLocation(getX()-1,getY());
+            }else if(f == 3)
+            {
+                setLocation(getX(),getY()-1);
+            }else if(f == 4)
+            {
+                setLocation(getX(),getY()+1);
+            }
+            //setLocation(getX()+1,getY());
         }
     }
     /**
