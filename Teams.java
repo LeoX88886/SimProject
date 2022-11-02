@@ -104,16 +104,16 @@ public class Teams extends Actor
             if(shift == 1)
             {
                 f = 1;
-                setLocation(getX(),getY()-5);
+                setLocation(getX(),getY()+5);
             }else if(shift == 2)
             {
                 f = 2;
-                setLocation(getX(),getY()-5);
+                setLocation(getX(),getY()+5);
             }
             if(shift == 3)
             {
                 f = 4;
-                setLocation(getX(),getY()-5);
+                setLocation(getX(),getY()+5);
             }
         }
         else if((down.getRed() == wall.getRed() && down.getGreen() == wall.getGreen() && down.getBlue() == wall.getBlue()) && directionD == 1)
@@ -122,16 +122,16 @@ public class Teams extends Actor
             if(shift == 1)
             {
                 f = 1;
-                setLocation(getX(),getY()+5);
+                setLocation(getX(),getY()-5);
             }else if(shift == 2)
             {
                 f = 2;
-                setLocation(getX(),getY()+5);
+                setLocation(getX(),getY()-5);
             }
             if(shift == 3)
             {
                 f = 3;
-                setLocation(getX(),getY()+5);
+                setLocation(getX(),getY()-5);
             }
         }
     }
