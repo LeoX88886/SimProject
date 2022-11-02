@@ -13,7 +13,7 @@ public class Games extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     //Game console icon
-    private GreenfootImage gameImage = new GreenfootImage("images/GamesIcon/game.png");
+    private GreenfootImage gameImage = new GreenfootImage("images/GamesIcon/game2.png");
     
     //instance of scores
     private static int scoreOne;
