@@ -12,7 +12,7 @@ public class Teams extends Actor
      * Act - do whatever the Teams wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    private int randomMove = 0;
     private GreenfootImage teamImage = new GreenfootImage("images/TeamsPic/GreenTeam.png");
     GreenfootImage img = getImage();
     Color wall = new Color(9,0,255);
@@ -22,16 +22,11 @@ public class Teams extends Actor
     protected int directionD;
     protected int speed;
     private int f = 1;
-    //Teams t = (Teams)getOneObjectAtOffset(0,0,Teams.class);
     public Teams()
     {
-        teamImage.scale(30,30);
+        teamImage.scale(35,35);
         setImage(teamImage);
     }
-    //public void getImage()
-    //{
-    //    return teamImage;
-    // }
     public void act()
     {
         // Add your action code here.
@@ -49,7 +44,12 @@ public class Teams extends Actor
         }else if(f == 4){
             setLocation(getX(),getY()+1);
         }
-        //setLocation(getX()+1,getY());
+        if(randomMove >= 225)
+        {
+            f = Greenfoot.getRandomNumber(4);
+            randomMove = 0;
+        }
+        randomMove++;
     }
     public void WallCollison(){
         directionR = 1;
@@ -163,11 +163,4 @@ public class Teams extends Actor
             }
         }
     }
-
-    /**
-     * if(img.getColorAt(getX(),getY()) == color
-     * {
-     *     code
-     * }
-     */
 }
