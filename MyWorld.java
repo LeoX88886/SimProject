@@ -18,7 +18,7 @@ public class MyWorld extends World
     //instance of the classes
     Effects e = new Effects();
     Games g = new Games();
-    Teams t = new Teams();
+    Team1 t = new Team1();
     
     public MyWorld()
     {    

@@ -6,14 +6,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Teams extends Actor
+public abstract class Teams extends Actor
 {
     /**
      * Act - do whatever the Teams wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int randomMove = 0;
-    private GreenfootImage teamImage = new GreenfootImage("images/TeamsPic/GreenTeam.png");
+    
     GreenfootImage img = getImage();
     Color wall = new Color(9,0,255);
     protected int directionR;// 1 = right, -1 = left
@@ -22,11 +22,7 @@ public class Teams extends Actor
     protected int directionD;
     protected int speed;
     private int f = 1;
-    public Teams()
-    {
-        teamImage.scale(35,35);
-        setImage(teamImage);
-    }
+    
     public void act()
     {
         // Add your action code here.
