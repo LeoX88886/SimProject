@@ -16,11 +16,19 @@ public class Effects extends Actor
 
     }
     
+    public boolean checkHitTeams(){
+        Teams t = (Teams)getOneObjectAtOffset(2+getImage().getWidth()/2, 0, Teams.class);
+        if(t != null){
+            //t.removeItem();
+            return true;
+        }
+        return false;
+    }
     
     public void act()
     {
         // Add your action code here.
-                
+        checkHitTeams();
         
     }
 }
