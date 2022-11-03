@@ -28,6 +28,9 @@ public class MyWorld extends World
         background.scale(1024, 800);
         setBackground (background);
         
+        MainCharacter main = new MainCharacter();//spawn MainCharater
+        addObject(main, 200, 200);
+        
         
         
         
