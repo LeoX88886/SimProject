@@ -54,6 +54,17 @@ public class Games extends Actor
         {
             scoreTwo--;
         }
+        
+        
+        if(isTouching(MainCharacter.class))
+        {
+            int chance = Greenfoot.getRandomNumber(3);
+            
+            if (chance == 0)
+            {
+                scoreOne++;
+            }
+        }
     }
     
     
