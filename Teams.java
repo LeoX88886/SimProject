@@ -163,7 +163,6 @@ public class Teams extends Actor
             }
         }
     }
-
     /**
      * if(img.getColorAt(getX(),getY()) == color
      * {

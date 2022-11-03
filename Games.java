@@ -19,6 +19,8 @@ public class Games extends Actor
     private static int scoreOne;
     private static int scoreTwo;
     
+    private static int scoreMultiplier = 5;
+    
     
     public Games()
     {
@@ -62,7 +64,7 @@ public class Games extends Actor
             
             if (chance == 0)
             {
-                scoreOne++;
+                scoreOne = scoreOne + scoreMultiplier;
             }
         }
     }
@@ -77,7 +79,6 @@ public class Games extends Actor
     {
         return scoreTwo;
     }
-    
     
     
 }
