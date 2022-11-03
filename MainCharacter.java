@@ -24,7 +24,7 @@ public class MainCharacter extends Actor
     private boolean isFacingUp = true;
     
     private int size = 50;//quick way to adjust all the MainCharater's image sizes
-    private int CharaterSpeed = 1;//quick way to adjust all the MainCharater's speed
+    private int CharacterSpeed = 1;//quick way to adjust all the MainCharater's speed
     private int SprintSpeed = 2;//quick way to adjust all the MainCharater's sprint speed
     
     public MainCharacter()
@@ -106,7 +106,7 @@ public class MainCharacter extends Actor
         if(Greenfoot.isKeyDown("d"))//MainCharater moves right
         {
             isFacingRight = true;
-            move(CharaterSpeed);
+            move(CharacterSpeed);
             idleAction();
             
             if(Greenfoot.isKeyDown("c"))//MainCharater sprints right
@@ -119,7 +119,7 @@ public class MainCharacter extends Actor
         if(Greenfoot.isKeyDown("a"))//MainCharater moves left
         {
             isFacingRight = false;
-            move(-CharaterSpeed);
+            move(-CharacterSpeed);
             idleAction();
             
             if(Greenfoot.isKeyDown("c"))//MainCharater sprints left
@@ -133,7 +133,7 @@ public class MainCharacter extends Actor
         {
             int x = getX();
             int y = getY();
-            setLocation(x, y -CharaterSpeed);
+            setLocation(x, y -CharacterSpeed);
             
             isFacingUp = true;
             idleActionTwo();
@@ -149,7 +149,7 @@ public class MainCharacter extends Actor
         {
             int x = getX();
             int y = getY();
-            setLocation(x, y + CharaterSpeed);
+            setLocation(x, y + CharacterSpeed);
             isFacingUp = false;
             idleActionTwo();
             
@@ -172,4 +172,8 @@ public class MainCharacter extends Actor
         }
     }
     
+    public void hitByEffect(){
+        CharacterSpeed = 2;
+        SprintSpeed = 4;
+    }
 }

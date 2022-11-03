@@ -25,10 +25,20 @@ public class Effects extends Actor
         return false;
     }
     
+    public boolean checkHitMC(){
+        MainCharacter mc = (MainCharacter)getOneObjectAtOffset(2+getImage().getWidth()/2, 0, MainCharacter.class);
+        if(mc != null){
+            mc.hitByEffect();
+            return true;
+        }
+        return false;
+    }
+    
     public void act()
     {
         // Add your action code here.
         checkHitTeams();
+        checkHitMC();
         
     }
 }
