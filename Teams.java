@@ -21,8 +21,12 @@ public abstract class Teams extends Actor
     protected int directionU;
     protected int directionD;
     protected int speed;
-    private int f = 1;
-    
+    protected int f = 1;
+    public int setF()
+    {
+        f = Greenfoot.getRandomNumber(4);
+        return f;
+    }
     public void act()
     {
         // Add your action code here.

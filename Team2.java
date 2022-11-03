@@ -17,6 +17,7 @@ public class Team2 extends Teams
     {
         teamImage.scale(35,35);
         setImage(teamImage);
+        super.setF();
     }
     public void act()
     {
