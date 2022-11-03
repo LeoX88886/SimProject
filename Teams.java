@@ -62,22 +62,41 @@ public class Teams extends Actor
         Color left = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/-2,getY()));
         Color up = (getWorld().getBackground().getColorAt(getX(),getY() + getImage().getHeight()/-2));
         Color down = (getWorld().getBackground().getColorAt(getX(),getY() + getImage().getHeight()/2));
+        if(getY() == 56)
+        {
+            f = 4;
+            setLocation(getX(),getY()+4);
+        }else if(getX() == 60){
+            f = 2;
+            setLocation(getX()+4,getY());
+        }
+        else if(getY() == 745){
+            f = 3;
+            setLocation(getX(),getY()-4);
+        }
+        else if(getX() == 962){
+            f = 1;
+            setLocation(getX()-4,getY());
+        }
         if((right.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue())&& directionR == 1)
         {
             shift = Greenfoot.getRandomNumber(3);
             if(shift == 1)
             {
                 f = 2;
-                setLocation(getX()-5,getY());
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX()-7,getY());
             }else if(shift == 2)
             {
                 f = 3;
-                setLocation(getX()-5,getY());
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX()-7,getY());
             }
             if(shift == 3)
             {
                 f = 4;
-                setLocation(getX()-5,getY());
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX()-7,getY());
             }
         }
         else if((left.getRed() == wall.getRed() && left.getGreen() == wall.getGreen() && left.getBlue() == wall.getBlue()) && directionL == -1)
@@ -86,16 +105,19 @@ public class Teams extends Actor
             if(shift == 1)
             {
                 f = 1;
-                setLocation(getX()+5,getY());
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX()+7,getY());
             }else if(shift == 2)
             {
                 f = 3;
-                setLocation(getX()+5,getY());
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX()+7,getY());
             }
             if(shift == 3)
             {
                 f = 4;
-                setLocation(getX()+5,getY());
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX()+7,getY());
             }
         }
         else if((up.getRed() == wall.getRed() && up.getGreen() == wall.getGreen() && up.getBlue() == wall.getBlue()) && directionU == -1)
@@ -104,16 +126,19 @@ public class Teams extends Actor
             if(shift == 1)
             {
                 f = 1;
-                setLocation(getX(),getY()+5);
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX(),getY()+7);
             }else if(shift == 2)
             {
                 f = 2;
-                setLocation(getX(),getY()+5);
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX(),getY()+7);
             }
             if(shift == 3)
             {
                 f = 4;
-                setLocation(getX(),getY()+5);
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX(),getY()+7);
             }
         }
         else if((down.getRed() == wall.getRed() && down.getGreen() == wall.getGreen() && down.getBlue() == wall.getBlue()) && directionD == 1)
@@ -122,16 +147,19 @@ public class Teams extends Actor
             if(shift == 1)
             {
                 f = 1;
-                setLocation(getX(),getY()-5);
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX(),getY()-7);
             }else if(shift == 2)
             {
                 f = 2;
-                setLocation(getX(),getY()-5);
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX(),getY()-7);
             }
             if(shift == 3)
             {
                 f = 3;
-                setLocation(getX(),getY()-5);
+                shift = Greenfoot.getRandomNumber(3);
+                setLocation(getX(),getY()-7);
             }
         }
     }
