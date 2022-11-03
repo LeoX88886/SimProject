@@ -171,4 +171,5 @@ public class MainCharacter extends Actor
             super.setLocation(oldX, oldY);
         }
     }
+    
 }
