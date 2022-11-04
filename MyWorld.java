@@ -15,13 +15,23 @@ public class MyWorld extends World
      */
     protected static GreenfootImage background = new GreenfootImage ("images/pacMan Maze.png");
     
-    //instance of the classes
-    Effects e = new Effects();
-    Games g = new Games();
+    
+    
+    
+    //team instance
     Team1 t1 = new Team1();
     Team2 t2 = new Team2();
     Team3 t3 = new Team3();
     Team4 t4 = new Team4();
+    
+    //game instance
+    Games g = new Games();
+    Games g2 = new Games();
+    Games g3 = new Games();
+    Games g4 = new Games();
+    
+    //effect instance
+    Effects e = new Effects();
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -39,13 +49,24 @@ public class MyWorld extends World
         
         
         
-        addObject(e, 100, 100);
-        addObject(g, 100, 200);
+        
+        //teams location
         addObject(t1, 72, 66);
         addObject(t2, 948, 66);
         addObject(t3, 72, 734);
         addObject(t4, 948, 734);
-
+        
+        //games loction
+        addObject(g, 360, 270);
+        addObject(g2, 460, 30);
+        addObject(g3, 360, 530);
+        addObject(g4, 460, 760);
+        
+        
+        
+        
+        //effect location
+        addObject(e, 100, 100);
         
     }
     
