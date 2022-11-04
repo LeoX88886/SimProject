@@ -67,6 +67,16 @@ public class Games extends Actor
                 scoreOne = scoreOne + scoreMultiplier;
             }
         }
+        
+        if(isTouching(Teams.class))
+        {
+            int chance = Greenfoot.getRandomNumber(3);
+            
+            if (chance == 0)
+            {
+                scoreOne = scoreOne + scoreMultiplier;
+            }
+        }
     }
     
     
