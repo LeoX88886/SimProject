@@ -20,7 +20,6 @@ public abstract class Teams extends Actor
     protected int directionL;
     protected int directionU;
     protected int directionD;
-    protected int speed;
     protected int s = 2;
     protected int f = 1;
     public int setF()
