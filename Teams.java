@@ -21,6 +21,7 @@ public abstract class Teams extends Actor
     protected int directionU;
     protected int directionD;
     protected int speed;
+    protected int s = 2;
     protected int f = 1;
     public int setF()
     {
@@ -36,13 +37,13 @@ public abstract class Teams extends Actor
     public void Walk()
     {
         if(f == 1){
-            setLocation(getX()+1,getY());
+            setLocation(getX()+s,getY());
         }else if(f == 2){
-            setLocation(getX()-1,getY());
+            setLocation(getX()-s,getY());
         }else if(f == 3){
-            setLocation(getX(),getY()-1);
+            setLocation(getX(),getY()-s);
         }else if(f == 4){
-            setLocation(getX(),getY()+1);
+            setLocation(getX(),getY()+s);
         }
         if(randomMove >= 225)
         {
