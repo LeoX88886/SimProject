@@ -22,7 +22,7 @@ public abstract class Teams extends Actor
     protected int directionD;
     protected int s = 2;
     protected int f = 1;
-    private int arcade = 60;
+    private int arcade = 20;
     public int setF()
     {
         f = Greenfoot.getRandomNumber(4);
@@ -32,6 +32,7 @@ public abstract class Teams extends Actor
     {
         // Add your action code here.
         Walk();
+        GameCollison();
         WallCollison();
     }
     public void Walk()
@@ -173,5 +174,7 @@ public abstract class Teams extends Actor
                 removeTouching(Games.class);
             }
         }
+        arcade = 20;
+        s = 2;
     }
 }
