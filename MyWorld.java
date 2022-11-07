@@ -58,9 +58,15 @@ public class MyWorld extends World
         
         //games loction
         addObject(g, 360, 270);
+        
         addObject(g2, 460, 30);
+        g2.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
+        
         addObject(g3, 360, 530);
+        g3.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
+    
         addObject(g4, 460, 760);
+        g4.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
         
         
         
