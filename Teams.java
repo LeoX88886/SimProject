@@ -22,6 +22,7 @@ public abstract class Teams extends Actor
     protected int directionD;
     protected int s = 2;
     protected int f = 1;
+    private int arcade = 60;
     public int setF()
     {
         f = Greenfoot.getRandomNumber(4);
@@ -160,6 +161,16 @@ public abstract class Teams extends Actor
                 f = 3;
                 shift = Greenfoot.getRandomNumber(3);
                 setLocation(getX(),getY()-7);
+            }
+        }
+    }
+    public void GameCollison(){
+        if(isTouching(Games.class))
+        {
+            if(arcade > 0){
+                s = 0;
+                arcade--;
+                removeTouching(Games.class);
             }
         }
     }

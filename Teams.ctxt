@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=void\ Walk()
 comment4.params=
 comment4.target=void\ WallCollison()
-numComments=5
+comment5.params=
+comment5.target=void\ GameCollison()
+numComments=6
