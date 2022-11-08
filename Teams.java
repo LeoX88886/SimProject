@@ -13,7 +13,7 @@ public abstract class Teams extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int randomMove = 0;
-    
+    //SimpleTimer gameTimer = new SimpleTimer();
     GreenfootImage img = getImage();
     Color wall = new Color(9,0,255);
     protected int directionR;// 1 = right, -1 = left
@@ -166,15 +166,12 @@ public abstract class Teams extends Actor
         }
     }
     public void GameCollison(){
-        if(isTouching(Games.class))
-        {
-            if(arcade > 0){
-                s = 0;
-                arcade--;
-                removeTouching(Games.class);
-            }
+        Games g = (Games)getOneIntersectingObject(Games.class);
+        if (g != null){
+            s = 0;
+            g.deleteMe();
+        }else{
+            s = 2;
         }
-        arcade = 20;
-        s = 2;
     }
 }

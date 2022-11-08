@@ -19,6 +19,8 @@ public class Games extends Actor
     private static int scoreOne;
     private static int scoreTwo;
     
+    protected int deleteTimer;
+    
     private static int scoreMultiplier = 5;
     
     
@@ -30,13 +32,14 @@ public class Games extends Actor
         scoreOne = 0;
         scoreTwo = 0;
         
+        deleteTimer = -1;
         
-
     }
     
     public void act()
     {
         // Add your action code here.
+        
         if(Greenfoot.isKeyDown("1"))
         {
             scoreOne++;
@@ -46,7 +49,7 @@ public class Games extends Actor
         {
             scoreTwo++;
         }
-        
+            
         if(Greenfoot.isKeyDown("3"))
         {
             scoreOne--;
@@ -55,6 +58,13 @@ public class Games extends Actor
         if(Greenfoot.isKeyDown("4"))
         {
             scoreTwo--;
+        }
+        
+        if (deleteTimer > 0 ){
+            deleteTimer--;
+        }
+        if(deleteTimer == 0){
+            getWorld().removeObject(this);
         }
         
         
@@ -77,6 +87,10 @@ public class Games extends Actor
                 scoreOne = scoreOne + scoreMultiplier;
             }
         }
+    }
+    
+    public void deleteMe (){
+        deleteTimer = 5;
     }
     
     
