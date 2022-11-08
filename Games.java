@@ -59,15 +59,6 @@ public class Games extends Actor
         {
             scoreTwo--;
         }
-        
-        if (deleteTimer > 0){
-            deleteTimer--;
-        }
-        if(deleteTimer == 0){
-            getWorld().removeObject(this);
-        }
-        
-        /**
         if(isTouching(MainCharacter.class))
         {
             int chance = Greenfoot.getRandomNumber(3);
@@ -77,7 +68,7 @@ public class Games extends Actor
                 scoreOne = scoreOne + scoreMultiplier;
             }
         }
-        
+        /**
         if(isTouching(Teams.class))
         {
             int chance = Greenfoot.getRandomNumber(3);
@@ -87,6 +78,19 @@ public class Games extends Actor
                 scoreOne = scoreOne + scoreMultiplier;
             }
         }*/
+        
+        if (deleteTimer > 0){
+            deleteTimer--;
+        }
+        if(deleteTimer == 0){
+            int chance = Greenfoot.getRandomNumber(3);
+            if (chance == 0)
+            {
+                scoreOne = scoreOne + scoreMultiplier;
+            }
+            getWorld().removeObject(this);
+        }
+        
     }
     
     public void deleteMe (){

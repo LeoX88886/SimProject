@@ -25,7 +25,7 @@ public abstract class Teams extends Actor
     private int arcade = 20;
     public int setF()
     {
-        f = Greenfoot.getRandomNumber(4);
+        f = Greenfoot.getRandomNumber(3);// this if for 4 directions. random pulls 0,1,2,3.
         return f;
     }
     public void act()
@@ -43,12 +43,12 @@ public abstract class Teams extends Actor
             setLocation(getX()-s,getY());
         }else if(f == 3){
             setLocation(getX(),getY()-s);
-        }else if(f == 4){
+        }else if(f == 0){
             setLocation(getX(),getY()+s);
         }
         if(randomMove >= 225)
         {
-            f = Greenfoot.getRandomNumber(4);
+            f = Greenfoot.getRandomNumber(3);
             randomMove = 0;
         }
         randomMove++;
@@ -82,85 +82,85 @@ public abstract class Teams extends Actor
         }
         if((right.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue())&& directionR == 1)
         {
-            shift = Greenfoot.getRandomNumber(3);
+            shift = Greenfoot.getRandomNumber(2);
             if(shift == 1)
             {
                 f = 2;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX()-7,getY());
             }else if(shift == 2)
             {
                 f = 3;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX()-7,getY());
             }
-            if(shift == 3)
+            if(shift == 0)
             {
                 f = 4;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX()-7,getY());
             }
         }
         else if((left.getRed() == wall.getRed() && left.getGreen() == wall.getGreen() && left.getBlue() == wall.getBlue()) && directionL == -1)
         {
-            shift = Greenfoot.getRandomNumber(3);
+            shift = Greenfoot.getRandomNumber(2);
             if(shift == 1)
             {
                 f = 1;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX()+7,getY());
             }else if(shift == 2)
             {
                 f = 3;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX()+7,getY());
             }
-            if(shift == 3)
+            if(shift == 0)
             {
                 f = 4;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX()+7,getY());
             }
         }
         else if((up.getRed() == wall.getRed() && up.getGreen() == wall.getGreen() && up.getBlue() == wall.getBlue()) && directionU == -1)
         {
-            shift = Greenfoot.getRandomNumber(3);
+            shift = Greenfoot.getRandomNumber(2);
             if(shift == 1)
             {
                 f = 1;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX(),getY()+7);
             }else if(shift == 2)
             {
                 f = 2;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX(),getY()+7);
             }
-            if(shift == 3)
+            if(shift == 0)
             {
                 f = 4;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX(),getY()+7);
             }
         }
         else if((down.getRed() == wall.getRed() && down.getGreen() == wall.getGreen() && down.getBlue() == wall.getBlue()) && directionD == 1)
         {
-            shift = Greenfoot.getRandomNumber(3);
+            shift = Greenfoot.getRandomNumber(2);
             if(shift == 1)
             {
                 f = 1;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX(),getY()-7);
             }else if(shift == 2)
             {
                 f = 2;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX(),getY()-7);
             }
-            if(shift == 3)
+            if(shift == 0)
             {
                 f = 3;
-                shift = Greenfoot.getRandomNumber(3);
+                shift = Greenfoot.getRandomNumber(2);
                 setLocation(getX(),getY()-7);
             }
         }
