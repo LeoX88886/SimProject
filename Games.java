@@ -19,7 +19,7 @@ public class Games extends Actor
     private static int scoreOne;
     private static int scoreTwo;
     
-    protected int deleteTimer;
+    private int deleteTimer;
     
     private static int scoreMultiplier = 5;
     
@@ -60,14 +60,14 @@ public class Games extends Actor
             scoreTwo--;
         }
         
-        if (deleteTimer > 0 ){
+        if (deleteTimer > 0){
             deleteTimer--;
         }
         if(deleteTimer == 0){
             getWorld().removeObject(this);
         }
         
-        
+        /**
         if(isTouching(MainCharacter.class))
         {
             int chance = Greenfoot.getRandomNumber(3);
@@ -86,11 +86,13 @@ public class Games extends Actor
             {
                 scoreOne = scoreOne + scoreMultiplier;
             }
-        }
+        }*/
     }
     
     public void deleteMe (){
-        deleteTimer = 5;
+        if (deleteTimer == -1){
+            deleteTimer = 30;
+        }
     }
     
     
