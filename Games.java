@@ -19,6 +19,8 @@ public class Games extends Actor
     private static int scoreOne;
     private static int scoreTwo;
     
+    private int deleteTimer;
+    
     private static int scoreMultiplier = 5;
     
     
@@ -30,13 +32,14 @@ public class Games extends Actor
         scoreOne = 0;
         scoreTwo = 0;
         
+        deleteTimer = -1;
         
-
     }
     
     public void act()
     {
         // Add your action code here.
+        
         if(Greenfoot.isKeyDown("1"))
         {
             scoreOne++;
@@ -46,7 +49,7 @@ public class Games extends Actor
         {
             scoreTwo++;
         }
-        
+            
         if(Greenfoot.isKeyDown("3"))
         {
             scoreOne--;
@@ -56,8 +59,6 @@ public class Games extends Actor
         {
             scoreTwo--;
         }
-        
-        
         if(isTouching(MainCharacter.class))
         {
             int chance = Greenfoot.getRandomNumber(3);
@@ -67,7 +68,7 @@ public class Games extends Actor
                 scoreOne = scoreOne + scoreMultiplier;
             }
         }
-        
+        /**
         if(isTouching(Teams.class))
         {
             int chance = Greenfoot.getRandomNumber(3);
@@ -76,6 +77,25 @@ public class Games extends Actor
             {
                 scoreOne = scoreOne + scoreMultiplier;
             }
+        }*/
+        
+        if (deleteTimer > 0){
+            deleteTimer--;
+        }
+        if(deleteTimer == 0){
+            int chance = Greenfoot.getRandomNumber(3);
+            if (chance == 0)
+            {
+                scoreOne = scoreOne + scoreMultiplier;
+            }
+            getWorld().removeObject(this);
+        }
+        
+    }
+    
+    public void deleteMe (){
+        if (deleteTimer == -1){
+            deleteTimer = 30;
         }
     }
     
