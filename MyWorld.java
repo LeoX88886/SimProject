@@ -39,7 +39,7 @@ public class MyWorld extends World
         
         setPaintOrder(MainCharacter.class, Teams.class, Games.class, Effects.class);
 
-        background = new GreenfootImage ("images/pacMan Maze.png");
+        background = new GreenfootImage ("images/MazeWorld.png");
         background.scale(1024, 800);
         setBackground (background);
         
