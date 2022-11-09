@@ -8,37 +8,31 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Teams extends Actor
 {
-    /**
-     * Act - do whatever the Teams wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     private int randomMove = 0;
-    //SimpleTimer gameTimer = new SimpleTimer();
     GreenfootImage img = getImage();
     Color wall = new Color(9,0,255);
-    protected int directionR;// 1 = right, -1 = left
+    protected int directionR;
     protected int directionL;
     protected int directionU;
     protected int directionD;
+    // 1 = right, -1 = left
     protected int s = 2;
     protected int f = 1;
-    private int arcade = 20;
-    
-    
     public int setF()
     {
-        f = Greenfoot.getRandomNumber(3);// this if for 4 directions. random pulls 0,1,2,3.
+        //each team needs a random direction to start moving
+        f = Greenfoot.getRandomNumber(3);//this is for the 4 directions. Random pulls 0,1,2,3.
         return f;
     }
     public void act()
     {
-        // Add your action code here.
         Walk();
         GameCollison();
         WallCollison();
     }
     public void Walk()
     {
+        //movement code
         if(f == 1){
             setLocation(getX()+s,getY());
         }else if(f == 2){
@@ -50,22 +44,20 @@ public abstract class Teams extends Actor
         }
         if(randomMove >= 225)
         {
+            //will change direction after 225 milliseconds. 
             f = Greenfoot.getRandomNumber(3);
             randomMove = 0;
         }
         randomMove++;
     }
     public void WallCollison(){
-        //directionR = 1;
-        //directionL = -1;
-        //directionU = -1;
-        //directionD = 1;
-        
+        //color to detect when the team is touching the walls on the map.
         int shift = Greenfoot.getRandomNumber(3);
         Color right = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/2,getY()));
         Color left = (getWorld().getBackground().getColorAt(getX() + getImage().getWidth()/-2,getY()));
         Color up = (getWorld().getBackground().getColorAt(getX(),getY() + getImage().getHeight()/-2));
         Color down = (getWorld().getBackground().getColorAt(getX(),getY() + getImage().getHeight()/2));
+        //Wall bounce code
         if(getY() == 56)
         {
             f = 4;
@@ -82,8 +74,9 @@ public abstract class Teams extends Actor
             f = 1;
             setLocation(getX()-4,getY());
         }
-        if((right.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue()))//RIGHT
+        if((right.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue()))
         {
+            //RIGHT
             shift = Greenfoot.getRandomNumber(2);
             if(shift == 1)
             {
@@ -103,8 +96,9 @@ public abstract class Teams extends Actor
                 shift = Greenfoot.getRandomNumber(2);
             }
         }
-        else if((left.getRed() == wall.getRed() && left.getGreen() == wall.getGreen() && left.getBlue() == wall.getBlue()))//LEFT
+        else if((left.getRed() == wall.getRed() && left.getGreen() == wall.getGreen() && left.getBlue() == wall.getBlue()))
         {
+            //LEFT
             shift = Greenfoot.getRandomNumber(2);
             if(shift == 1)
             {
@@ -123,8 +117,9 @@ public abstract class Teams extends Actor
                 shift = Greenfoot.getRandomNumber(2);
             }
         }
-        else if((up.getRed() == wall.getRed() && up.getGreen() == wall.getGreen() && up.getBlue() == wall.getBlue()))//UP
+        else if((up.getRed() == wall.getRed() && up.getGreen() == wall.getGreen() && up.getBlue() == wall.getBlue()))
         {
+            //UP
             shift = Greenfoot.getRandomNumber(2);
             if(shift == 1)
             {
@@ -143,8 +138,9 @@ public abstract class Teams extends Actor
                 shift = Greenfoot.getRandomNumber(2);
             }
         }
-        else if((down.getRed() == wall.getRed() && down.getGreen() == wall.getGreen() && down.getBlue() == wall.getBlue()))//DOWN
+        else if((down.getRed() == wall.getRed() && down.getGreen() == wall.getGreen() && down.getBlue() == wall.getBlue()))
         {
+            //DOWN
             shift = Greenfoot.getRandomNumber(2);
             if(shift == 1)
             {
@@ -164,13 +160,16 @@ public abstract class Teams extends Actor
             }
         }
     }
-    public void GameCollison(){
+    public void GameCollison()
+    {
+        //code for when interacting with the games class.
         Games g = (Games)getOneIntersectingObject(Games.class);
         if (g != null){
-            s = 0;
+            s = 0;//s = 0 means no movement
             g.deleteMe();
         }else{
             s = 2;
+            //reset movemnet beck to normal.
         }
     }
 }
