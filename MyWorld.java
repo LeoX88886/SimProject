@@ -13,7 +13,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    protected static GreenfootImage background = new GreenfootImage ("images/pacMan Maze.png");
+    protected static GreenfootImage background = new GreenfootImage ("images/MazeWorld.png");
     
     
     
@@ -39,7 +39,7 @@ public class MyWorld extends World
         
         setPaintOrder(MainCharacter.class, Teams.class, Games.class, Effects.class);
 
-        background = new GreenfootImage ("images/pacMan Maze.png");
+        background = new GreenfootImage ("images/MazeWorld.png");
         background.scale(1024, 800);
         setBackground (background);
         
@@ -59,13 +59,13 @@ public class MyWorld extends World
         //games loction
         addObject(g, 360, 270);
         
-        addObject(g2, 460, 30);
+        addObject(g2, 460, 80);
         g2.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
         
-        addObject(g3, 360, 530);
+        addObject(g3, 760, 500);
         g3.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
     
-        addObject(g4, 460, 760);
+        addObject(g4, 460, 740);
         g4.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
         
         
