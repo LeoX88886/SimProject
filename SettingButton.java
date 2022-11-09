@@ -6,31 +6,31 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PlayButton extends Actor
+public class SettingButton extends Actor
 {
     /**
      * Act - do whatever the PlayButton wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private GreenfootImage playImage = new GreenfootImage("images/LobbyWorld/playButtonFade.png");
-    public PlayButton()
+    private GreenfootImage settImage = new GreenfootImage("images/LobbyWorld/settingButtonFade.png");
+    public SettingButton()
     {
         
         
         
-        setImage(playImage);
+        setImage(settImage);
     }
     
     public void act()
     {
         if (Greenfoot.mouseMoved(this))//if mouse is hovering
         {
-            setImage(new GreenfootImage("images/LobbyWorld/playButton.png"));
+            setImage(new GreenfootImage("images/LobbyWorld/settingButton.png"));
         }
         
         if (Greenfoot.mouseMoved(null) && !Greenfoot.mouseMoved(this))//if not hovering
         {
-            setImage(new GreenfootImage("images/LobbyWorld/playButtonFade.png"));
+            setImage(new GreenfootImage("images/LobbyWorld/settingButtonFade.png"));
             
         }
               

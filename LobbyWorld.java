@@ -14,17 +14,29 @@ public class LobbyWorld extends World
      * 
      */
     
-    PlayButton b = new PlayButton();
+    
+    
+    PlayButton pb = new PlayButton();
+    SettingButton sb = new SettingButton();
+
     public LobbyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        addObject(b, 72, 66);
+        addObject(pb, 130, 300);
+        addObject(sb, 430, 300);
+        
+        
         
     }
     
     public void act()
     {
-        
+        MouseInfo m = Greenfoot.getMouseInfo();
+        if (m != null)
+        {
+            showText("X: " + String.valueOf(m.getX()), 200, 200);
+            showText("Y: " + String.valueOf(m.getY()), 300, 200);
+        }
     }
 }
