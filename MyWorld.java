@@ -13,7 +13,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    protected static GreenfootImage background = new GreenfootImage ("images/pacMan Maze.png");
+    protected static GreenfootImage background = new GreenfootImage ("images/MazeWorld.png");
     
     
     
