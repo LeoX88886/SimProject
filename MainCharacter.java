@@ -26,6 +26,7 @@ public class MainCharacter extends Actor
     private int size = 50;//quick way to adjust all the MainCharater's image sizes
     private int CharacterSpeed = 1;//quick way to adjust all the MainCharater's speed
     private int SprintSpeed = 2;//quick way to adjust all the MainCharater's sprint speed
+    private int speedMultiplier = 1;
     
     public MainCharacter()
     {
