@@ -14,17 +14,24 @@ public class LobbyWorld extends World
      * 
      */
     
+    protected static GreenfootImage background = new GreenfootImage ("images/jenshin.jpg");
     
     
     PlayButton pb = new PlayButton();
     SettingButton sb = new SettingButton();
+    InstructionButton ib = new InstructionButton();
 
     public LobbyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         addObject(pb, 130, 300);
-        addObject(sb, 430, 300);
+        addObject(sb, 280, 300);
+        addObject(ib, 430, 300);
+        
+        background = new GreenfootImage ("images/jenshin.jpg");
+        
+        setBackground (background);
         
         
         
