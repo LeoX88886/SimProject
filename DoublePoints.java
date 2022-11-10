@@ -8,12 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DoublePoints extends Effects
 {
-    /**
-     * Act - do whatever the DoublePoints wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private GreenfootImage effectImage = new GreenfootImage("images/Effects/coin.png");
+    
     public void act()
     {
         // Add your action code here.
+        effectImage.scale(50, 50);
+        setImage(effectImage);
+    }
+    
+    public boolean checkHitTeams(){
+        //can't double whats not there
+        return false;
+    }
+    
+    public boolean checkHitMC(){
+        //can't double whats not there
+        return false;
     }
 }

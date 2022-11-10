@@ -12,5 +12,5 @@ comment4.target=void\ act()
 comment5.params=x\ y
 comment5.target=void\ setLocation(int,\ int)
 comment6.params=
-comment6.target=void\ hitByEffect()
+comment6.target=void\ speedingUp()
 numComments=7

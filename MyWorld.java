@@ -31,7 +31,10 @@ public class MyWorld extends World
     Games g4 = new Games();
     
     //effect instance
-    Effects e = new Effects();
+    DoublePoints dp = new DoublePoints();
+    SpeedUp su = new SpeedUp();
+    SwapPoints sp = new SwapPoints();
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -72,7 +75,9 @@ public class MyWorld extends World
         
         
         //effect location
-        addObject(e, 100, 100);
+        addObject(dp, 75, 100);
+        addObject(su, 75, 200);
+        addObject(sp, 75, 300);
         
     }
     

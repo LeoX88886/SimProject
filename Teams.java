@@ -17,6 +17,7 @@ public abstract class Teams extends Actor
     protected int directionD;
     // 1 = right, -1 = left
     protected int s = 2;
+    protected int sUp = 5;
     protected int f = 1;
     public int setF()
     {
@@ -171,5 +172,8 @@ public abstract class Teams extends Actor
             s = 2;
             //reset movemnet beck to normal.
         }
+    }
+    public void speedingUp(){
+        s = sUp;
     }
 }

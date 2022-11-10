@@ -26,7 +26,11 @@ public class MainCharacter extends Actor
     private int size = 50;//quick way to adjust all the MainCharater's image sizes
     private int CharacterSpeed = 1;//quick way to adjust all the MainCharater's speed
     private int SprintSpeed = 2;//quick way to adjust all the MainCharater's sprint speed
-    private int speedMultiplier = 1;
+    private int CharacterSpeedUp = 2;//multiplier of speed for when mc collides with SpeedUp
+    private int SprintSpeedUp = 3;//multiplier of speed for when mc collides with SpeedUp
+    
+    //timer variable for speedup
+    private int timer;
     
     public MainCharacter()
     {
@@ -173,8 +177,21 @@ public class MainCharacter extends Actor
         }
     }
     
-    public void hitByEffect(){
-        CharacterSpeed = 2;
-        SprintSpeed = 4;
+    public void speedingUp(){
+        CharacterSpeed = CharacterSpeedUp;
+        SprintSpeed = SprintSpeedUp;
+        /* This timer does not work, leaving it here for future reference to fix
+        timer = 60;
+        
+        if(timer == 0){
+            CharacterSpeed = 1;
+            SprintSpeed = 2;
+        }
+        CharacterSpeed = CharacterSpeedUp;
+        SprintSpeed = SprintSpeedUp;
+        if(timer > 0){
+            timer--;
+        }
+        */
     }
 }
