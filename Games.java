@@ -89,6 +89,7 @@ public class Games extends Actor
                 scoreOne = scoreOne + scoreMultiplier;
             }
             getWorld().removeObject(this);
+            MyWorld.getNum();
         }
         
     }

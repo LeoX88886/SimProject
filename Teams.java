@@ -43,7 +43,7 @@ public abstract class Teams extends Actor
         }else if(f == 0){
             setLocation(getX(),getY()+s );
         }
-        if(randomMove >= 225)
+        if(randomMove >= 150)
         {
             //will change direction after 225 milliseconds. 
             f = Greenfoot.getRandomNumber(3);
