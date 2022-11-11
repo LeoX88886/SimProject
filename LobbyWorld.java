@@ -31,7 +31,7 @@ public class LobbyWorld extends World
         
         background = new GreenfootImage ("images/jenshin.jpg");
         
-        setBackground (background);
+        setBackground (this.background);
         
         
         
