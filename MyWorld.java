@@ -23,10 +23,10 @@ public class MyWorld extends World
     Team4 t4 = new Team4();
 
     //game instance
-    Games g = new Games();
-    Games g2 = new Games();
-    Games g3 = new Games();
-    Games g4 = new Games();
+    Game1 g = new Game1();
+    Game2 g2 = new Game2();
+    Game3 g3 = new Game3();
+    Game4 g4 = new Game4();
 
     //effect instance
     DoublePoints dp = new DoublePoints();
@@ -97,15 +97,14 @@ public class MyWorld extends World
         {
             spawnGame();
         }
-
     }
 
     public void spawnGame()
     {
-        Games g1 = new Games();
-        Games g2 = new Games();
-        Games g3 = new Games();
-        Games g4 = new Games();
+        Game1 g1 = new Game1();
+        Game2 g2 = new Game2();
+        Game3 g3 = new Game3();
+        Game4 g4 = new Game4();
         int gi = Greenfoot.getRandomNumber(7);
         int GameImg = Greenfoot.getRandomNumber(4);
         gameNum++;

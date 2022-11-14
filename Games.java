@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Games extends Actor
+public abstract class Games extends Actor
 {
     /**
      * Act - do whatever the Games wants to do. This method is called whenever
@@ -16,8 +16,8 @@ public class Games extends Actor
     private GreenfootImage gameImage = new GreenfootImage("images/GamesIcon/game2.png");
     
     //instance of scores
-    private static int scoreOne;
-    private static int scoreTwo;
+    protected static int scoreOne;
+    protected static int scoreTwo;
     
     private int deleteTimer;
     
@@ -59,6 +59,7 @@ public class Games extends Actor
         {
             scoreTwo--;
         }
+        
         if(isTouching(MainCharacter.class))
         {
             int chance = Greenfoot.getRandomNumber(3);
