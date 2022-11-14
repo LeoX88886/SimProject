@@ -105,201 +105,24 @@ public class MyWorld extends World
         Game2 g2 = new Game2();
         Game3 g3 = new Game3();
         Game4 g4 = new Game4();
-        int gi = Greenfoot.getRandomNumber(7);
-        int GameImg = Greenfoot.getRandomNumber(4);
+        int gi = Greenfoot.getRandomNumber(8);
         gameNum++;
-        //int GameImg = Greenfoot.getRandomNumber(4);
-        if(gi == 0)
-        {
+        if(gi == 0){
             addObject(g1, 400, 200);
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
-        }
-        if(gi == 1)
-        {
+        }else if(gi == 1){
             addObject(g2, 600, 650);
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
-        }
-        if(gi == 2)
-        {
+        }else if(gi == 2){
             addObject(g3, 200, 350);
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
-        }
-        if(gi == 3)
-        {
+        }else if(gi == 3){
             addObject(g4,400, 450);
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
-        }
-        if(gi == 4)
-        {
+        }else if(gi == 4){
             addObject(g1,575, 350);
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
-        }
-        if(gi == 5)
-        {
+        }else if(gi == 5){
             addObject(g2,200, 450);
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
-        }
-        if(gi == 6)
-        {
+        }else if(gi == 6){
             addObject(g3,550, 150);
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
-        }
-        if(gi == 7)
-        {
+        }else if(gi == 7){
             addObject(g4,605, 325);
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
         }
     }
 
