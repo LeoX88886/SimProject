@@ -36,7 +36,7 @@ public class SettingButton extends Actor
               
         if (Greenfoot.mouseClicked(this)) 
         {
-            Greenfoot.setWorld(new MyWorld());
+            Greenfoot.setWorld(new SettingsWorld());
         }
     }
 }
