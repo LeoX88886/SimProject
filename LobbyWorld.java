@@ -25,9 +25,9 @@ public class LobbyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        addObject(pb, 130, 300);
-        addObject(sb, 280, 300);
-        addObject(ib, 430, 300);
+        addObject(pb, 210, 300);
+        addObject(sb, 360, 300);
+        addObject(ib, 280, 360);
         
         background = new GreenfootImage ("images/jenshin.jpg");
         

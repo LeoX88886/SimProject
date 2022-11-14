@@ -19,7 +19,7 @@ public class SettingsWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         addObject(b,60,375);
-        Games g = new Games();
+        Game1 g = new Game1();
         addObject(g, 360, 270);
     }
 }
