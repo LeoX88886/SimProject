@@ -12,7 +12,7 @@ public class InstructionButton extends Actor
      * Act - do whatever the PlayButton wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private GreenfootImage inImage = new GreenfootImage("images/LobbyWorld/instructionButtonFade.png");
+    private GreenfootImage inImage = new GreenfootImage("images/LobbyWorld1/instructionButtonFade.png");
     public InstructionButton()
     {
         
@@ -25,12 +25,12 @@ public class InstructionButton extends Actor
     {
         if (Greenfoot.mouseMoved(this))//if mouse is hovering
         {
-            setImage(new GreenfootImage("images/LobbyWorld/instructionButton.png"));
+            setImage(new GreenfootImage("images/LobbyWorld1/instructionButton.png"));
         }
         
         if (Greenfoot.mouseMoved(null) && !Greenfoot.mouseMoved(this))//if not hovering
         {
-            setImage(new GreenfootImage("images/LobbyWorld/instructionButtonFade.png"));
+            setImage(new GreenfootImage("images/LobbyWorld1/instructionButtonFade.png"));
             
         }
               
