@@ -17,8 +17,12 @@ public abstract class Teams extends Actor
     protected int directionD;
     // 1 = right, -1 = left
     protected int s = 2;
-    protected static int sUp = 5;
+    protected int sUp = 5;
     protected int f = 1;
+    
+    //timer variable for speedup
+    private SimpleTimer timer = new SimpleTimer();
+
     public int setF()
     {
         //each team needs a random direction to start moving
@@ -30,6 +34,11 @@ public abstract class Teams extends Actor
         Walk();
         GameCollison();
         WallCollison();
+        
+        //speedup/slowdown when interacting with SpeedUp effects
+        if(timer.millisElapsed() >= 5000){
+            returnOriginalSpeed();
+        }
     }
     public void Walk()
     {
@@ -172,8 +181,15 @@ public abstract class Teams extends Actor
             //reset movemnet beck to normal.
         }
     }
+    //not working why??? game bad
     public void speedingUp(){
+        timer.mark();
+        
         s = sUp;
+    }
+    
+    public void returnOriginalSpeed(){
+        s = 2;
     }
     /**
     public static int get_sUp()

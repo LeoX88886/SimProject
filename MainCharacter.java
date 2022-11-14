@@ -30,7 +30,7 @@ public class MainCharacter extends Actor
     private int SprintSpeedUp = 3;//multiplier of speed for when mc collides with SpeedUp
     
     //timer variable for speedup
-    private int timer;
+    private SimpleTimer timer = new SimpleTimer();
     
     public MainCharacter()
     {
@@ -164,6 +164,10 @@ public class MainCharacter extends Actor
                 setLocation(x, y + SprintSpeed);   
             }
         }
+        
+        if(timer.millisElapsed() >= 5000){
+            returnOriginalSpeed();
+        }
     }
     
     public void setLocation(int x, int y)//When MainCharater touches Boundary, it stops MainCharater from moving further
@@ -178,20 +182,14 @@ public class MainCharacter extends Actor
     }
     
     public void speedingUp(){
-        CharacterSpeed = CharacterSpeedUp;
-        SprintSpeed = SprintSpeedUp;
-        /* This timer does not work, leaving it here for future reference to fix
-        timer = 60;
+        timer.mark();
         
-        if(timer == 0){
-            CharacterSpeed = 1;
-            SprintSpeed = 2;
-        }
         CharacterSpeed = CharacterSpeedUp;
         SprintSpeed = SprintSpeedUp;
-        if(timer > 0){
-            timer--;
-        }
-        */
+    }
+    
+    public void returnOriginalSpeed(){
+        CharacterSpeed = 1;
+        SprintSpeed = 2;
     }
 }
