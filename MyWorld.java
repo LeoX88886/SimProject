@@ -101,14 +101,14 @@ public class MyWorld extends World
 
     public void spawnGame()
     {
-        Game1 g1 = new Game1();
+        Game1 g = new Game1();
         Game2 g2 = new Game2();
         Game3 g3 = new Game3();
         Game4 g4 = new Game4();
         int gi = Greenfoot.getRandomNumber(8);
         gameNum++;
         if(gi == 0){
-            addObject(g1, 400, 200);
+            addObject(g, 400, 200);
         }else if(gi == 1){
             addObject(g2, 600, 650);
         }else if(gi == 2){
@@ -116,7 +116,7 @@ public class MyWorld extends World
         }else if(gi == 3){
             addObject(g4,400, 450);
         }else if(gi == 4){
-            addObject(g1,575, 350);
+            addObject(g,575, 350);
         }else if(gi == 5){
             addObject(g2,200, 450);
         }else if(gi == 6){
