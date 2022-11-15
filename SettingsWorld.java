@@ -17,6 +17,9 @@ public class SettingsWorld extends World
     T2Ch t2 = new T2Ch();
     T3Ch t3 = new T3Ch();
     T4Ch t4 = new T4Ch();
+    protected static int Ic2 = 1;
+    protected static int Ic3 = 0;
+    protected static int Ic4 = 0;
     public SettingsWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -29,5 +32,31 @@ public class SettingsWorld extends World
         addObject(t3,100,65);
         addObject(t4,150,65);
     }
-    //public int IC();
+    public static int IC(){
+        if(Ic2 == 1){
+            t3.IC();
+            t4.IC();
+            Ic3 = 0;
+            Ic4 = 0;
+        }else if(Ic3 == 1){
+            t2.IC();
+            t4.IC();
+            Ic2 = 0;
+            Ic4 = 0;
+        }else if(Ic4 == 1){
+            t2.IC();
+            t3.IC();
+            Ic2 = 0;
+            Ic3 = 0;
+        }
+    }
+    public int I2C(){
+        Ic2 = 1;
+    }
+    public int I3C(){
+        Ic3 = 1;
+    }
+    public int I4C(){
+        Ic4 = 1;
+    }
 }

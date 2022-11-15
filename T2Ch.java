@@ -26,16 +26,9 @@ public class T2Ch extends Actor
         {
             MyWorld.setTeams(2);
             setImage(Chosen);
-            //t3.IC();
-            //t4.IC();
         }
-        //IC();
     }
-    /**
     public void IC(){
-        if(SettingsWorld.IC()){
-            setImage(settImage);
-        }
-        
-    }*/
+        setImage(settImage);
+    }
 }

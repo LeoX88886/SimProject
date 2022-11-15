@@ -26,13 +26,9 @@ public class T4Ch extends Actor
         {
             MyWorld.setTeams(2);
             setImage(Chosen);
-            //t2.IC();
-            //t3.IC();
         }
-        //IC();
     }
-    /**
     public void IC(){
         setImage(settImage);
-    }*/
+    }
 }
