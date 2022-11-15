@@ -26,7 +26,7 @@ public class SpeedUp extends Effects
     }
     
     public boolean checkHitMC(){
-        MainCharacter mc = (MainCharacter)getOneObjectAtOffset(getImage().getWidth()/2, 0, MainCharacter.class);
+        MainCharacter mc = (MainCharacter)getOneObjectAtOffset(0, 0, MainCharacter.class);
         if(mc != null){
             mc.speedingUp();
             delete = true;
@@ -36,7 +36,7 @@ public class SpeedUp extends Effects
     }
     
     public boolean checkHitTeams(){
-        Teams t = (Teams)getOneObjectAtOffset(getImage().getWidth()/2, 0, Teams.class);
+        Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
             t.speedingUp();
             delete = true;
