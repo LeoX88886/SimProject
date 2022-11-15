@@ -14,6 +14,9 @@ public class SettingsWorld extends World
      * 
      */
     BackButton b = new BackButton();
+    T2Ch t2 = new T2Ch();
+    T3Ch t3 = new T3Ch();
+    T4Ch t4 = new T4Ch();
     public SettingsWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -21,5 +24,10 @@ public class SettingsWorld extends World
         addObject(b,60,375);
         Game1 g = new Game1();
         addObject(g, 360, 270);
+        
+        addObject(t2,50,65);
+        addObject(t3,100,65);
+        addObject(t4,150,65);
     }
+    //public int IC();
 }
