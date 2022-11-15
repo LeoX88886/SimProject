@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SpeedUp extends Effects
 {
     private GreenfootImage effectImage = new GreenfootImage("images/Effects/bluecoin.png");
-    private boolean delete = false;
     
     public void act()
     {
@@ -21,12 +20,13 @@ public class SpeedUp extends Effects
         checkHitTeams();
         
         if(delete){
+            //removes this object when collision against MC or teams
             removeThis();
         }
     }
-    
+    //Check if hitting MainCharacter
     public boolean checkHitMC(){
-        MainCharacter mc = (MainCharacter)getOneObjectAtOffset(getImage().getWidth()/2, 0, MainCharacter.class);
+        MainCharacter mc = (MainCharacter)getOneObjectAtOffset(0, 0, MainCharacter.class);
         if(mc != null){
             mc.speedingUp();
             delete = true;
@@ -34,9 +34,9 @@ public class SpeedUp extends Effects
         }
         return false;
     }
-    
+    //Check if hitting team
     public boolean checkHitTeams(){
-        Teams t = (Teams)getOneObjectAtOffset(getImage().getWidth()/2, 0, Teams.class);
+        Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
             t.speedingUp();
             delete = true;

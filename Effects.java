@@ -7,6 +7,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Effects extends Actor
 {
+    protected boolean delete = false;
+    
     public abstract boolean checkHitTeams();
     
     public abstract boolean checkHitMC();

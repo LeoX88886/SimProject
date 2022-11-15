@@ -32,6 +32,7 @@ public class MyWorld extends World
     //effect instance
     DoublePoints dp = new DoublePoints();
     SpeedUp su = new SpeedUp();
+    SpeedUp su2 = new SpeedUp();
     SwapPoints sp = new SwapPoints();
 
     public MyWorld()

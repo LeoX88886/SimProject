@@ -18,6 +18,8 @@ public abstract class Games extends Actor
     //instance of scores
     protected static int scoreOne;
     protected static int scoreTwo;
+    protected static int scoreOneExtra;
+    protected static int scoreTwoExtra;
     
     private int deleteTimer;
     
@@ -93,6 +95,8 @@ public abstract class Games extends Actor
             MyWorld.getNum();
         }
         
+        scoreOneExtra = scoreOne;
+        scoreTwoExtra = scoreTwo;
     }
     
     public void deleteMe (){
@@ -112,5 +116,23 @@ public abstract class Games extends Actor
         return scoreTwo;
     }
     
+    public static int getScoreOneExtra()
+    {
+        return scoreOneExtra;
+    }
     
+    public static int getScoreTwoExtra()
+    {
+        return scoreTwoExtra;
+    }
+    
+    public static void setScoreOne(int value)
+    {
+        scoreOne = value;
+    }
+    
+    public static void setScoreTwo(int value)
+    {
+        scoreTwo = value;
+    }
 }
