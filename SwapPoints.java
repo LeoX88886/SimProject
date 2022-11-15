@@ -9,21 +9,45 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SwapPoints extends Effects
 {
     private GreenfootImage effectImage = new GreenfootImage("images/Effects/graycoin.png");
+    private boolean delete = false;
     
     public void act()
     {
         // Add your action code here.
         effectImage.scale(50, 50);
         setImage(effectImage);
-    }
-    
-    public boolean checkHitTeams(){
-        //can't double whats not there
-        return false;
+        
+        checkHitMC();
+        checkHitTeams();
+        
+        if(delete){
+            removeThis();
+        }
     }
     
     public boolean checkHitMC(){
-        //can't switch whats not there
+        MainCharacter mc = (MainCharacter)getOneObjectAtOffset(0, 0, MainCharacter.class);
+        if(mc != null){
+            Games.setScoreOne(Games.getScoreTwoExtra());
+            Games.setScoreTwo(Games.getScoreOneExtra());
+            delete = true;
+            return true;
+        }
         return false;
+    }
+    
+    public boolean checkHitTeams(){
+        Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
+        if(t != null){
+            Games.setScoreOne(Games.getScoreTwoExtra());
+            Games.setScoreTwo(Games.getScoreOneExtra());
+            delete = true;
+            return true;
+        }
+        return false;
+    }
+    
+    public void removeThis(){
+        getWorld().removeObject(this);
     }
 }
