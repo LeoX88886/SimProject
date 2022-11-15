@@ -27,7 +27,7 @@ public class T3Ch extends Actor
             MyWorld.setTeams(2);
             setImage(Chosen);
         }
-        SettingsWorld.IC();
+        //SettingsWorld.IC();
     }
     public void IC(){
         setImage(settImage);
