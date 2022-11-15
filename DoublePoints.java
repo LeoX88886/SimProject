@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class DoublePoints extends Effects
 {
     private GreenfootImage effectImage = new GreenfootImage("images/Effects/coin.png");
-    private boolean delete = false;
     
     public void act()
     {
@@ -28,7 +27,7 @@ public class DoublePoints extends Effects
     public boolean checkHitMC(){
         MainCharacter mc = (MainCharacter)getOneObjectAtOffset(0, 0, MainCharacter.class);
         if(mc != null){
-            mc.speedingUp();
+            //do something when hitting MC
             delete = true;
             return true;
         }
@@ -38,7 +37,7 @@ public class DoublePoints extends Effects
     public boolean checkHitTeams(){
         Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
-            t.speedingUp();
+            //do something when hitting teams
             delete = true;
             return true;
         }

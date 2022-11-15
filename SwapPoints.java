@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SwapPoints extends Effects
 {
     private GreenfootImage effectImage = new GreenfootImage("images/Effects/graycoin.png");
-    private boolean delete = false;
     
     public void act()
     {
@@ -28,6 +27,7 @@ public class SwapPoints extends Effects
     public boolean checkHitMC(){
         MainCharacter mc = (MainCharacter)getOneObjectAtOffset(0, 0, MainCharacter.class);
         if(mc != null){
+            //swaps the points on the score board when hitting MC
             Games.setScoreOne(Games.getScoreTwoExtra());
             Games.setScoreTwo(Games.getScoreOneExtra());
             delete = true;
@@ -39,6 +39,7 @@ public class SwapPoints extends Effects
     public boolean checkHitTeams(){
         Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
+            //swaps the points on the score board when hitting teams
             Games.setScoreOne(Games.getScoreTwoExtra());
             Games.setScoreTwo(Games.getScoreOneExtra());
             delete = true;
