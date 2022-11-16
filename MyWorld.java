@@ -15,6 +15,7 @@ public class MyWorld extends World
      */
     protected static GreenfootImage background = new GreenfootImage ("images/MazeWorld.png");
     protected static int gameNum = 0;
+    protected int teamNum = 2;
 
     //team instance
     Team1 t1 = new Team1();
@@ -50,10 +51,23 @@ public class MyWorld extends World
         addObject(main, 200, 200);
 
         //teams location
-        addObject(t1, 72, 66);
-        addObject(t2, 948, 66);
-        addObject(t3, 72, 734);
-        addObject(t4, 948, 734);
+        if(teamNum == 2)
+        {
+            addObject(t1, 72, 66);
+            addObject(t2, 948, 66);
+        } else if (teamNum == 3){
+            addObject(t1, 72, 66);
+            addObject(t2, 948, 66);
+            addObject(t3, 72, 734);
+        } else if (teamNum == 4){
+            addObject(t1, 72, 66);
+            addObject(t2, 948, 66);
+            addObject(t3, 72, 734);
+            addObject(t4, 948, 734);
+        }
+        
+        
+        
 
         //games loction
         /*addObject(g, 360, 270);
@@ -78,7 +92,11 @@ public class MyWorld extends World
         
         
     }
-
+    public int setTeams(int x)
+    {
+        teamNum = x;
+        return teamNum;
+    }
     public static int getNum()
     {
         return gameNum--;
