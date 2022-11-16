@@ -33,6 +33,8 @@ public class MyWorld extends World
     SpeedUp su = new SpeedUp();
     SwapPoints sp = new SwapPoints();
 
+    private static int k = 3;
+
     public MyWorld()
     {   
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -66,13 +68,15 @@ public class MyWorld extends World
         g4.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));*/
 
         spawnGame();
-        //spawnGame();
-        //spawnGame();
+        spawnGame();
+        spawnGame();
 
         //effect location
         addObject(dp, 75, 100);
         addObject(su, 75, 200);
         addObject(sp, 75, 300);
+        
+        
     }
 
     public static int getNum()
@@ -92,12 +96,29 @@ public class MyWorld extends World
         //Teams.get_sUp();
         showText("team 1 score: " + Games.getScoreOne(), 300, 50);
         showText("team 2 score: " + Games.getScoreTwo(), 500, 50);
+        
 
-        if(gameNum < 4)
+        if (k < 3)
         {
             spawnGame();
+            
+            k++;
+            
         }
+        
+        
     }
+    
+    public static void subK()
+    {
+        k = k -1;
+    }
+    
+    public static int getK()
+    {
+        return k;
+    }
+    
 
     public void spawnGame()
     {
@@ -108,7 +129,7 @@ public class MyWorld extends World
         int gi = Greenfoot.getRandomNumber(7);
         int GameImg = Greenfoot.getRandomNumber(4);
         gameNum++;
-        //int GameImg = Greenfoot.getRandomNumber(4);
+        
         if(gi == 0)
         {
             addObject(g1, 400, 200);
@@ -302,5 +323,4 @@ public class MyWorld extends World
             }
         }
     }
-
 }

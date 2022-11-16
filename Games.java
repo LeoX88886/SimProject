@@ -90,6 +90,7 @@ public abstract class Games extends Actor
                 scoreOne = scoreOne + scoreMultiplier;
             }
             getWorld().removeObject(this);
+            MyWorld.subK();
             MyWorld.getNum();
         }
         
@@ -99,6 +100,8 @@ public abstract class Games extends Actor
         if (deleteTimer == -1){
             deleteTimer = 30;
         }
+        
+        
     }
     
     
