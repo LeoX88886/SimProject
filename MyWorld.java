@@ -34,7 +34,7 @@ public class MyWorld extends World
     SpeedUp su = new SpeedUp();
     SwapPoints sp = new SwapPoints();
 
-    private static int k = 3;
+    private static int k;
 
     public MyWorld(int teamNum)
     {   
@@ -51,6 +51,9 @@ public class MyWorld extends World
         addObject(main, 200, 200);
 
         this.teamNum = teamNum;
+        
+        
+        k = 0;
         
         //teams location
         if(teamNum == 2)
@@ -83,9 +86,9 @@ public class MyWorld extends World
         addObject(g4, 460, 740);
         g4.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));*/
 
-        spawnGame();
-        spawnGame();
-        spawnGame();
+        //spawnGame();
+        //spawnGame();
+        //spawnGame();
 
         //effect location
         addObject(dp, 75, 100);
@@ -147,12 +150,13 @@ public class MyWorld extends World
         Game3 g3 = new Game3();
         Game4 g4 = new Game4();
         int gi = Greenfoot.getRandomNumber(7);
-        int GameImg = Greenfoot.getRandomNumber(4);
+        
         gameNum++;
         
         if(gi == 0)
         {
             addObject(g1, 400, 200);
+            int GameImg = Greenfoot.getRandomNumber(4);
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -177,6 +181,7 @@ public class MyWorld extends World
         if(gi == 1)
         {
             addObject(g2, 600, 650);
+            int GameImg = Greenfoot.getRandomNumber(4);
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -201,6 +206,7 @@ public class MyWorld extends World
         if(gi == 2)
         {
             addObject(g3, 200, 350);
+            int GameImg = Greenfoot.getRandomNumber(4);
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -225,6 +231,7 @@ public class MyWorld extends World
         if(gi == 3)
         {
             addObject(g4,400, 450);
+            int GameImg = Greenfoot.getRandomNumber(4);
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -249,6 +256,7 @@ public class MyWorld extends World
         if(gi == 4)
         {
             addObject(g1,575, 350);
+            int GameImg = Greenfoot.getRandomNumber(4);
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -273,6 +281,7 @@ public class MyWorld extends World
         if(gi == 5)
         {
             addObject(g2,200, 450);
+            int GameImg = Greenfoot.getRandomNumber(4);
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -297,6 +306,7 @@ public class MyWorld extends World
         if(gi == 6)
         {
             addObject(g3,550, 150);
+            int GameImg = Greenfoot.getRandomNumber(4);
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -321,6 +331,7 @@ public class MyWorld extends World
         if(gi == 7)
         {
             addObject(g4,605, 325);
+            int GameImg = Greenfoot.getRandomNumber(4);
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));

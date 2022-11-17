@@ -93,7 +93,7 @@ public abstract class Games extends Actor
             }
             getWorld().removeObject(this);
             MyWorld.subK();
-            MyWorld.getNum();
+            //MyWorld.getNum();
         }
         
         scoreOneExtra = scoreOne;
