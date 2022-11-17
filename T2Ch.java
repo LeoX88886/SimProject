@@ -24,7 +24,7 @@ public class T2Ch extends Actor
         T4Ch t4 = new T4Ch();
         if (Greenfoot.mouseClicked(this) && getImage().equals(settImage)) 
         {
-            MyWorld.setTeams(2);
+            //MyWorld.setTeams(2);
             setImage(Chosen);
         }
     }

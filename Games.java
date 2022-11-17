@@ -21,7 +21,7 @@ public abstract class Games extends Actor
     protected static int scoreOneExtra;
     protected static int scoreTwoExtra;
     
-    private int deleteTimer;
+    private int deleteTimer = -1;
     
     private static int scoreMultiplier = 5;
     
@@ -71,6 +71,16 @@ public abstract class Games extends Actor
                 scoreOne = scoreOne + scoreMultiplier;
             }
         }
+        
+        if(isTouching(Teams.class))
+        {
+            int chance = Greenfoot.getRandomNumber(3);
+            
+            if (chance == 0)
+            {
+                scoreOne = scoreOne + scoreMultiplier;
+            }
+        }
         /**
         if(isTouching(Teams.class))
         {
@@ -93,18 +103,22 @@ public abstract class Games extends Actor
             }
             getWorld().removeObject(this);
             MyWorld.subK();
-            MyWorld.getNum();
+            //MyWorld.getNum();
+            deleteTimer = -1;
         }
         
         scoreOneExtra = scoreOne;
         scoreTwoExtra = scoreTwo;
     }
     
+    
+    
     public void deleteMe (){
-        if (deleteTimer == -1){
+        /*if (deleteTimer == -1){
             deleteTimer = 30;
-        }
+        }*/
         
+        deleteTimer = 30;
         
     }
     
