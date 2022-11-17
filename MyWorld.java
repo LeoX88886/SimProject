@@ -60,7 +60,7 @@ public class MyWorld extends World
         } else if (teamNum == 3){
             addObject(t1, 72, 66);
             addObject(t2, 948, 66);
-            addObject(t3, 72, 734);
+            addObject(t3, 512, 734);
         } else if (teamNum == 4){
             addObject(t1, 72, 66);
             addObject(t2, 948, 66);

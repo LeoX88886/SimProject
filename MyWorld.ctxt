@@ -1,16 +1,18 @@
 #BlueJ class context
 comment0.target=MyWorld
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=MyWorld()
-comment2.params=
-comment2.target=int\ getNum()
+comment1.params=teamNum
+comment1.target=MyWorld(int)
+comment2.params=x
+comment2.target=int\ setTeams(int)
 comment3.params=
-comment3.target=void\ act()
+comment3.target=int\ getNum()
 comment4.params=
-comment4.target=void\ subK()
+comment4.target=void\ act()
 comment5.params=
-comment5.target=int\ getK()
+comment5.target=void\ subK()
 comment6.params=
-comment6.target=void\ spawnGame()
-numComments=7
+comment6.target=int\ getK()
+comment7.params=
+comment7.target=void\ spawnGame()
+numComments=8
