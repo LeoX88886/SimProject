@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SpeedUp extends Effects
 {
-    private GreenfootImage effectImage = new GreenfootImage("images/Effects/bluecoin.png");
+    private GreenfootImage effectImage = new GreenfootImage("images/Effects/SpeedUp.png");
     
     public void act()
     {
