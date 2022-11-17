@@ -36,7 +36,7 @@ public class InstructionButton extends Actor
               
         if (Greenfoot.mouseClicked(this)) 
         {
-            Greenfoot.setWorld(new MyWorld());
+            //Greenfoot.setWorld(new MyWorld());
         }
     }
 }

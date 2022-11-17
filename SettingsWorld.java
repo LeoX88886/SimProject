@@ -14,14 +14,7 @@ public class SettingsWorld extends World
      * 
      */
     BackButton b = new BackButton();
-    /**
-    T2Ch t2 = new T2Ch();
-    T3Ch t3 = new T3Ch();
-    T4Ch t4 = new T4Ch();
-    */
-    protected static int Ic2 = 1;
-    protected static int Ic3 = 0;
-    protected static int Ic4 = 0;
+    ButtonGroup numTeamsButton;
     public SettingsWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -29,37 +22,25 @@ public class SettingsWorld extends World
         addObject(b,60,375);
         Game1 g = new Game1();
         addObject(g, 360, 270);
-        /**
-        addObject(t2,50,65);
-        addObject(t3,100,65);
-        addObject(t4,150,65);
-        */
-    }/**
-    public static int IC(){
-        if(Ic2 == 1){
-            //t3.IC();
-            //t4.IC();
-            Ic3 = 0;
-            Ic4 = 0;
-        }else if(Ic3 == 1){
-            //t2.IC();
-            //t4.IC();
-            Ic2 = 0;
-            Ic4 = 0;
-        }else if(Ic4 == 1){
-            //t2.IC();
-            //t3.IC();
-            Ic2 = 0;
-            Ic3 = 0;
+        numTeamsButton = new ButtonGroup(3);
+        // add three buttons
+        numTeamsButton.addButton(new Button(2, new GreenfootImage("SettingButtons/2Teams.png"), new GreenfootImage("SettingButtons/Choose2.png")));
+        numTeamsButton.addButton(new Button(3, new GreenfootImage("SettingButtons/3Teams.png"), new GreenfootImage("SettingButtons/Choose3.png")));
+        numTeamsButton.addButton(new Button(4, new GreenfootImage("SettingButtons/4Teams.png"), new GreenfootImage("SettingButtons/Choose4.png")));
+        
+        // choose one to be selected
+        numTeamsButton.setSelection(0);
+        
+        
+        
+        addObject(numTeamsButton, 25, 70);
+        
+    }
+    
+    public void act () {
+        if (Greenfoot.mouseClicked(b)) 
+        {
+            Greenfoot.setWorld(new LobbyWorld(numTeamsButton.getCurrentValue()));
         }
     }
-    public int I2C(){
-        Ic2 = 1;
-    }
-    public int I3C(){
-        Ic3 = 1;
-    }
-    public int I4C(){
-        Ic4 = 1;
-    }*/
 }

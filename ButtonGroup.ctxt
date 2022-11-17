@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=ButtonGroup
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ButtonGroup\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=size
+comment1.target=ButtonGroup(int)
+comment2.params=w
+comment2.target=void\ addedToWorld(greenfoot.World)
+comment3.params=b
+comment3.target=void\ addButton(Button)
+comment4.params=value
+comment4.target=void\ setSelection(int)
+comment5.params=
+comment5.target=int\ getCurrentValue()
+comment6.params=clicked
+comment6.target=void\ changeSelection(Button)
+comment7.params=
+comment7.target=void\ act()
+comment7.text=\r\n\ Act\ -\ do\ whatever\ the\ ButtonGroup\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=8
