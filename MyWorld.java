@@ -149,14 +149,16 @@ public class MyWorld extends World
         Game2 g2 = new Game2();
         Game3 g3 = new Game3();
         Game4 g4 = new Game4();
-        int gi = Greenfoot.getRandomNumber(7);
-        
+        int gi = Greenfoot.getRandomNumber(9);
+        int GameImg = Greenfoot.getRandomNumber(4)+1;
         gameNum++;
         
         if(gi == 0)
         {
             addObject(g1, 400, 200);
-            int GameImg = Greenfoot.getRandomNumber(4);
+            
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+            /**
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -176,12 +178,14 @@ public class MyWorld extends World
             if(GameImg ==4)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
+            }*/
         }
         if(gi == 1)
         {
             addObject(g2, 600, 650);
-            int GameImg = Greenfoot.getRandomNumber(4);
+            
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+            /**
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -201,12 +205,14 @@ public class MyWorld extends World
             if(GameImg ==4)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
+            }*/
         }
         if(gi == 2)
         {
             addObject(g3, 200, 350);
-            int GameImg = Greenfoot.getRandomNumber(4);
+            
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+            /**
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -226,12 +232,14 @@ public class MyWorld extends World
             if(GameImg ==4)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
+            }*/
         }
         if(gi == 3)
         {
             addObject(g4,400, 450);
-            int GameImg = Greenfoot.getRandomNumber(4);
+            
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+            /**
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -251,12 +259,14 @@ public class MyWorld extends World
             if(GameImg ==4)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
+            }*/
         }
         if(gi == 4)
         {
             addObject(g1,575, 350);
-            int GameImg = Greenfoot.getRandomNumber(4);
+            
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+            /**
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -276,12 +286,14 @@ public class MyWorld extends World
             if(GameImg ==4)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
+            }*/
         }
         if(gi == 5)
         {
             addObject(g2,200, 450);
-            int GameImg = Greenfoot.getRandomNumber(4);
+            
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+            /**
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -301,12 +313,14 @@ public class MyWorld extends World
             if(GameImg ==4)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
+            }*/
         }
         if(gi == 6)
         {
             addObject(g3,550, 150);
-            int GameImg = Greenfoot.getRandomNumber(4);
+            
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+            /**
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -326,12 +340,13 @@ public class MyWorld extends World
             if(GameImg ==4)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
+            }*/
         }
         if(gi == 7)
         {
             addObject(g4,605, 325);
-            int GameImg = Greenfoot.getRandomNumber(4);
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+            /**
             if(GameImg ==0)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
@@ -351,7 +366,15 @@ public class MyWorld extends World
             if(GameImg ==4)
             {
                 g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }
+            }*/
+        }
+        if(gi == 8){
+            addObject(g4,800, 440);
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+        }
+        if(gi == 9){
+            addObject(g4,750, 140);
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
         }
     }
 }

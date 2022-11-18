@@ -12,7 +12,7 @@ public class Game1 extends Games
      * Act - do whatever the Game1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private GreenfootImage teamImage = new GreenfootImage("images/GamesIcon/game.png");
+    private GreenfootImage teamImage = new GreenfootImage("images/GamesIcon/game1.png");
     public void act()
     {
         // Add your action code here.
