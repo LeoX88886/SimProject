@@ -16,8 +16,8 @@ public abstract class Games extends Actor
     private GreenfootImage gameImage = new GreenfootImage("images/GamesIcon/game2.png");
     
     //instance of scores
-    protected static int scoreOne;
-    protected static int scoreTwo;
+    protected static int scoreOne = 0;
+    protected static int scoreTwo = 0;
     protected static int scoreOneExtra;
     protected static int scoreTwoExtra;
     
@@ -31,8 +31,11 @@ public abstract class Games extends Actor
         //gameImage.scale(80,80);
         setImage(gameImage);
         
-        scoreOne = 0;
-        scoreTwo = 0;
+        
+        scoreMultiplier = 5;
+        
+        scoreOneExtra = 0;
+        scoreTwoExtra = 0;
         
         deleteTimer = -1;
         
@@ -71,8 +74,10 @@ public abstract class Games extends Actor
                 scoreOne = scoreOne + scoreMultiplier;
             }
         }
-        /**
-        if(isTouching(Teams.class))
+        
+        
+        
+        if(isTouching(Team1.class))
         {
             int chance = Greenfoot.getRandomNumber(3);
             
@@ -80,24 +85,40 @@ public abstract class Games extends Actor
             {
                 scoreOne = scoreOne + scoreMultiplier;
             }
-        }*/
+            return;
+        }
+        
+        if(isTouching(Team2.class))
+        {
+            int chance = Greenfoot.getRandomNumber(3);
+            
+            if (chance == 0)
+            {
+                scoreTwo = scoreTwo + scoreMultiplier;
+            }
+            return;
+        }
         
         if (deleteTimer > 0){
             deleteTimer--;
         }
         if(deleteTimer == 0){
-            int chance = Greenfoot.getRandomNumber(3);
+            /*int chance = Greenfoot.getRandomNumber(3);
             if (chance == 0)
             {
                 scoreOne = scoreOne + scoreMultiplier;
-            }
+            }*/
+            
             getWorld().removeObject(this);
             MyWorld.subK();
+            
+            
             //MyWorld.getNum();
+            return;
         }
         
-        scoreOneExtra = scoreOne;
-        scoreTwoExtra = scoreTwo;
+        //scoreOneExtra = scoreOne;
+        //scoreTwoExtra = scoreTwo;
     }
     
     public void deleteMe (){
