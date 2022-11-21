@@ -37,7 +37,14 @@ public class MyWorld extends World
 
     private static int k;
     
+    //textbox
+    private Font funFont, boringFont;
     
+    
+    private SuperTextBox widgetText1;
+    private SuperTextBox widgetText2;
+    private SuperTextBox widgetText3;
+    private SuperTextBox widgetText4;
 
     public MyWorld(int teamNum,int numGames)
     {   
@@ -57,6 +64,25 @@ public class MyWorld extends World
         
         Games.resetScoreOne();
         Games.resetScoreTwo();
+        
+        
+        //text box code
+        
+        funFont = new Font ("Comic Sans MS", false, false, 16);
+        boringFont = new Font ("Times New Roman", false, false, 18);
+        
+        
+        widgetText1 = new SuperTextBox ("Testing 123",  funFont, 200);
+        addObject (widgetText1, 120, 20);
+        
+        widgetText2 = new SuperTextBox ("Testing 123",  funFont, 200);
+        addObject (widgetText2, 320, 20);
+        
+        widgetText3 = new SuperTextBox ("Testing 123",  funFont, 200);
+        addObject (widgetText3, 520, 20);
+        
+        widgetText4 = new SuperTextBox ("Testing 123",  funFont, 200);
+        addObject (widgetText4, 720, 20);
         
         
         k = 0;
@@ -123,8 +149,23 @@ public class MyWorld extends World
         }
 
         //Teams.get_sUp();
-        showText("team 1 score: " + Games.getScoreOne(), 300, 50);
-        showText("team 2 score: " + Games.getScoreTwo(), 500, 50);
+        //showText("team 1 score: " + Games.getScoreOne(), 300, 50);
+        //showText("team 2 score: " + Games.getScoreTwo(), 500, 50);
+        
+        
+        
+        //textbox
+        
+        widgetText1.update("team 1 score: " + Games.getScoreOne());
+        
+        widgetText2.update("team 2 score: " + Games.getScoreTwo());
+        
+        widgetText3.update("team 3 score: " + Games.getScoreTwo());
+        
+        widgetText4.update("team 4 score: " + Games.getScoreOne());
+        
+        
+        
         
 
         if (k < numGames)
