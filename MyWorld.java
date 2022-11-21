@@ -16,6 +16,7 @@ public class MyWorld extends World
     protected static GreenfootImage background = new GreenfootImage ("images/MazeWorld.png");
     protected static int gameNum = 0;
     protected int teamNum = 2;
+    protected int numGames = 3;
 
     //team instance
     Team1 t1 = new Team1();
@@ -38,7 +39,7 @@ public class MyWorld extends World
     
     
 
-    public MyWorld(int teamNum)
+    public MyWorld(int teamNum,int numGames)
     {   
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 800, 1);
@@ -126,7 +127,7 @@ public class MyWorld extends World
         showText("team 2 score: " + Games.getScoreTwo(), 500, 50);
         
 
-        if (k < 3)
+        if (k < numGames)
         {
             spawnGame();
             

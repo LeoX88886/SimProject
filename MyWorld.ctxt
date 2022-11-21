@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=MyWorld
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=teamNum
-comment1.target=MyWorld(int)
+comment1.params=teamNum\ numGames
+comment1.target=MyWorld(int,\ int)
 comment2.params=x
 comment2.target=int\ setTeams(int)
 comment3.params=

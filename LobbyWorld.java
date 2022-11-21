@@ -17,13 +17,15 @@ public class LobbyWorld extends World
     protected static GreenfootImage background = new GreenfootImage ("images/jenshin.jpg");
 
     private int numTeams;
+    private int numGames;
     PlayButton pb = new PlayButton();
     SettingButton sb = new SettingButton();
     InstructionButton ib = new InstructionButton();
 
-    public LobbyWorld (int numTeams){
+    public LobbyWorld (int numTeams, int numGames){
         this(); // regular no-parameter constructor
         this.numTeams = numTeams;
+        this.numGames = numGames;
     }
 
     public LobbyWorld()
@@ -53,7 +55,7 @@ public class LobbyWorld extends World
 
         if (Greenfoot.mouseClicked(pb)) 
         {
-            Greenfoot.setWorld(new MyWorld(numTeams));
+            Greenfoot.setWorld(new MyWorld(numTeams,numGames));
         }
     }
 }
