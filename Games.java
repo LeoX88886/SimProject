@@ -78,7 +78,7 @@ public abstract class Games extends Actor
         }
         
         
-        
+        /**
         if(isTouching(Team1.class))
         {
             int chance = Greenfoot.getRandomNumber(3);
@@ -100,7 +100,7 @@ public abstract class Games extends Actor
             }
             return;
         }
-        
+        */
         if (deleteTimer > 0){
             deleteTimer--;
         }
@@ -110,11 +110,35 @@ public abstract class Games extends Actor
             {
                 scoreOne = scoreOne + scoreMultiplier;
             }*/
+            if(isTouching(Team1.class))
+            {
+                /**int chance = Greenfoot.getRandomNumber(3);
+                
+                if (chance == 0)
+                {
+                    scoreOne = scoreOne + scoreMultiplier;
+                }*/
+                scoreOne++;
+                getWorld().removeObject(this);
+                MyWorld.subK();
+                return;
+            }
+            if(isTouching(Team2.class))
+            {
+                /**int chance = Greenfoot.getRandomNumber(3);
+                
+                if (chance == 0)
+                {
+                    scoreOne = scoreOne + scoreMultiplier;
+                }*/
+                scoreTwo++;
+                getWorld().removeObject(this);
+                MyWorld.subK();
+                return;
+            }
             
-            getWorld().removeObject(this);
-            MyWorld.subK();
-            
-            
+            //getWorld().removeObject(this);
+            //MyWorld.subK();
             //MyWorld.getNum();
             return;
         }
