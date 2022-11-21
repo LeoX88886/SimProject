@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SwapPoints extends Effects
 {
-    private GreenfootImage effectImage = new GreenfootImage("images/Effects/graycoin.png");
+    private GreenfootImage effectImage = new GreenfootImage("images/Effects/pointswap.png");
     
     public void act()
     {

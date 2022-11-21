@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+//Image heavily inspired by an item in  the game "Battle Cats" by PONOS
 /**
  * Write a description of class SpeedUp here.
  * 
