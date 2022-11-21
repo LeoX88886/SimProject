@@ -17,8 +17,9 @@ public abstract class Teams extends Actor
     protected int directionD;
     // 1 = right, -1 = left
     protected int s = 2;
-    protected int sUp = 5;
+    protected int sUp = 4;
     protected int f = 1;
+    protected boolean speeding = false;
     
     //timer variable for speedup
     private SimpleTimer timer = new SimpleTimer();
@@ -35,8 +36,9 @@ public abstract class Teams extends Actor
         GameCollison();
         WallCollison();
         
+        checkHitSpeedUp();
         //speedup/slowdown when interacting with SpeedUp effects
-        if(timer.millisElapsed() >= 5000){
+        if(timer.millisElapsed() > 5000){
             returnOriginalSpeed();
         }
     }
@@ -177,19 +179,39 @@ public abstract class Teams extends Actor
             s = 0;//s = 0 means no movement
             g.deleteMe();
         }else{
-            s = 2;
-            //reset movemnet beck to normal.
+            if(speeding == true){
+                //reset movemnet beck to SpeedUp speed.
+                s = sUp;
+            }
+            if(speeding == false){
+                //reset movemnet beck to normal.
+                s = 2;
+            }
         }
     }
     //not working why??? game bad
     public void speedingUp(){
-        timer.mark();
-        
         s = sUp;
+        
+        speeding = true;
     }
     
     public void returnOriginalSpeed(){
         s = 2;
+        
+        speeding = false;
+    }
+    
+    public boolean checkHitSpeedUp(){
+        SpeedUp su = (SpeedUp)getOneObjectAtOffset(0, 0, SpeedUp.class);
+        if(su != null){
+            timer.mark();
+            
+            su.removeThis();
+            speedingUp();
+            return true;
+        }
+        return false;
     }
     /**
     public static int get_sUp()

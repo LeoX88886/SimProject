@@ -37,12 +37,11 @@ public class SpeedUp extends Effects
     }
     //Check if hitting team
     public boolean checkHitTeams(){
-        Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
+        /*Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
-            t.speedingUp();
             delete = true;
             return true;
-        }
+        }*/
         return false;
     }
     

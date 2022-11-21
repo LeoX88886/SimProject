@@ -143,8 +143,8 @@ public abstract class Games extends Actor
             return;
         }
         
-        //scoreOneExtra = scoreOne;
-        //scoreTwoExtra = scoreTwo;
+        scoreOneExtra = scoreOne;
+        scoreTwoExtra = scoreTwo;
     }
     
     public void deleteMe (){
