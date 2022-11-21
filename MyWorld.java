@@ -155,231 +155,80 @@ public class MyWorld extends World
         Game2 g2 = new Game2();
         Game3 g3 = new Game3();
         Game4 g4 = new Game4();
-        int gi = Greenfoot.getRandomNumber(9);
+        int gi = Greenfoot.getRandomNumber(15);
         int GameImg = Greenfoot.getRandomNumber(4)+1;
         gameNum++;
         
         if(gi == 0)
         {
             addObject(g1, 400, 200);
-            
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
-            /**
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }*/
         }
         if(gi == 1)
         {
             addObject(g2, 600, 650);
-            
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
-            /**
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }*/
         }
         if(gi == 2)
         {
             addObject(g3, 200, 350);
-            
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
-            /**
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }*/
         }
         if(gi == 3)
         {
             addObject(g4,400, 450);
-            
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
-            /**
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }*/
         }
         if(gi == 4)
         {
             addObject(g1,575, 350);
-            
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
-            /**
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }*/
         }
         if(gi == 5)
         {
             addObject(g2,200, 450);
-            
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
-            /**
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }*/
         }
         if(gi == 6)
         {
             addObject(g3,550, 150);
-            
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
-            /**
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }*/
         }
         if(gi == 7)
         {
             addObject(g4,605, 325);
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
-            /**
-            if(GameImg ==0)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game.png"));
-            }
-            if(GameImg ==1)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game2.png"));
-            }
-            if(GameImg ==2)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-            }
-            if(GameImg ==3)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));
-            }
-            if(GameImg ==4)
-            {
-                g1.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-            }*/
         }
         if(gi == 8){
-            addObject(g4,800, 440);
+            addObject(g1,800, 440);
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
         }
         if(gi == 9){
-            addObject(g4,750, 140);
+            addObject(g2,750, 140);
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+        }
+        if(gi == 10){
+            addObject(g3,980, 240);
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+        }
+        if(gi == 11){
+            addObject(g4,550, 640);
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+        }
+        if(gi == 12){
+            addObject(g1,300, 610);
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+        }
+        if(gi == 13){
+            addObject(g2,825, 540);
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+        }
+        if(gi == 14){
+            addObject(g3,250, 710);
+            g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+        }
+        if(gi == 15){
+            addObject(g4,200, 140);
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
         }
     }
