@@ -91,9 +91,9 @@ public class MyWorld extends World
         //spawnGame();
 
         //effect location
-        addObject(dp, 75, 100);
-        addObject(su, 75, 200);
-        addObject(sp, 75, 300);
+        addObject(dp, 300, 100);
+        addObject(su, 300, 200);
+        addObject(sp, 300, 300);
         
         
     }

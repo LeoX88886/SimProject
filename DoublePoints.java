@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DoublePoints extends Effects
 {
-    private GreenfootImage effectImage = new GreenfootImage("images/Effects/coin.png");
+    private GreenfootImage effectImage = new GreenfootImage("images/Effects/pointup.png");
     
     public void act()
     {
