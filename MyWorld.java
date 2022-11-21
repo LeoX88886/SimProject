@@ -35,6 +35,8 @@ public class MyWorld extends World
     SwapPoints sp = new SwapPoints();
 
     private static int k;
+    
+    
 
     public MyWorld(int teamNum)
     {   
@@ -51,6 +53,9 @@ public class MyWorld extends World
         addObject(main, 200, 200);
 
         this.teamNum = teamNum;
+        
+        Games.resetScoreOne();
+        Games.resetScoreTwo();
         
         
         k = 0;

@@ -21,6 +21,8 @@ public abstract class Games extends Actor
     protected static int scoreOneExtra;
     protected static int scoreTwoExtra;
     
+    
+    
     private int deleteTimer;
     
     private static int scoreMultiplier = 5;
@@ -34,8 +36,8 @@ public abstract class Games extends Actor
         
         scoreMultiplier = 5;
         
-        scoreOneExtra = 0;
-        scoreTwoExtra = 0;
+        //scoreOneExtra = 0;
+        //scoreTwoExtra = 0;
         
         deleteTimer = -1;
         
@@ -138,6 +140,16 @@ public abstract class Games extends Actor
     public static int getScoreTwo()
     {
         return scoreTwo;
+    }
+    
+    public static void resetScoreOne()
+    {
+        scoreOne = 0;
+    }
+    
+    public static void resetScoreTwo()
+    {
+        scoreTwo = 0;
     }
     
     public static int getScoreOneExtra()
