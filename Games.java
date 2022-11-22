@@ -23,7 +23,7 @@ public abstract class Games extends Actor
     protected static int scoreOneExtra;
     protected static int scoreTwoExtra;
     
-    GreenfootSound win = new GreenfootSound("gameWin.wav");
+    private GreenfootSound win = new GreenfootSound("gameWin.wav");
     
     private int deleteTimer;
     
@@ -156,10 +156,6 @@ public abstract class Games extends Actor
         scoreFour = 0;
     }
     
-    public static void resetScoreTwo()
-    {
-        scoreTwo = 0;
-    }
     
     public static int getScoreThree()
     {

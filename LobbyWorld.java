@@ -14,7 +14,9 @@ public class LobbyWorld extends World
      * 
      */
 
-    protected static GreenfootImage background = new GreenfootImage ("images/jenshin.jpg");
+    private static GreenfootImage background1 = new GreenfootImage ("images/jenshin.jpg");
+    
+    private static GifImage background = new GifImage("aniBackground.gif");
 
     private int numTeams;
     private int numGames;
@@ -28,6 +30,7 @@ public class LobbyWorld extends World
     PlayButton pb = new PlayButton();
     SettingButton sb = new SettingButton();
     InstructionButton ib = new InstructionButton();
+    ScreenTitle st = new ScreenTitle();
 
     public LobbyWorld (int numTeams, int numGames, int scorTotal){
         this(); // regular no-parameter constructor
@@ -38,23 +41,33 @@ public class LobbyWorld extends World
     public LobbyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
-        addObject(pb, 210, 300);
+        super(700, 400, 1); 
+        /*addObject(pb, 210, 300);
         addObject(sb, 360, 300);
         addObject(ib, 280, 360);
+        addObject(st, 400, 170);*/
 
         numTeams = 2;
         numGames = 3;
         scorTotal = 4;
-        background = new GreenfootImage ("images/jenshin.jpg");
-
-        setBackground (this.background);
+        background1 = new GreenfootImage ("images/jenshin.jpg");
+        
+        setBackground(background1);
+        
+        
 
         
     }
 
     public void act()
     {
+        setBackground(background.getCurrentImage());   
+        
+        addObject(pb, 210, 300);
+        addObject(sb, 360, 300);
+        addObject(ib, 280, 360);
+        addObject(st, 400, 170);
+        
         MouseInfo m = Greenfoot.getMouseInfo();
         if (m != null)
         {
