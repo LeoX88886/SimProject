@@ -17,6 +17,7 @@ public class MyWorld extends World
     protected static int gameNum = 0;
     protected int teamNum = 2;
     protected int numGames = 3;
+    protected int scorTotal = 4;
 
     //team instance
     Team1 t1 = new Team1();
@@ -46,7 +47,7 @@ public class MyWorld extends World
     private SuperTextBox widgetText3;
     private SuperTextBox widgetText4;
 
-    public MyWorld(int teamNum,int numGames)
+    public MyWorld(int teamNum,int numGames, int scorTotal)
     {   
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 800, 1);
@@ -164,7 +165,8 @@ public class MyWorld extends World
         
         widgetText4.update("team 4 score: " + Games.getScoreFour());
         
-        
+        //if Games.grtscoreOne = 100
+        // setWorld to winWorld
         
         
 

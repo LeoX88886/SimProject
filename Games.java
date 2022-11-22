@@ -78,31 +78,6 @@ public abstract class Games extends Actor
                 scoreOne = scoreOne + scoreMultiplier;
             }
         }
-        
-        
-        /**
-        if(isTouching(Team1.class))
-        {
-            int chance = Greenfoot.getRandomNumber(3);
-            
-            if (chance == 0)
-            {
-                scoreOne = scoreOne + scoreMultiplier;
-            }
-            return;
-        }
-        
-        if(isTouching(Team2.class))
-        {
-            int chance = Greenfoot.getRandomNumber(3);
-            
-            if (chance == 0)
-            {
-                scoreTwo = scoreTwo + scoreMultiplier;
-            }
-            return;
-        }
-        */
         if (deleteTimer > 0){
             deleteTimer--;
         }
@@ -114,12 +89,6 @@ public abstract class Games extends Actor
             }*/
             if(isTouching(Team1.class))
             {
-                /**int chance = Greenfoot.getRandomNumber(3);
-                
-                if (chance == 0)
-                {
-                    scoreOne = scoreOne + scoreMultiplier;
-                }*/
                 scoreOne++;
                 getWorld().removeObject(this);
                 MyWorld.subK();
@@ -127,12 +96,6 @@ public abstract class Games extends Actor
             }
             if(isTouching(Team2.class))
             {
-                /**int chance = Greenfoot.getRandomNumber(3);
-                
-                if (chance == 0)
-                {
-                    scoreOne = scoreOne + scoreMultiplier;
-                }*/
                 scoreTwo++;
                 getWorld().removeObject(this);
                 MyWorld.subK();
@@ -140,12 +103,6 @@ public abstract class Games extends Actor
             }
             if(isTouching(Team3.class))
             {
-                /**int chance = Greenfoot.getRandomNumber(3);
-                
-                if (chance == 0)
-                {
-                    scoreOne = scoreOne + scoreMultiplier;
-                }*/
                 scoreThree++;
                 getWorld().removeObject(this);
                 MyWorld.subK();
@@ -153,12 +110,6 @@ public abstract class Games extends Actor
             }
             if(isTouching(Team4.class))
             {
-                /**int chance = Greenfoot.getRandomNumber(3);
-                
-                if (chance == 0)
-                {
-                    scoreOne = scoreOne + scoreMultiplier;
-                }*/
                 scoreFour++;
                 getWorld().removeObject(this);
                 MyWorld.subK();
@@ -188,7 +139,6 @@ public abstract class Games extends Actor
     {
         return scoreOne;
     }
-    
     public static int getScoreTwo()
     {
         return scoreTwo;

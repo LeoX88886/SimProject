@@ -18,6 +18,7 @@ public class LobbyWorld extends World
 
     private int numTeams;
     private int numGames;
+    private int scorTotal;
     PlayButton pb = new PlayButton();
     SettingButton sb = new SettingButton();
     InstructionButton ib = new InstructionButton();
@@ -55,7 +56,7 @@ public class LobbyWorld extends World
 
         if (Greenfoot.mouseClicked(pb)) 
         {
-            Greenfoot.setWorld(new MyWorld(numTeams,numGames));
+            Greenfoot.setWorld(new MyWorld(numTeams,numGames,scorTotal));
         }
     }
 }
