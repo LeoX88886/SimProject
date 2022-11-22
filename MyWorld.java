@@ -38,7 +38,7 @@ public class MyWorld extends World
     SwapPoints sp = new SwapPoints();
 
     private static int k;
-    
+    private static int e;
     //textbox
     private Font funFont, boringFont;
     
