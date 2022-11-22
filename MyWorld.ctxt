@@ -15,4 +15,6 @@ comment6.params=
 comment6.target=int\ getK()
 comment7.params=
 comment7.target=void\ spawnGame()
-numComments=8
+comment8.params=
+comment8.target=void\ spawnEffect()
+numComments=9

@@ -17,6 +17,7 @@ public class MyWorld extends World
     protected static int gameNum = 0;
     protected int teamNum = 2;
     protected int numGames = 3;
+    protected int numEffects = 3;
     protected int scorTotal = 4;
 
     //team instance
@@ -87,6 +88,7 @@ public class MyWorld extends World
         
         
         k = 0;
+        e = 0;
         
         //teams location
         if(teamNum == 2)
@@ -194,6 +196,11 @@ public class MyWorld extends World
             k++;
             
         }
+        if (e < numEffects)
+        {
+            spawnEffect();
+            e++;
+        }
         
     }
     
@@ -216,7 +223,7 @@ public class MyWorld extends World
         Game4 g4 = new Game4();
         int gi = Greenfoot.getRandomNumber(15);
         int GameImg = Greenfoot.getRandomNumber(4)+1;
-        gameNum++;
+        numEffects++;
         
         if(gi == 0)
         {
@@ -289,6 +296,72 @@ public class MyWorld extends World
         if(gi == 15){
             addObject(g4,200, 140);
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
+        }
+    }
+    public void spawnEffect()
+    {
+        DoublePoints g1 = new DoublePoints();
+        SpeedUp g2 = new SpeedUp();
+        SwapPoints g3 = new SwapPoints();
+        int gi = Greenfoot.getRandomNumber(15);
+        int GameImg = Greenfoot.getRandomNumber(4)+1;
+        gameNum++;
+        
+        if(gi == 0)
+        {
+            addObject(g1, 450, 270);
+        }
+        if(gi == 1)
+        {
+            addObject(g2, 300, 650);
+        }
+        if(gi == 2)
+        {
+            addObject(g3, 230, 650);
+        }
+        if(gi == 3)
+        {
+            addObject(g1,700, 450);
+        }
+        if(gi == 4)
+        {
+            addObject(g2,575, 650);
+        }
+        if(gi == 5)
+        {
+            addObject(g3,300, 650);
+        }
+        if(gi == 6)
+        {
+            addObject(g1,550, 350);
+        }
+        if(gi == 7)
+        {
+            addObject(g2,675, 325);
+        }
+        if(gi == 8){
+            addObject(g3,720, 440);
+        }
+        if(gi == 9){
+            addObject(g1,780, 170);
+        }
+        if(gi == 10){
+            addObject(g2,980, 240);
+        }
+        if(gi == 11){
+            addObject(g3,500, 640);
+        }
+        if(gi == 12){
+            addObject(g1,700, 680);
+        }
+        if(gi == 13){
+            addObject(g2,755, 540);
+        }
+        if(gi == 14){
+            addObject(g3,250, 710);
+        }
+        if(gi == 15){
+            addObject(g1,200, 250);
         }
     }
 }
