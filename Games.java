@@ -23,7 +23,7 @@ public abstract class Games extends Actor
     protected static int scoreOneExtra;
     protected static int scoreTwoExtra;
     
-    
+    GreenfootSound win = new GreenfootSound("gameWin.wav");
     
     private int deleteTimer;
     
@@ -87,9 +87,11 @@ public abstract class Games extends Actor
             {
                 scoreOne = scoreOne + scoreMultiplier;
             }*/
+            
             if(isTouching(Team1.class))
             {
                 scoreOne++;
+                win.play();
                 getWorld().removeObject(this);
                 MyWorld.subK();
                 return;
@@ -97,6 +99,7 @@ public abstract class Games extends Actor
             if(isTouching(Team2.class))
             {
                 scoreTwo++;
+                win.play();
                 getWorld().removeObject(this);
                 MyWorld.subK();
                 return;
@@ -104,6 +107,7 @@ public abstract class Games extends Actor
             if(isTouching(Team3.class))
             {
                 scoreThree++;
+                win.play();
                 getWorld().removeObject(this);
                 MyWorld.subK();
                 return;
@@ -111,6 +115,7 @@ public abstract class Games extends Actor
             if(isTouching(Team4.class))
             {
                 scoreFour++;
+                win.play();
                 getWorld().removeObject(this);
                 MyWorld.subK();
                 return;
@@ -121,7 +126,6 @@ public abstract class Games extends Actor
             //MyWorld.getNum();
             return;
         }
-        
         scoreOneExtra = scoreOne;
         scoreTwoExtra = scoreTwo;
     }

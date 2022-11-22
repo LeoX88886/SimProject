@@ -18,17 +18,23 @@ public class LobbyWorld extends World
 
     private int numTeams;
     private int numGames;
-    private int scorTotal;
+    private int scorTotal = 3;
+    /**
+    private int scor1;
+    private int scor2;
+    private int scor3;
+    private int scor4;
+    */
     PlayButton pb = new PlayButton();
     SettingButton sb = new SettingButton();
     InstructionButton ib = new InstructionButton();
 
-    public LobbyWorld (int numTeams, int numGames){
+    public LobbyWorld (int numTeams, int numGames, int scorTotal){
         this(); // regular no-parameter constructor
         this.numTeams = numTeams;
         this.numGames = numGames;
+        this.scorTotal = scorTotal;
     }
-
     public LobbyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -38,6 +44,8 @@ public class LobbyWorld extends World
         addObject(ib, 280, 360);
 
         numTeams = 2;
+        numGames = 3;
+        scorTotal = 4;
         background = new GreenfootImage ("images/jenshin.jpg");
 
         setBackground (this.background);
