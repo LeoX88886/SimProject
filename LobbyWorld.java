@@ -14,7 +14,7 @@ public class LobbyWorld extends World
      * 
      */
 
-    private static GreenfootImage background1 = new GreenfootImage ("images/jenshin.jpg");
+    private static GreenfootImage background1 = new GreenfootImage ("images/jenshin.png");
     
     private static GifImage background = new GifImage("aniBackground.gif");
 
@@ -50,7 +50,7 @@ public class LobbyWorld extends World
         numTeams = 2;
         numGames = 3;
         scorTotal = 4;
-        background1 = new GreenfootImage ("images/jenshin.jpg");
+        background1 = new GreenfootImage ("images/jenshin.png");
         
         setBackground(background1);
         
