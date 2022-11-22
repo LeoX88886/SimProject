@@ -91,7 +91,7 @@ public class MyWorld extends World
         if(teamNum == 2)
         {
             addObject(t1, 72, 66);
-            addObject(t2, 948, 66);
+            addObject(t2, 948, 734);
         } else if (teamNum == 3){
             addObject(t1, 72, 66);
             addObject(t2, 948, 66);
