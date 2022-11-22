@@ -18,6 +18,8 @@ public abstract class Games extends Actor
     //instance of scores
     protected static int scoreOne = 0;
     protected static int scoreTwo = 0;
+    protected static int scoreThree = 0;
+    protected static int scoreFour = 0;
     protected static int scoreOneExtra;
     protected static int scoreTwoExtra;
     
@@ -136,6 +138,32 @@ public abstract class Games extends Actor
                 MyWorld.subK();
                 return;
             }
+            if(isTouching(Team3.class))
+            {
+                /**int chance = Greenfoot.getRandomNumber(3);
+                
+                if (chance == 0)
+                {
+                    scoreOne = scoreOne + scoreMultiplier;
+                }*/
+                scoreThree++;
+                getWorld().removeObject(this);
+                MyWorld.subK();
+                return;
+            }
+            if(isTouching(Team4.class))
+            {
+                /**int chance = Greenfoot.getRandomNumber(3);
+                
+                if (chance == 0)
+                {
+                    scoreOne = scoreOne + scoreMultiplier;
+                }*/
+                scoreFour++;
+                getWorld().removeObject(this);
+                MyWorld.subK();
+                return;
+            }
             
             //getWorld().removeObject(this);
             //MyWorld.subK();
@@ -166,14 +194,27 @@ public abstract class Games extends Actor
         return scoreTwo;
     }
     
-    public static void resetScoreOne()
+    public static void resetScore()
     {
         scoreOne = 0;
+        scoreTwo = 0;
+        scoreThree = 0;
+        scoreFour = 0;
     }
     
     public static void resetScoreTwo()
     {
         scoreTwo = 0;
+    }
+    
+    public static int getScoreThree()
+    {
+        return scoreThree;
+    }
+    
+    public static int getScoreFour()
+    {
+        return scoreFour;
     }
     
     public static int getScoreOneExtra()

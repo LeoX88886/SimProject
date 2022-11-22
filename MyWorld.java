@@ -62,8 +62,8 @@ public class MyWorld extends World
 
         this.teamNum = teamNum;
         
-        Games.resetScoreOne();
-        Games.resetScoreTwo();
+        Games.resetScore();
+        
         
         
         //text box code
@@ -160,9 +160,9 @@ public class MyWorld extends World
         
         widgetText2.update("team 2 score: " + Games.getScoreTwo());
         
-        widgetText3.update("team 3 score: " + Games.getScoreTwo());
+        widgetText3.update("team 3 score: " + Games.getScoreThree());
         
-        widgetText4.update("team 4 score: " + Games.getScoreOne());
+        widgetText4.update("team 4 score: " + Games.getScoreFour());
         
         
         
