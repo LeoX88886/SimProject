@@ -37,7 +37,7 @@ public class SwapPoints extends Effects
     }
     
     public boolean checkHitTeams(){
-        /*Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
+        Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
             //swaps the points on the score board when hitting teams
             int s1 = Games.getScoreOneExtra();
@@ -46,7 +46,7 @@ public class SwapPoints extends Effects
             Games.setScoreTwo(s1);
             delete = true;
             return true;
-        }*/
+        }
         return false;
     }
     
