@@ -167,9 +167,26 @@ public class MyWorld extends World
         
         //if Games.grtscoreOne = 100
         // setWorld to winWorld
-        
-        
-
+        if (Games.getScoreOne() == scorTotal)
+        {
+            Greenfoot.stop();
+            return;
+        }
+        if (Games.getScoreTwo() == scorTotal)
+        {
+            Greenfoot.stop();
+            return;
+        }
+        if (Games.getScoreThree() == scorTotal)
+        {
+            Greenfoot.stop();
+            return;
+        }
+        if (Games.getScoreFour() == scorTotal)
+        {
+            Greenfoot.stop();
+            return;
+        }
         if (k < numGames)
         {
             spawnGame();
