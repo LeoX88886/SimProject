@@ -62,7 +62,7 @@ public class SettingsWorld extends World
         if (Greenfoot.mouseClicked(b)) 
         {
             Greenfoot.setWorld(new LobbyWorld(numTeamsButton.getCurrentValue(),numGamesButton.getCurrentValue(), numScorButton.getCurrentValue()));
-            //SwapPoints.setNumTeams(numTeamsButton.getCurrentValue());
+            SwapPoints.setNumTeams(numTeamsButton.getCurrentValue());
         }
     }
 }

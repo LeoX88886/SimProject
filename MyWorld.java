@@ -15,10 +15,10 @@ public class MyWorld extends World
      */
     protected static GreenfootImage background = new GreenfootImage ("images/MazeWorld.png");
     protected static int gameNum = 0;
-    protected int teamNum = 2;
+    protected static int teamNum = 2;
+    protected static int scorTotal = 4;
     protected int numGames = 3;
     protected int numEffects = 3;
-    protected static int scorTotal = 4;
 
     //team instance
     Team1 t1 = new Team1();
@@ -51,7 +51,7 @@ public class MyWorld extends World
     public static void setScorTotal(int num){
         scorTotal = num;
     }
-    
+
     public MyWorld(int teamNum,int numGames, int scorTotal)
     {   
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
