@@ -55,7 +55,7 @@ public class SwapPoints extends Effects
                 Games.setScoreFour(s3);
             }
             
-            sp.setVolume(50);
+            sp.setVolume(30);
             sp.play();
             MyWorld.subK();
             delete = true;

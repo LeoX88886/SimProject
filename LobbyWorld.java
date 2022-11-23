@@ -95,7 +95,7 @@ public class LobbyWorld extends World
     public void started()//starts the theme sound when world starts
     {
         themeMusic.playLoop();
-        themeMusic.setVolume(25);
+        themeMusic.setVolume(15);
     }
     
     public void stopped()// stops the theme sound when paused

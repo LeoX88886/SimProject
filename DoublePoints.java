@@ -29,7 +29,7 @@ public class DoublePoints extends Effects
         Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
             //do something when hitting teams
-            dp.setVolume(50);
+            dp.setVolume(30);
             dp.play();
             Games.setSMultiplier(2);
             MyWorld.subK();

@@ -40,7 +40,7 @@ public abstract class Games extends Actor
     {
         //gameImage.scale(80,80);
         setImage(gameImage);
-        win.setVolume(50);
+        win.setVolume(30);
         
         deleteTimer = -1;
         
