@@ -18,7 +18,7 @@ public class MyWorld extends World
     protected int teamNum = 2;
     protected int numGames = 3;
     protected int numEffects = 3;
-    protected int scorTotal = 4;
+    protected static int scorTotal = 4;
 
     //team instance
     Team1 t1 = new Team1();
@@ -47,7 +47,11 @@ public class MyWorld extends World
     private SuperTextBox widgetText2;
     private SuperTextBox widgetText3;
     private SuperTextBox widgetText4;
-
+    
+    public static void setScorTotal(int num){
+        scorTotal = num;
+    }
+    
     public MyWorld(int teamNum,int numGames, int scorTotal)
     {   
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.

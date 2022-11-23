@@ -38,6 +38,8 @@ public class LobbyWorld extends World
         this.numTeams = numTeams;
         this.numGames = numGames;
         this.scorTotal = scorTotal;
+        
+        MyWorld.setScorTotal(this.scorTotal);
     }
     public LobbyWorld()
     {    
