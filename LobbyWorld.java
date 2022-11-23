@@ -65,14 +65,11 @@ public class LobbyWorld extends World
         
         background.resume();//resume the animation when the world gets recalled from the WinScreen
         setBackground(background1);
-        
     }
 
     public void act()
     {
         setBackground(background.getCurrentImage());//start the animation background  
-        
-        WinScreen.stopSound();
         started();//play theme song
         
         //adding the objects to the animation background
