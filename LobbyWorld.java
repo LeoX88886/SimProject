@@ -32,7 +32,7 @@ public class LobbyWorld extends World
     private GreenfootSound button = new GreenfootSound("sounds/button.mp3");
     private GreenfootSound music = new GreenfootSound("sounds/NahidaMusic.mp3");
     
-    private GreenfootSound themeSound;
+    private static GreenfootSound themeSound;
     
     public LobbyWorld (int numTeams, int numGames, int scorTotal){
         this(); // regular no-parameter constructor
@@ -55,7 +55,7 @@ public class LobbyWorld extends World
         playMusic++;
         */
         
-       themeSound = new GreenfootSound("sounds/NahidaMusic.mp3"); //instance of ambient sound effect
+        themeSound = new GreenfootSound("sounds/NahidaMusic.mp3"); //instance of ambient sound effect
 
         numTeams = 2;
         numGames = 3;
@@ -65,6 +65,7 @@ public class LobbyWorld extends World
         
         background.resume();//resume the animation when the world gets recalled from the WinScreen
         setBackground(background1);
+        
     }
 
     public void act()
@@ -93,13 +94,18 @@ public class LobbyWorld extends World
         }
     }
     
-    public void started()//starts the ambient sound when world starts
+    public void started()//starts the theme sound when world starts
     {
-        themeSound.play();
+        themeSound.playLoop();
         themeSound.setVolume(50);
     }
     
-    public void stopped()// stops the ambient sound when paused
+    public void stopped()// stops the theme sound when paused
+    {
+        themeSound.stop();
+    }
+    
+    public static void stopMusic()// stops the theme sound when paused
     {
         themeSound.stop();
     }

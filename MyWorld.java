@@ -263,8 +263,6 @@ public class MyWorld extends World
             WinText4 w4 = new WinText4();//show team 4 wins
             gameWorld.addObject(w4, 350, 80);
             
-            
-            
             return;
         }
     }

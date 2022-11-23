@@ -67,6 +67,7 @@ public class SettingsWorld extends World
     }
     
     public void act () {
+        LobbyWorld.stopMusic();
         if (Greenfoot.mouseClicked(b)) 
         {
             /*

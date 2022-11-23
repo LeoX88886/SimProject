@@ -28,6 +28,7 @@ public class InstructionsWorld extends World
     }
     
     public void act(){
+        LobbyWorld.stopMusic();
         if (Greenfoot.mouseClicked(b)) 
         {   
             Greenfoot.setWorld(new LobbyWorld());
