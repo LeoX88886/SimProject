@@ -51,26 +51,6 @@ public abstract class Games extends Actor
     {
         // Add your action code here.
         
-        if(Greenfoot.isKeyDown("1"))
-        {
-            scoreOne++;
-        }
-        
-        if(Greenfoot.isKeyDown("2"))
-        {
-            scoreTwo++;
-        }
-            
-        if(Greenfoot.isKeyDown("3"))
-        {
-            scoreOne--;
-        }
-        
-        if(Greenfoot.isKeyDown("4"))
-        {
-            scoreTwo--;
-        }
-        
         if (deleteTimer > 0){
             deleteTimer--;
         }

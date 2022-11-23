@@ -72,13 +72,6 @@ public class LobbyWorld extends World
         addObject(ib, 280, 360);
         addObject(st, 400, 170);
         addObject(stt, 60, 240);
-        
-        MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText("X: " + String.valueOf(m.getX()), 200, 200);
-            showText("Y: " + String.valueOf(m.getY()), 300, 200);
-        }
 
         if (Greenfoot.mouseClicked(pb)) 
         {

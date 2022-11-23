@@ -41,13 +41,5 @@ public class WinScreen extends World
         {
             Greenfoot.setWorld(new LobbyWorld());
         }
-        
-        
-        MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText("X: " + String.valueOf(m.getX()), 200, 200);
-            showText("Y: " + String.valueOf(m.getY()), 300, 200);
-        }
     }
 }

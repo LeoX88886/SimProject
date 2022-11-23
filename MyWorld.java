@@ -147,13 +147,6 @@ public class MyWorld extends World
 
     public void act()
     {
-        MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText("X: " + String.valueOf(m.getX()), 200, 200);
-            showText("Y: " + String.valueOf(m.getY()), 300, 200);
-        }
-        
         win();
 
         //Teams.get_sUp();
@@ -163,7 +156,6 @@ public class MyWorld extends World
         
         
         //textbox
-        
         widgetText1.update("team 1 score: " + Games.getScoreOne());
         
         widgetText2.update("team 2 score: " + Games.getScoreTwo());
