@@ -1,9 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Teams here.
+ * The Teams calss is the main actor within the simulation that interacts with differnt actors.
+ * randomMove is the timer for the teams to change their movement direction when it reaches a certain number. wall is so the team can see if it 
+ * is hitting a wall within the background of the play area.The s & sUp variables are for how fast the teams are moving and when it speeds up.
+ * f is for the direction the team moves (1 is right, 2 is left, 3 is up, and 4 is down).
  * 
- * @author (your name) 
+ * @author tyson Darius Pellatt
  * @version (a version number or a date)
  */
 public abstract class Teams extends Actor
@@ -11,10 +14,6 @@ public abstract class Teams extends Actor
     private int randomMove = 0;
     GreenfootImage img = getImage();
     Color wall = new Color(9,0,255);
-    protected int directionR;
-    protected int directionL;
-    protected int directionU;
-    protected int directionD;
     // 1 = right, -1 = left
     protected int s = 2;
     protected int sUp = 4;
@@ -27,7 +26,7 @@ public abstract class Teams extends Actor
     public int setF()
     {
         //each team needs a random direction to start moving
-        f = Greenfoot.getRandomNumber(4)+1;//this is for the 4 directions. Random pulls 0,1,2,3.
+        f = Greenfoot.getRandomNumber(4)+1;//this is for the 4 directions.
         return f;
     }
     public void act()
@@ -189,20 +188,20 @@ public abstract class Teams extends Actor
             }
         }
     }
-    //not working why??? game bad
     public void speedingUp(){
+        //code to change the speed to the speed up version
         s = sUp;
-        
         speeding = true;
     }
     
     public void returnOriginalSpeed(){
+        //code to change the added speed back to normal
         s = 2;
-        
         speeding = false;
     }
     
     public boolean checkHitSpeedUp(){
+        //code to see if the team is touching a speed up. it didnt work int he actual speedUp actor for some reason
         SpeedUp su = (SpeedUp)getOneObjectAtOffset(0, 0, SpeedUp.class);
         if(su != null){
             timer.mark();
@@ -213,9 +212,4 @@ public abstract class Teams extends Actor
         }
         return false;
     }
-    /**
-    public static int get_sUp()
-    {
-        return sUp;
-    }*/
 }

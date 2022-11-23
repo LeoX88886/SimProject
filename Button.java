@@ -1,22 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class T3Ch here.
+ * The button class is used to create the values that can be changes when creating the simmulation.
  * 
- * @author (your name) 
+ * @author tyson Darius Pellatt, Jordan Cohen 
  * @version (a version number or a date)
  */
 public class Button extends Actor
 {
-    /**
-     * Act - do whatever the T3Ch wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     protected int value;
     protected GreenfootImage unselected; //= new GreenfootImage("images/SettingButtons/Choose3.png");
     protected GreenfootImage selected; //= new GreenfootImage("images/SettingButtons/3Team's.png");
     public Button(int value, GreenfootImage unselected, GreenfootImage selected)
     {
+        //value is how much is being changed (ex. 2 teams being changed to 4 teams), and a selected & unselected picture
         this.value = value;
         this.unselected = unselected;
         this.selected = selected;
@@ -26,6 +23,7 @@ public class Button extends Actor
     public int getValue()
     {
         return value;
+        //returns the value of the button
     }
     
     public void switchImage(){
@@ -34,6 +32,7 @@ public class Button extends Actor
         } else {
             setImage(unselected);
         }
+        //changes the chosen image with each other
     }
     
     public void unselect(){
