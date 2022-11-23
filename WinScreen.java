@@ -13,6 +13,8 @@ public class WinScreen extends World
     
     MainMenuButton b = new MainMenuButton();
     
+    private static GreenfootSound winSound;
+    
     /**
      * Constructor for objects of class WinScreen.
      * 
@@ -24,6 +26,8 @@ public class WinScreen extends World
         
         background = new GreenfootImage ("images/jenshin2.jpg");
         
+        winSound = new GreenfootSound("sounds/applause.mp3"); //instance of win sound effect
+        
         setBackground(background);
         
     }
@@ -31,10 +35,23 @@ public class WinScreen extends World
     public void act()
     {
         addObject(b, 50, 360);
-        
+
+        started();
         if (Greenfoot.mouseClicked(b)) 
         {
+            stopped();
             Greenfoot.setWorld(new LobbyWorld());
         }
+    }
+    
+    public void started()//starts the theme sound when world starts
+    {
+        winSound.playLoop();
+        winSound.setVolume(25);
+    }
+    
+    public void stopped()// stops the theme sound when paused
+    {
+        winSound.stop();
     }
 }

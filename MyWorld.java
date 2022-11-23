@@ -123,6 +123,8 @@ public class MyWorld extends World
     private SuperTextBox widgetText3;
     private SuperTextBox widgetText4;
     
+    private static GreenfootSound gameMusic;//gameplay msuic
+    
     public static void setScorTotal(int num){
         scorTotal = num;
     }
@@ -166,6 +168,10 @@ public class MyWorld extends World
         k = 0;
         e = 0;
         
+        
+        gameMusic = new GreenfootSound("sounds/NahidaMusic.mp3");//instnace of gameplay music
+        
+        
         //teams location
         if(teamNum == 2)
         {
@@ -197,6 +203,7 @@ public class MyWorld extends World
     public void act()
     {
         win();
+        started();
 
         //Teams.get_sUp();
         //showText("team 1 score: " + Games.getScoreOne(), 300, 50);
@@ -231,6 +238,8 @@ public class MyWorld extends World
             
             WinText1 w1 = new WinText1();//show team 1 wins
             gameWorld.addObject(w1, 350, 80);
+            
+            stopped();
             return;
         }
         if (Games.getScoreTwo() >= scorTotal)
@@ -240,6 +249,8 @@ public class MyWorld extends World
             
             WinText2 w2 = new WinText2();//show team 2 wins
             gameWorld.addObject(w2, 350, 80);
+            
+            stopped();
             return;
         }
         if (Games.getScoreThree() >= scorTotal)
@@ -251,7 +262,7 @@ public class MyWorld extends World
             gameWorld.addObject(w3, 350, 80);
             
             
-            
+            stopped();
             return;
         }
         if (Games.getScoreFour() >= scorTotal)
@@ -262,9 +273,21 @@ public class MyWorld extends World
             WinText4 w4 = new WinText4();//show team 4 wins
             gameWorld.addObject(w4, 350, 80);
             
+            stopped();
             return;
         }
     }
+    
+    public void started()//starts the theme sound when world starts
+    {
+        gameMusic.playLoop();
+        gameMusic.setVolume(50);
+    }
+    
+    public void stopped()// stops the theme sound when paused
+    {
+        gameMusic.stop();
+    }   
     
     public static void subK()
     {
