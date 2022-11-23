@@ -22,8 +22,10 @@ public abstract class Games extends Actor
     protected static int scoreFour = 0;
     protected static int scoreOneExtra;
     protected static int scoreTwoExtra;
+    protected static int scoreThreeExtra;
+    protected static int scoreFourExtra;
     
-    private GreenfootSound win = new GreenfootSound("gameWin.wav");
+    private GreenfootSound win = new GreenfootSound("sounds/gameWin.wav");
     
     private int deleteTimer;
     
@@ -128,6 +130,8 @@ public abstract class Games extends Actor
         }
         scoreOneExtra = scoreOne;
         scoreTwoExtra = scoreTwo;
+        scoreThreeExtra = scoreThree;
+        scoreFourExtra = scoreFour;
     }
     
     public void deleteMe (){
@@ -147,6 +151,14 @@ public abstract class Games extends Actor
     {
         return scoreTwo;
     }
+    public static int getScoreThree()
+    {
+        return scoreThree;
+    }
+    public static int getScoreFour()
+    {
+        return scoreFour;
+    }
     
     public static void resetScore()
     {
@@ -156,34 +168,37 @@ public abstract class Games extends Actor
         scoreFour = 0;
     }
     
-    
-    public static int getScoreThree()
-    {
-        return scoreThree;
-    }
-    
-    public static int getScoreFour()
-    {
-        return scoreFour;
-    }
-    
     public static int getScoreOneExtra()
     {
         return scoreOneExtra;
     }
-    
     public static int getScoreTwoExtra()
     {
         return scoreTwoExtra;
+    }
+    public static int getScoreThreeExtra()
+    {
+        return scoreThreeExtra;
+    }
+    public static int getScoreFourExtra()
+    {
+        return scoreFourExtra;
     }
     
     public static void setScoreOne(int value)
     {
         scoreOne = value;
     }
-    
     public static void setScoreTwo(int value)
     {
         scoreTwo = value;
+    }
+    public static void setScoreThree(int value)
+    {
+        scoreThree = value;
+    }
+    public static void setScoreFour(int value)
+    {
+        scoreFour = value;
     }
 }
