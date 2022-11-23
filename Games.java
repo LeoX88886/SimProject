@@ -24,20 +24,20 @@ public abstract class Games extends Actor
     protected static int scoreTwoExtra;
     protected static int scoreThreeExtra;
     protected static int scoreFourExtra;
+    protected static int dp = 0;
+    
+    protected static int sMultiplier = 1;
+    protected static int ogSMultiplier = 1;
     
     private GreenfootSound win = new GreenfootSound("sounds/gameWin.wav");
     
     private int deleteTimer;
-    
-    private static int scoreMultiplier = 5;
-    
     
     public Games()
     {
         //gameImage.scale(80,80);
         setImage(gameImage);
         
-        scoreMultiplier = 5;
         
         //scoreOneExtra = 0;
         //scoreTwoExtra = 0;
@@ -49,6 +49,10 @@ public abstract class Games extends Actor
     public void act()
     {
         // Add your action code here.
+        if(dp >= 3){
+            dp = 0;
+            Games.resetSMultiplier();
+        }
         
         if (deleteTimer > 0){
             deleteTimer--;
@@ -62,7 +66,8 @@ public abstract class Games extends Actor
             
             if(isTouching(Team1.class))
             {
-                scoreOne++;
+                scoreOne = scoreOne + (1 * sMultiplier);
+                dp++;
                 win.play();
                 getWorld().removeObject(this);
                 MyWorld.subK();
@@ -70,7 +75,8 @@ public abstract class Games extends Actor
             }
             if(isTouching(Team2.class))
             {
-                scoreTwo++;
+                scoreTwo = scoreTwo + (1 * sMultiplier);
+                dp++;
                 win.play();
                 getWorld().removeObject(this);
                 MyWorld.subK();
@@ -78,7 +84,8 @@ public abstract class Games extends Actor
             }
             if(isTouching(Team3.class))
             {
-                scoreThree++;
+                scoreThree = scoreThree + (1 * sMultiplier);
+                dp++;
                 win.play();
                 getWorld().removeObject(this);
                 MyWorld.subK();
@@ -86,7 +93,8 @@ public abstract class Games extends Actor
             }
             if(isTouching(Team4.class))
             {
-                scoreFour++;
+                scoreFour = scoreFour + (1 * sMultiplier);
+                dp++;
                 win.play();
                 getWorld().removeObject(this);
                 MyWorld.subK();
@@ -112,7 +120,14 @@ public abstract class Games extends Actor
         
     }
     
-    public static int getScoreOne()//score to record in myWorld
+    public static void setSMultiplier(int num){
+        sMultiplier = num;
+    }
+    public static void resetSMultiplier(){
+        sMultiplier = ogSMultiplier;
+    }
+    
+    public static int getScoreOne()
     {
         return scoreOne;
     }
