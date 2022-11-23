@@ -55,4 +55,9 @@ public class WinScreen extends World
     {
         winSound.stop();
     }
+    
+    public static void stopSound()// stops the win sound when paused
+    {
+        winSound.stop();
+    }
 }

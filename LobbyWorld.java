@@ -72,6 +72,7 @@ public class LobbyWorld extends World
     {
         setBackground(background.getCurrentImage());//start the animation background  
         
+        WinScreen.stopSound();
         started();//play theme song
         
         //adding the objects to the animation background

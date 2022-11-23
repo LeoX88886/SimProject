@@ -284,7 +284,7 @@ public class MyWorld extends World
     public void started()//starts the theme sound when world starts
     {
         gameMusic.playLoop();
-        gameMusic.setVolume(50);
+        gameMusic.setVolume(25);
     }
     
     public void stopped()// stops the theme sound when paused
