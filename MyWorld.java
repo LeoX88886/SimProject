@@ -151,6 +151,8 @@ public class MyWorld extends World
             showText("X: " + String.valueOf(m.getX()), 200, 200);
             showText("Y: " + String.valueOf(m.getY()), 300, 200);
         }
+        
+        win();
 
         //Teams.get_sUp();
         //showText("team 1 score: " + Games.getScoreOne(), 300, 50);
@@ -175,7 +177,7 @@ public class MyWorld extends World
         
         
         
-        if (Games.getScoreOne() >= scorTotal)
+        /*if (Games.getScoreOne() >= scorTotal)
         {
             widgetText1.update("team 1 wins");
             widgetText2.update("team 1 wins");
@@ -210,7 +212,11 @@ public class MyWorld extends World
             widgetText4.update("team 4 wins");
             Greenfoot.stop();
             return;
-        }
+        }*/
+        
+        
+        
+        
         /*if (k < numGames)
         {
             spawnGame();
@@ -234,6 +240,52 @@ public class MyWorld extends World
             e++;
         }
         
+    }
+    
+    public void win()//go to WinScreen if 
+    {
+        if (Games.getScoreOne() >= scorTotal)
+        {
+            WinScreen gameWorld = new WinScreen();
+            Greenfoot.setWorld(gameWorld);
+            
+            WinText1 w1 = new WinText1();
+            gameWorld.addObject(w1, 350, 80);
+            return;
+        }
+        if (Games.getScoreTwo() >= scorTotal)
+        {
+            WinScreen gameWorld = new WinScreen();
+            Greenfoot.setWorld(gameWorld);
+            
+            WinText2 w2 = new WinText2();
+            gameWorld.addObject(w2, 350, 80);
+            return;
+        }
+        if (Games.getScoreThree() >= scorTotal)
+        {
+            WinScreen gameWorld = new WinScreen();
+            Greenfoot.setWorld(gameWorld);
+            
+            WinText3 w3 = new WinText3();
+            gameWorld.addObject(w3, 350, 80);
+            
+            
+            
+            return;
+        }
+        if (Games.getScoreFour() >= scorTotal)
+        {
+            WinScreen gameWorld = new WinScreen();
+            Greenfoot.setWorld(gameWorld);
+            
+            WinText4 w4 = new WinText4();
+            gameWorld.addObject(w4, 350, 80);
+            
+            
+            
+            return;
+        }
     }
     
     public static void subK()
