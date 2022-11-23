@@ -52,6 +52,7 @@ public class LobbyWorld extends World
         scorTotal = 4;
         background1 = new GreenfootImage ("images/jenshin.png");
         
+        background.resume(); 
         setBackground(background1);
         
         
@@ -78,6 +79,8 @@ public class LobbyWorld extends World
         if (Greenfoot.mouseClicked(pb)) 
         {
             Greenfoot.setWorld(new MyWorld(numTeams,numGames,scorTotal));
+            
+            background.pause(); 
         }
     }
 }
