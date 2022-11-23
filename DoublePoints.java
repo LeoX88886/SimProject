@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
- * Write a description of class DoublePoints here.
+ * DoublePoints will increase the amount of points gained when a team interacts
+ * with a game, doubling the points earned for 3 games before returning
+ * to the normal +1 per game
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Justin Sin
+ * @version 1
  */
 public class DoublePoints extends Effects
 {
@@ -16,7 +17,6 @@ public class DoublePoints extends Effects
         // Add your action code here.
         effectImage.scale(50, 50);
         setImage(effectImage);
-        
         
         checkHitTeams();
         

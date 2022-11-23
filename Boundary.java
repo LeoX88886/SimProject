@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Boundary here.
+ * Was not used
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author n/a
+ * @version n/a
  */
 
 public class Boundary extends Actor

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ScreenTitle here.
+ * Image containing the words for the screen title
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author leo Xu, Tyson Pellatt
+ * @version 1
  */
 public class ScreenTitle extends Actor
 {

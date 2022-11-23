@@ -6,8 +6,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * is hitting a wall within the background of the play area.The s & sUp variables are for how fast the teams are moving and when it speeds up.
  * f is for the direction the team moves (1 is right, 2 is left, 3 is up, and 4 is down).
  * 
- * @author tyson Darius Pellatt
- * @version (a version number or a date)
+ * @author Tyson Darius Pellatt
+ * @version 1
  */
 public abstract class Teams extends Actor
 {

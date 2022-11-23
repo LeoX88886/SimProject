@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class LobbyWorld here.
+ * The "home screen" of this simulation
+ * Contains the buttons to access MyWorld(Simulation), SettingsWorld(settings)
+ * and InstructionWorld(instructions)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Leo Xu, Justin Sin, Tyson Pellatt
+ * @version 1
  */
 public class LobbyWorld extends World
 {

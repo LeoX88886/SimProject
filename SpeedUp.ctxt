@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=SpeedUp
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ SpeedUp\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Image\ heavily\ inspired\ by\ an\ item\ in\ the\ game\ "Battle\ Cats"\ by\ PONOS\r\n\ \r\n\ SpeedUp\ double\ the\ speed\ of\ the\ team\ subclass\ that\ interacts\ with\ it\r\n\ for\ 5\ seconds\r\n\ \r\n\ @author\ Justin\ Sin\r\n\ @version\ 1\r\n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=

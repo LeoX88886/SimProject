@@ -1,11 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-//Image heavily inspired by an item in  the game "Battle Cats" by PONOS
 /**
- * Write a description of class SpeedUp here.
+ * Image heavily inspired by an item in the game "Battle Cats" by PONOS
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * SpeedUp double the speed of the team subclass that interacts with it
+ * for 5 seconds
+ * 
+ * @author Justin Sin
+ * @version 1
  */
 public class SpeedUp extends Effects
 {
@@ -16,7 +17,6 @@ public class SpeedUp extends Effects
         // Add your action code here.
         effectImage.scale(50, 50);
         setImage(effectImage);
-        
         
         checkHitTeams();
         

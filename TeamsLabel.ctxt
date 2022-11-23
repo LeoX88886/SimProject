@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TeamsLabel
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ TeamsLabel\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Teams\ label\r\n\ \r\n\ @author\ Tyson\ Pellatt\r\n\ @version\ 1\r\n
 comment1.params=Banner
 comment1.target=TeamsLabel(greenfoot.GreenfootImage)
 numComments=2

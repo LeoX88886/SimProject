@@ -1,10 +1,84 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Where all the action takes place
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * In this simulation, you begin by being introduced to an animated background
+ * with 3 buttons you can choose to press, PLAY, INSTRUCTIONS and SETTINGS.
+ * 
+ * Pressing the INSTRUCTIONS button will lead you to a new world where an image
+ * filled with information of what the simulation can do will be displayed
+ * 
+ * Pressing the SETTINGS buttons will lead you to a world where you can edit
+ * the values of the # of teams spawn, # of games spawned and score required
+ * for a team to win
+ * 
+ * Pressing the START button will begin the simulation, leading you to MyWorld
+ * 
+ * MyWorld will instantly have 3-4 Effects, # of teams you selected(2 as default),
+ * # of games spawned(3 as default) on a maze map
+ * 
+ * The teams will start randomly moving, applying perks/effects when interacting
+ * with any subclass of Effects, and increasing their score by 1(2 if collected DoublePoints)
+ * until a team wins by reaching the required score
+ * 
+ * All the Game and Team subclasses act the same, with the only difference being the image
+ * 
+ * Effects:
+ * 
+ * DoublePoints: This subclass doubles the amount of points earned by all teams x2
+ * for the next 3 games the teams interact with, afterwards, it will reset and the teams
+ * will have to interact with it again to gain the buff
+ * 
+ * SpeedUp: This subclass doubles the team that interacts with it for 5 seconds
+ * 
+ * SwapPoints: this subclass swaps the points of the current teams when interacted with
+ * etc. Team 1 score: 5 -> Team 1 score: 3
+ *      Team 2 score: 7 -> Team 2 score: 5
+ *      Team 3 score: 1 -> Team 3 score: 7
+ *      Team 4 score: 3 -> Team 4 score: 1
+ *      
+ * When a team reaches the score requirement, the simulation will end and a winning
+ * screen will be displayed for whoever won, with a back button on the bottom left
+ * if the user wants to start the simulation again, bring the user back to LobbyWorld
+ * 
+ * Known Errors:
+ * (commented out): Music will repeat when a simulation is over and returns 
+ * to the main screen
+ * Effects spawn can sometimes overlap Games spawn
+ * 
+ * Credits:
+ * 
+ * Self-Made:
+ * screenTitle.png
+ * screenTitle2.png
+ * Backarrow.png
+ * backButton2.png
+ * Everything in LobbyWorld1 folder
+ * Everything in SettingButtons folder
+ * Everything in WinScreen folder
+ * 
+ * Inspired:
+ * MazeWorld.png inspired by (https://pacman.fandom.com/wiki/Pac-Man_Maze)
+ * InstructionScreen.png inspired (https://www.freepik.com/free-photos-vectors/arcade-background)
+ * SpeedUp.png, pointswap.png, pointup.png inspired by (https://battle-cats.fandom.com/wiki/Battle_Items)
+ * 
+ * Taken:
+ * jenshin.png (https://steamcommunity.com/sharedfiles/filedetails/?id=1235691433)
+ * AniBackground.gif (https://www.youtube.com/watch?v=z0uKqg7yi04)
+ * BPVector.jpg (https://www.vecteezy.com/free-vector/gaming-background)
+ * DigitalHexWall.png (https://www.freepik.com/free-photos-vectors/arcade-background)
+ * button.mp3 (https://www.zapsplat.com/?s=button+click&post_type=music&sound-effect-category-id=)
+ * NahidaMusic.mp3 (https://www.youtube.com/watch?v=byxB8G_k3DI)
+ * DoublePoints.mp3 (https://pixabay.com/sound-effects/search/8-bit/?duration=0-30c)
+ * gameWin.mp3, gameLose.wav, SpeedUp.mp3, SwapPoints.mp3 (https://freesound.org/people/LittleRobotSoundFactory/packs/16681/)(https://www.storyblocks.com/audio/search/8bit )
+ * 
+ * 
+ * 
+ * Did you notice where we put the class code and teacher name?
+ * 
+ * @author Leo Xu, Justin Sin, Tyson Pellatt
+ * @version 1
  */
 public class MyWorld extends World
 {
@@ -227,7 +301,7 @@ public class MyWorld extends World
         }        
     }
     
-    public void win()//go to WinScreen if the maxium score is hit
+    public void win()//go to WinScreen if the maximum score is hit
     {
         if (Games.getScoreOne() >= scorTotal)
         {

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Team1 here.
+ * subclass for Teams superclass, contains a different color/image of teams
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Tyson Darius Pellatt
+ * @version 1
  */
 public class Team1 extends Teams
 {

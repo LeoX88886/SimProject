@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Games here.
+ * Games superclass to create subclasses that increases points for whichever
+ * Teams subclass interacts with them
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Leo Xu
+ * @version 1
  */
 public abstract class Games extends Actor
 {
@@ -26,9 +27,10 @@ public abstract class Games extends Actor
     protected static int scoreFourExtra;
     protected static int dp = 0;
     
+    //instance of score multipliers
     protected static int sMultiplier = 1;
     protected static int ogSMultiplier = 1;
-    
+    //sound for whenever team interacts with game
     protected GreenfootSound win = new GreenfootSound("sounds/gameWin.mp3");
     
     private int deleteTimer;
@@ -38,9 +40,6 @@ public abstract class Games extends Actor
         //gameImage.scale(80,80);
         setImage(gameImage);
         win.setVolume(50);
-        
-        //scoreOneExtra = 0;
-        //scoreTwoExtra = 0;
         
         deleteTimer = -1;
         
@@ -106,6 +105,7 @@ public abstract class Games extends Actor
             //MyWorld.getNum();
             return;
         }
+        //record all the values of scoreOne-Four in extras
         scoreOneExtra = scoreOne;
         scoreTwoExtra = scoreTwo;
         scoreThreeExtra = scoreThree;
@@ -116,10 +116,9 @@ public abstract class Games extends Actor
         if (deleteTimer == -1){
             deleteTimer = 30;
         }
-        
-        
     }
     
+    //getter and setter methods for setting and resetting the score multiplier
     public static void setSMultiplier(int num){
         sMultiplier = num;
     }
@@ -127,6 +126,7 @@ public abstract class Games extends Actor
         sMultiplier = ogSMultiplier;
     }
     
+    //getter method for retrievely scores
     public static int getScoreOne()
     {
         return scoreOne;
@@ -153,31 +153,29 @@ public abstract class Games extends Actor
         scoreFour = 0;
     }
     
+    //getter methods for retrievely extra scores
     public static int getScoreOneExtra()
     {
         return scoreOneExtra;
     }
-    
     public static int getScoreTwoExtra()
     {
         return scoreTwoExtra;
     }
-    
     public static int getScoreThreeExtra()
     {
         return scoreThreeExtra;
     }
-    
     public static int getScoreFourExtra()
     {
         return scoreFourExtra;
     }
     
+    //setter methods for setting the value of each score(mainly for SwapPoints)
     public static void setScoreOne(int value)
     {
         scoreOne = value;
     }
-    
     public static void setScoreTwo(int value)
     {
         scoreTwo = value;
@@ -186,7 +184,6 @@ public abstract class Games extends Actor
     {
         scoreThree = value;
     }
-    
     public static void setScoreFour(int value)
     {
         scoreFour = value;

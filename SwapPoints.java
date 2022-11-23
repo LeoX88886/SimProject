@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
- * Write a description of class SwapPoints here.
+ * SwapPoints essentially swaps the score of all the teams when interacted
+ * by a team subclass
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Justin Sin
+ * @version 1
  */
 public class SwapPoints extends Effects
 {
@@ -17,7 +17,6 @@ public class SwapPoints extends Effects
         // Add your action code here.
         effectImage.scale(50, 50);
         setImage(effectImage);
-        
         
         checkHitTeams();
         

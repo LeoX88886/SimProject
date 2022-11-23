@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class InstructionsWorld here.
+ * A world created to host an image
+ * image is that of the instructions of how this simulation works
+ * has a back button to return to LobbyWorld (Homescreen)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Justin Sin
+ * @version 1
  */
 public class InstructionsWorld extends World
 {

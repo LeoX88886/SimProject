@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ScreenTitleTwo
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ScreenTitle\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Image\ containing\ the\ words\ for\ the\ second\ screen\ title\r\n\ \r\n\ @author\ leo\ Xu,\ Tyson\ Pellatt\r\n\ @version\ 1\r\n
 comment1.params=
 comment1.target=ScreenTitleTwo()
 comment2.params=

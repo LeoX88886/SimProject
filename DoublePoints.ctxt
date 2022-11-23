@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=DoublePoints
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ DoublePoints\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ DoublePoints\ will\ increase\ the\ amount\ of\ points\ gained\ when\ a\ team\ interacts\r\n\ with\ a\ game,\ doubling\ the\ points\ earned\ for\ 3\ games\ before\ returning\r\n\ to\ the\ normal\ +1\ per\ game\r\n\ \r\n\ @author\ Justin\ Sin\r\n\ @version\ 1\r\n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=

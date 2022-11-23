@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Games
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Games\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Games\ superclass\ to\ create\ subclasses\ that\ increases\ points\ for\ whichever\r\n\ Teams\ subclass\ interacts\ with\ them\r\n\ \r\n\ @author\ Leo\ Xu\r\n\ @version\ 1\r\n
 comment1.params=
 comment1.target=Games()
 comment10.params=

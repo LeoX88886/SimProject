@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PlayButton here.
+ * Creates a button with the word "Instruction" on it
+ * when pressed, brings the user to InstructionWorld
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author leo Xu(code), Justin Sin(image)
+ * @version 1
  */
 public class InstructionButton extends Actor
 {

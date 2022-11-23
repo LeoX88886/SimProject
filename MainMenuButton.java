@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MainMenuButton here.
+ * A back button that returns the user to LobbyWorld when pressed
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Tyson Pellatt
+ * @version 1
  */
 public class MainMenuButton extends Actor
 {

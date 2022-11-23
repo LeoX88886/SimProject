@@ -1,10 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class SettingsWorld here.
+ * A world to change the settings of MyWorld
+ * Can change # of Games spawned
+ *            # of Teams spawned
+ *            Score required for a Team to win
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * 
+ * @author Tyson Pellatt
+ * @version 1
  */
 public class SettingsWorld extends World
 {

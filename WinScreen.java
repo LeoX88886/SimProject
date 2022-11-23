@@ -1,22 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class WinScreen here.
+ * Displays the win screen for whichever team won the simulation
+ * (reaching required score stated in settings)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Leo Xu
+ * @version 1
  */
 public class WinScreen extends World
 {
     private static GreenfootImage background = new GreenfootImage ("images/jenshin2.jpg");
     
-    
     MainMenuButton b = new MainMenuButton();
-    
-    
-    
-    
-    
     
     /**
      * Constructor for objects of class WinScreen.

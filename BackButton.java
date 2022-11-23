@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PlayButton here.
+ * An image and object used to return to the previous world
+ * etc. InstructionWorld -> LobbyWorld
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Tyson Pellatt
+ * @version 1
  */
 public class BackButton extends Actor
 {

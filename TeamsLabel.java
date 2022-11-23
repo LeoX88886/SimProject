@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TeamsLabel here.
+ * Teams label
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Tyson Pellatt
+ * @version 1
  */
 public class TeamsLabel extends Actor
 {

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class WinText1 here.
+ * Displays this text when team 1 reaches the score requirement for a win
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Leo Xu, Tyson Pellatt
+ * @version 1
  */
 public class WinText1 extends Actor
 {
