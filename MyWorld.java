@@ -91,7 +91,7 @@ public class MyWorld extends World
     protected static int gameNum = 0;
     protected static int teamNum = 2;
     protected static int scorTotal = 4;
-    protected int numGames = 3;
+    protected int numGames = 53;
     protected int numEffects = 3;
 
     //team instance
@@ -140,7 +140,8 @@ public class MyWorld extends World
 
 
         this.teamNum = teamNum;
-        
+        this.numGames = numGames;
+        this.scorTotal = scorTotal;
         Games.resetScore();
         
         //text box code
@@ -211,15 +212,15 @@ public class MyWorld extends World
         
         widgetText4.update("team 4 score: " + Games.getScoreFour());
         
-        if (k < 4)//respawns games
+        if (k < numGames)//respawns games
         {
             spawnGame();
-            k++;    
+            ;    
         }
-        if (e < 4)//respawns effects
+        if (e < numEffects)//respawns effects
         {
             spawnEffect();
-            e++;
+            ;
         }        
     }
     
@@ -295,7 +296,7 @@ public class MyWorld extends World
         Game4 g4 = new Game4();
         int gi = Greenfoot.getRandomNumber(15);
         int GameImg = Greenfoot.getRandomNumber(4)+1;
-        numGames++;
+        k++;
         
         if(gi == 0)
         {
@@ -376,7 +377,7 @@ public class MyWorld extends World
         SpeedUp e2 = new SpeedUp();
         SwapPoints e3 = new SwapPoints();
         int ei = Greenfoot.getRandomNumber(15);
-        numEffects++;
+        e++;
         
         if(ei == 0)
         {
