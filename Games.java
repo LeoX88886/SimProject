@@ -37,7 +37,7 @@ public abstract class Games extends Actor
     {
         //gameImage.scale(80,80);
         setImage(gameImage);
-        win.setVolume(70);
+        win.setVolume(50);
         
         //scoreOneExtra = 0;
         //scoreTwoExtra = 0;

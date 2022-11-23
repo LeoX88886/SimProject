@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class DoublePoints extends Effects
 {
     private GreenfootImage effectImage = new GreenfootImage("images/Effects/pointup.png");
+    private GreenfootSound dp = new GreenfootSound("sounds/DoublePoints.mp3");
     
     public void act()
     {
@@ -28,6 +29,8 @@ public class DoublePoints extends Effects
         Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
             //do something when hitting teams
+            dp.setVolume(50);
+            dp.play();
             Games.setSMultiplier(2);
             MyWorld.subK();
             delete = true;

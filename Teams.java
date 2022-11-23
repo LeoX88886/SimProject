@@ -23,6 +23,8 @@ public abstract class Teams extends Actor
     protected boolean speeding = false;
     private static boolean doublePoints = false;
     
+    protected GreenfootSound speedup = new GreenfootSound("sounds/SpeedUp.mp3");
+    
     //timer variable for speedup
     private SimpleTimer timer = new SimpleTimer();
 
@@ -210,6 +212,8 @@ public abstract class Teams extends Actor
         SpeedUp su = (SpeedUp)getOneObjectAtOffset(0, 0, SpeedUp.class);
         if(su != null){
             timer.mark();
+            speedup.setVolume(50);
+            speedup.play();
             MyWorld.subK();
             su.removeThis();
             speedingUp();

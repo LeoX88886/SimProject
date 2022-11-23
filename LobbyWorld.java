@@ -19,6 +19,7 @@ public class LobbyWorld extends World
     private int numTeams;
     private int numGames;
     private int scorTotal = 3;
+    private int playMusic;
     
     /**
     private int scor1;
@@ -32,7 +33,10 @@ public class LobbyWorld extends World
     InstructionButton ib = new InstructionButton(); //intruction button
     ScreenTitle st = new ScreenTitle(); //Title "Arcade Siumlation
     ScreenTitleTwo stt = new ScreenTitleTwo();// Title groups number, class, teachers full name
-
+    //sounds for button press
+    private GreenfootSound button = new GreenfootSound("sounds/button.mp3");
+    private GreenfootSound music = new GreenfootSound("sounds/NahidaMusic.mp3");
+    
     public LobbyWorld (int numTeams, int numGames, int scorTotal){
         this(); // regular no-parameter constructor
         this.numTeams = numTeams;
@@ -45,8 +49,15 @@ public class LobbyWorld extends World
     public LobbyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(700, 400, 1); 
-
+        super(700, 400, 1);
+        /* Keeps repeating
+        music.setVolume(15);
+        if(playMusic == 0){
+            music.play();
+        }
+        playMusic++;
+        */
+        
         numTeams = 2;
         numGames = 3;
         scorTotal = 4;
@@ -70,9 +81,13 @@ public class LobbyWorld extends World
 
         if (Greenfoot.mouseClicked(pb))// go to myWorld when playbutton is pressed
         {
+            /* Creates a weird noise when pressed(removed)
+            button.setVolume(50);
+            button.play();
+            */
             Greenfoot.setWorld(new MyWorld(numTeams,numGames,scorTotal));
             
-            background.pause();//stops the aniamtion
+            background.pause();//stops the animation
         }
     }
 }

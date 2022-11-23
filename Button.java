@@ -11,6 +11,8 @@ public class Button extends Actor
     protected int value;
     protected GreenfootImage unselected; //= new GreenfootImage("images/SettingButtons/Choose3.png");
     protected GreenfootImage selected; //= new GreenfootImage("images/SettingButtons/3Team's.png");
+    private GreenfootSound button = new GreenfootSound("sounds/button.mp3");
+    
     public Button(int value, GreenfootImage unselected, GreenfootImage selected)
     {
         //value is how much is being changed (ex. 2 teams being changed to 4 teams), and a selected & unselected picture

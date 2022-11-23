@@ -19,16 +19,15 @@ public class InstructionsWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        
         background = new GreenfootImage ("images/InstructionsScreen.png");
         setBackground (this.background);
         addObject(b, 60, 375);
-        
-        
     }
     
     public void act(){
         if (Greenfoot.mouseClicked(b)) 
-        {
+        {   
             Greenfoot.setWorld(new LobbyWorld());
         }
     }

@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SwapPoints extends Effects
 {
     private GreenfootImage effectImage = new GreenfootImage("images/Effects/pointswap.png");
+    private GreenfootSound sp = new GreenfootSound("sounds/SwapPoints.mp3");
     private static int numTeams;
     
     public void act()
@@ -33,14 +34,14 @@ public class SwapPoints extends Effects
             if(numTeams == 2){
                 int s1 = Games.getScoreOneExtra();
                 int s2 = Games.getScoreTwoExtra();
-                
+            
                 Games.setScoreOne(s2);
                 Games.setScoreTwo(s1);
             }else if(numTeams == 3){
                 int s1 = Games.getScoreOneExtra();
                 int s2 = Games.getScoreTwoExtra();
                 int s3 = Games.getScoreThreeExtra();
-                
+            
                 Games.setScoreOne(s3);
                 Games.setScoreTwo(s1);
                 Games.setScoreThree(s2);
@@ -48,14 +49,15 @@ public class SwapPoints extends Effects
                 int s1 = Games.getScoreOneExtra();
                 int s2 = Games.getScoreTwoExtra();
                 int s3 = Games.getScoreThreeExtra();
-                int s4 = Games.getScoreFourExtra();
-                
+                int s4 = Games.getScoreFourExtra();                
                 Games.setScoreOne(s4);
                 Games.setScoreTwo(s1);
                 Games.setScoreThree(s2);
                 Games.setScoreFour(s3);
             }
             
+            sp.setVolume(50);
+            sp.play();
             MyWorld.subK();
             delete = true;
             return true;

@@ -17,6 +17,10 @@ public class SettingsWorld extends World
     ButtonGroup numTeamsButton;
     ButtonGroup numGamesButton;
     ButtonGroup numScorButton;
+    //sound for button press
+    private GreenfootSound button = new GreenfootSound("sounds/button.mp3");
+    
+    
     public SettingsWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -61,6 +65,10 @@ public class SettingsWorld extends World
     public void act () {
         if (Greenfoot.mouseClicked(b)) 
         {
+            /*
+            button.setVolume(50);
+            button.play();
+            */
             Greenfoot.setWorld(new LobbyWorld(numTeamsButton.getCurrentValue(),numGamesButton.getCurrentValue(), numScorButton.getCurrentValue()));
             SwapPoints.setNumTeams(numTeamsButton.getCurrentValue());
         }
