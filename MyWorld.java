@@ -368,7 +368,7 @@ public class MyWorld extends World
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
         }
         if(gi == 10){
-            addObject(g3,980, 240);
+            addObject(g3,950, 200);
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
         }
         if(gi == 11){
@@ -414,7 +414,7 @@ public class MyWorld extends World
         }
         if(ei == 3)
         {
-            addObject(e1,700, 450);
+            addObject(e1,600, 450);
         }
         if(ei == 4)
         {
@@ -426,7 +426,7 @@ public class MyWorld extends World
         }
         if(ei == 6)
         {
-            addObject(e1,550, 350);
+            addObject(e1,580, 350);
         }
         if(ei == 7)
         {
@@ -439,16 +439,16 @@ public class MyWorld extends World
             addObject(e1,780, 170);
         }
         if(ei == 10){
-            addObject(e2,980, 240);
+            addObject(e2,960, 240);
         }
         if(ei == 11){
-            addObject(e3,500, 640);
+            addObject(e3,500, 580);
         }
         if(ei == 12){
             addObject(e1,700, 680);
         }
         if(ei == 13){
-            addObject(e2,755, 540);
+            addObject(e2,755, 500);
         }
         if(ei == 14){
             addObject(e3,250, 710);
