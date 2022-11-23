@@ -57,14 +57,12 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 800, 1);
 
-        setPaintOrder(MainCharacter.class, Teams.class, Games.class, Effects.class);
 
         background = new GreenfootImage ("images/MazeWorld.png");
         background.scale(1024, 800);
         setBackground (background);
 
-        MainCharacter main = new MainCharacter();//spawn MainCharater
-        addObject(main, 200, 200);
+        
 
         this.teamNum = teamNum;
         

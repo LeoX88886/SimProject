@@ -17,7 +17,7 @@ public class SpeedUp extends Effects
         effectImage.scale(50, 50);
         setImage(effectImage);
         
-        checkHitMC();
+        
         checkHitTeams();
         
         if(delete){
@@ -25,17 +25,7 @@ public class SpeedUp extends Effects
             removeThis();
         }
     }
-    //Check if hitting MainCharacter
-    public boolean checkHitMC(){
-        MainCharacter mc = (MainCharacter)getOneObjectAtOffset(0, 0, MainCharacter.class);
-        if(mc != null){
-            mc.speedingUp();
-            MyWorld.subK();
-            delete = true;
-            return true;
-        }
-        return false;
-    }
+    
     //Check if hitting team
     public boolean checkHitTeams(){
         /*Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);

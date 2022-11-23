@@ -71,15 +71,6 @@ public abstract class Games extends Actor
             scoreTwo--;
         }
         
-        if(isTouching(MainCharacter.class))
-        {
-            int chance = Greenfoot.getRandomNumber(3);
-            
-            if (chance == 0)
-            {
-                scoreOne = scoreOne + scoreMultiplier;
-            }
-        }
         if (deleteTimer > 0){
             deleteTimer--;
         }
