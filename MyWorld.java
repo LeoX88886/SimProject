@@ -181,30 +181,6 @@ public class MyWorld extends World
             addObject(t4, 948, 734);
         }
         
-        
-        //games loction
-        /*addObject(g, 360, 270);
-
-        addObject(g2, 460, 80);
-        g2.setImage(new GreenfootImage ("images/GamesIcon/game5.png"));
-
-        addObject(g3, 760, 500);
-        g3.setImage(new GreenfootImage ("images/GamesIcon/game3.png"));
-
-        addObject(g4, 460, 740);
-        g4.setImage(new GreenfootImage ("images/GamesIcon/game4.png"));*/
-
-        //spawnGame();
-        //spawnGame();
-        //spawnGame();
-
-        //effect location
-        /**
-        addObject(dp, 300, 100);
-        addObject(su, 300, 200);
-        addObject(sp, 300, 300);
-        */
-        
     }
     
     public int setTeams(int x)
@@ -235,61 +211,7 @@ public class MyWorld extends World
         
         widgetText4.update("team 4 score: " + Games.getScoreFour());
         
-        //if Games.grtscoreOne = 100
-        // setWorld to winWorld
-        
-        
-        /*if (Games.getScoreOne() >= scorTotal)
-        {
-            widgetText1.update("team 1 wins");
-            widgetText2.update("team 1 wins");
-            widgetText3.update("team 1 wins");
-            widgetText4.update("team 1 wins");
-            Greenfoot.stop();
-            return;
-        }
-        if (Games.getScoreTwo() >= scorTotal)
-        {
-            widgetText1.update("team 2 wins");
-            widgetText2.update("team 2 wins");
-            widgetText3.update("team 2 wins");
-            widgetText4.update("team 2 wins");
-            Greenfoot.stop();
-            return;
-        }
-        if (Games.getScoreThree() >= scorTotal)
-        {
-            widgetText1.update("team 3 wins");
-            widgetText2.update("team 3 wins");
-            widgetText3.update("team 3 wins");
-            widgetText4.update("team 3 wins");
-            Greenfoot.stop();
-            return;
-        }
-        if (Games.getScoreFour() >= scorTotal)
-        {
-            widgetText1.update("team 4 wins");
-            widgetText2.update("team 4 wins");
-            widgetText3.update("team 4 wins");
-            widgetText4.update("team 4 wins");
-            Greenfoot.stop();
-            return;
-        }*/
-        
-        
-        /*if (k < numGames)
-        {
-            spawnGame();
-            k++;    
-        }
-        /**
-        if (e < numEffects)
-        {
-            spawnEffect();
-            e++;
-        }*/
-        
-         if (k < 4)//respawns games
+        if (k < 4)//respawns games
         {
             spawnGame();
             k++;    
