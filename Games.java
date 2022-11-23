@@ -33,7 +33,7 @@ public abstract class Games extends Actor
     //sound for whenever team interacts with game
     protected GreenfootSound win = new GreenfootSound("sounds/gameWin.mp3");
     
-    private int deleteTimer;
+    protected int deleteTimer;
     
     public Games()
     {

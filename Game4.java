@@ -18,5 +18,11 @@ public class Game4 extends Games
         // Add your action code here.
         setImage(teamImage);
         super.act();
+        deleteMe();
+    }
+    public void deleteMe (){
+        if (deleteTimer == -1){
+            deleteTimer = 45;
+        }
     }
 }
