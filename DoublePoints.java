@@ -28,6 +28,7 @@ public class DoublePoints extends Effects
         MainCharacter mc = (MainCharacter)getOneObjectAtOffset(0, 0, MainCharacter.class);
         if(mc != null){
             //do something when hitting MC
+            MyWorld.subK();
             delete = true;
             return true;
         }
@@ -38,6 +39,7 @@ public class DoublePoints extends Effects
         Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
             //do something when hitting teams
+            MyWorld.subK();
             delete = true;
             return true;
         }

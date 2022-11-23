@@ -206,7 +206,7 @@ public abstract class Teams extends Actor
         SpeedUp su = (SpeedUp)getOneObjectAtOffset(0, 0, SpeedUp.class);
         if(su != null){
             timer.mark();
-            
+            MyWorld.subK();
             su.removeThis();
             speedingUp();
             return true;

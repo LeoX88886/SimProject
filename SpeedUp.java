@@ -30,6 +30,7 @@ public class SpeedUp extends Effects
         MainCharacter mc = (MainCharacter)getOneObjectAtOffset(0, 0, MainCharacter.class);
         if(mc != null){
             mc.speedingUp();
+            MyWorld.subK();
             delete = true;
             return true;
         }

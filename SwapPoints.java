@@ -44,6 +44,7 @@ public class SwapPoints extends Effects
             int s2 = Games.getScoreTwoExtra();
             Games.setScoreOne(s2);
             Games.setScoreTwo(s1);
+            MyWorld.subK();
             delete = true;
             return true;
         }

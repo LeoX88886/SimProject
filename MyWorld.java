@@ -37,8 +37,8 @@ public class MyWorld extends World
     SpeedUp su = new SpeedUp();
     SwapPoints sp = new SwapPoints();
 
-    private static int k;
-    private static int e;
+    private static int k = 0 ;
+    private static int e = 0;
     //textbox
     private Font funFont, boringFont;
     
@@ -169,22 +169,22 @@ public class MyWorld extends World
         
         //if Games.grtscoreOne = 100
         // setWorld to winWorld
-        if (Games.getScoreOne() == scorTotal)
+        if (Games.getScoreOne() >= scorTotal)
         {
             Greenfoot.stop();
             return;
         }
-        if (Games.getScoreTwo() == scorTotal)
+        if (Games.getScoreTwo() >= scorTotal)
         {
             Greenfoot.stop();
             return;
         }
-        if (Games.getScoreThree() == scorTotal)
+        if (Games.getScoreThree() >= scorTotal)
         {
             Greenfoot.stop();
             return;
         }
-        if (Games.getScoreFour() == scorTotal)
+        if (Games.getScoreFour() >= scorTotal)
         {
             Greenfoot.stop();
             return;
@@ -192,9 +192,7 @@ public class MyWorld extends World
         if (k < numGames)
         {
             spawnGame();
-            
-            k++;
-            
+            k++;    
         }
         if (e < numEffects)
         {
@@ -213,7 +211,15 @@ public class MyWorld extends World
     {
         return k;
     }
+    public static void subE()
+    {
+        e = e -1;
+    }
     
+    public static int getE()
+    {
+        return e;
+    }
 
     public void spawnGame()
     {
@@ -223,7 +229,7 @@ public class MyWorld extends World
         Game4 g4 = new Game4();
         int gi = Greenfoot.getRandomNumber(15);
         int GameImg = Greenfoot.getRandomNumber(4)+1;
-        numEffects++;
+        numGames++;
         
         if(gi == 0)
         {
@@ -300,68 +306,67 @@ public class MyWorld extends World
     }
     public void spawnEffect()
     {
-        DoublePoints g1 = new DoublePoints();
-        SpeedUp g2 = new SpeedUp();
-        SwapPoints g3 = new SwapPoints();
-        int gi = Greenfoot.getRandomNumber(15);
-        int GameImg = Greenfoot.getRandomNumber(4)+1;
-        gameNum++;
+        DoublePoints e1 = new DoublePoints();
+        SpeedUp e2 = new SpeedUp();
+        SwapPoints e3 = new SwapPoints();
+        int ei = Greenfoot.getRandomNumber(15);
+        numEffects++;
         
-        if(gi == 0)
+        if(ei == 0)
         {
-            addObject(g1, 450, 270);
+            addObject(e1, 450, 270);
         }
-        if(gi == 1)
+        if(ei == 1)
         {
-            addObject(g2, 300, 650);
+            addObject(e2, 300, 650);
         }
-        if(gi == 2)
+        if(ei == 2)
         {
-            addObject(g3, 230, 650);
+            addObject(e3, 230, 650);
         }
-        if(gi == 3)
+        if(ei == 3)
         {
-            addObject(g1,700, 450);
+            addObject(e1,700, 450);
         }
-        if(gi == 4)
+        if(ei == 4)
         {
-            addObject(g2,575, 650);
+            addObject(e2,575, 650);
         }
-        if(gi == 5)
+        if(ei == 5)
         {
-            addObject(g3,300, 650);
+            addObject(e3,300, 650);
         }
-        if(gi == 6)
+        if(ei == 6)
         {
-            addObject(g1,550, 350);
+            addObject(e1,550, 350);
         }
-        if(gi == 7)
+        if(ei == 7)
         {
-            addObject(g2,675, 325);
+            addObject(e2,675, 325);
         }
-        if(gi == 8){
-            addObject(g3,720, 440);
+        if(ei == 8){
+            addObject(e3,720, 440);
         }
-        if(gi == 9){
-            addObject(g1,780, 170);
+        if(ei == 9){
+            addObject(e1,780, 170);
         }
-        if(gi == 10){
-            addObject(g2,980, 240);
+        if(ei == 10){
+            addObject(e2,980, 240);
         }
-        if(gi == 11){
-            addObject(g3,500, 640);
+        if(ei == 11){
+            addObject(e3,500, 640);
         }
-        if(gi == 12){
-            addObject(g1,700, 680);
+        if(ei == 12){
+            addObject(e1,700, 680);
         }
-        if(gi == 13){
-            addObject(g2,755, 540);
+        if(ei == 13){
+            addObject(e2,755, 540);
         }
-        if(gi == 14){
-            addObject(g3,250, 710);
+        if(ei == 14){
+            addObject(e3,250, 710);
         }
-        if(gi == 15){
-            addObject(g1,200, 250);
+        if(ei == 15){
+            addObject(e1,200, 250);
         }
     }
 }
