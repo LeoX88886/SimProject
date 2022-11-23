@@ -126,10 +126,11 @@ public class MyWorld extends World
         //spawnGame();
 
         //effect location
+        /**
         addObject(dp, 300, 100);
         addObject(su, 300, 200);
         addObject(sp, 300, 300);
-        
+        */
         
     }
     public int setTeams(int x)
@@ -199,6 +200,7 @@ public class MyWorld extends World
             spawnGame();
             k++;    
         }
+        /**
         if (e < numEffects)
         {
             spawnEffect();
@@ -215,7 +217,7 @@ public class MyWorld extends World
             spawnEffect();
             e++;
         }
-        
+        */
     }
     
     public static void subK()
