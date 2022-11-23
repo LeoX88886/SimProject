@@ -177,21 +177,37 @@ public class MyWorld extends World
         
         if (Games.getScoreOne() >= scorTotal)
         {
+            widgetText1.update("team 1 wins");
+            widgetText2.update("team 1 wins");
+            widgetText3.update("team 1 wins");
+            widgetText4.update("team 1 wins");
             Greenfoot.stop();
             return;
         }
         if (Games.getScoreTwo() >= scorTotal)
         {
+            widgetText1.update("team 2 wins");
+            widgetText2.update("team 2 wins");
+            widgetText3.update("team 2 wins");
+            widgetText4.update("team 2 wins");
             Greenfoot.stop();
             return;
         }
         if (Games.getScoreThree() >= scorTotal)
         {
+            widgetText1.update("team 3 wins");
+            widgetText2.update("team 3 wins");
+            widgetText3.update("team 3 wins");
+            widgetText4.update("team 3 wins");
             Greenfoot.stop();
             return;
         }
         if (Games.getScoreFour() >= scorTotal)
         {
+            widgetText1.update("team 4 wins");
+            widgetText2.update("team 4 wins");
+            widgetText3.update("team 4 wins");
+            widgetText4.update("team 4 wins");
             Greenfoot.stop();
             return;
         }
