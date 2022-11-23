@@ -233,47 +233,50 @@ public class MyWorld extends World
     {
         if (Games.getScoreOne() >= scorTotal)
         {
+            stopped();
+            
             WinScreen gameWorld = new WinScreen();
             Greenfoot.setWorld(gameWorld);
             
             WinText1 w1 = new WinText1();//show team 1 wins
             gameWorld.addObject(w1, 350, 80);
             
-            stopped();
             return;
         }
         if (Games.getScoreTwo() >= scorTotal)
         {
+            stopped();
+            
             WinScreen gameWorld = new WinScreen();
             Greenfoot.setWorld(gameWorld);
             
             WinText2 w2 = new WinText2();//show team 2 wins
             gameWorld.addObject(w2, 350, 80);
             
-            stopped();
             return;
         }
         if (Games.getScoreThree() >= scorTotal)
         {
+            stopped();
+            
             WinScreen gameWorld = new WinScreen();
             Greenfoot.setWorld(gameWorld);
             
             WinText3 w3 = new WinText3();//show team 3 wins
             gameWorld.addObject(w3, 350, 80);
             
-            
-            stopped();
             return;
         }
         if (Games.getScoreFour() >= scorTotal)
         {
+            stopped();
+            
             WinScreen gameWorld = new WinScreen();
             Greenfoot.setWorld(gameWorld);
             
             WinText4 w4 = new WinText4();//show team 4 wins
             gameWorld.addObject(w4, 350, 80);
             
-            stopped();
             return;
         }
     }
@@ -287,7 +290,12 @@ public class MyWorld extends World
     public void stopped()// stops the theme sound when paused
     {
         gameMusic.stop();
-    }   
+    }
+    
+    public static void stopMusic()// stops the theme sound when paused
+    {
+        gameMusic.stop();
+    }
     
     public static void subK()
     {

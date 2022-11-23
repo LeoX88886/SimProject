@@ -26,7 +26,7 @@ public class WinScreen extends World
         
         background = new GreenfootImage ("images/jenshin2.jpg");
         
-        winSound = new GreenfootSound("sounds/applause.mp3"); //instance of win sound effect
+        winSound = new GreenfootSound("sounds/applause.wav"); //instance of win sound effect
         
         setBackground(background);
         
@@ -34,6 +34,7 @@ public class WinScreen extends World
     
     public void act()
     {
+        MyWorld.stopMusic();
         addObject(b, 50, 360);
 
         started();
@@ -47,7 +48,7 @@ public class WinScreen extends World
     public void started()//starts the theme sound when world starts
     {
         winSound.playLoop();
-        winSound.setVolume(25);
+        winSound.setVolume(50);
     }
     
     public void stopped()// stops the theme sound when paused
