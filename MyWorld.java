@@ -214,13 +214,11 @@ public class MyWorld extends World
         
         if (k < numGames)//respawns games
         {
-            spawnGame();
-            ;    
+            spawnGame();    
         }
         if (e < numEffects)//respawns effects
         {
             spawnEffect();
-            ;
         }        
     }
     
