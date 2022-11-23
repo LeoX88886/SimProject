@@ -22,13 +22,6 @@ public class LobbyWorld extends World
     private int numGames;
     private int scorTotal = 3;
     private int playMusic;
-    
-    /**
-    private int scor1;
-    private int scor2;
-    private int scor3;
-    private int scor4;
-    */
    
     PlayButton pb = new PlayButton();//play button
     SettingButton sb = new SettingButton();// setting button
@@ -38,6 +31,8 @@ public class LobbyWorld extends World
     //sounds for button press
     private GreenfootSound button = new GreenfootSound("sounds/button.mp3");
     private GreenfootSound music = new GreenfootSound("sounds/NahidaMusic.mp3");
+    
+    private GreenfootSound themeSound;
     
     public LobbyWorld (int numTeams, int numGames, int scorTotal){
         this(); // regular no-parameter constructor
@@ -60,6 +55,8 @@ public class LobbyWorld extends World
         playMusic++;
         */
         
+       themeSound = new GreenfootSound("sounds/NahidaMusic.mp3"); //instance of ambient sound effect
+
         numTeams = 2;
         numGames = 3;
         scorTotal = 4;
@@ -73,6 +70,8 @@ public class LobbyWorld extends World
     public void act()
     {
         setBackground(background.getCurrentImage());//start the animation background  
+        
+        started();//play theme song
         
         //adding the objects to the animation background
         addObject(pb, 210, 300);
@@ -90,6 +89,18 @@ public class LobbyWorld extends World
             Greenfoot.setWorld(new MyWorld(numTeams,numGames,scorTotal));
             
             background.pause();//stops the animation
+            stopped(); //stop music
         }
+    }
+    
+    public void started()//starts the ambient sound when world starts
+    {
+        themeSound.play();
+        themeSound.setVolume(50);
+    }
+    
+    public void stopped()// stops the ambient sound when paused
+    {
+        themeSound.stop();
     }
 }
