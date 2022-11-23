@@ -37,11 +37,12 @@ public class MyWorld extends World
     SpeedUp su = new SpeedUp();
     SwapPoints sp = new SwapPoints();
 
+    //spawn instance
     private static int k = 0 ;
     private static int e = 0;
-    //textbox
-    private Font funFont, boringFont;
     
+    //textbox instance
+    private Font funFont, boringFont;
     
     private SuperTextBox widgetText1;
     private SuperTextBox widgetText2;
@@ -57,18 +58,14 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 800, 1);
 
-
         background = new GreenfootImage ("images/MazeWorld.png");
         background.scale(1024, 800);
         setBackground (background);
 
-        
 
         this.teamNum = teamNum;
         
         Games.resetScore();
-        
-        
         
         //text box code
         
@@ -88,7 +85,7 @@ public class MyWorld extends World
         widgetText4 = new SuperTextBox ("Testing 123",  funFont, 200);
         addObject (widgetText4, 720, 20);
         
-        
+        //for reseting game and effect spawn value
         k = 0;
         e = 0;
         
@@ -109,8 +106,6 @@ public class MyWorld extends World
         }
         
         
-        
-
         //games loction
         /*addObject(g, 360, 270);
 
@@ -135,15 +130,16 @@ public class MyWorld extends World
         */
         
     }
+    
     public int setTeams(int x)
     {
         teamNum = x;
         return teamNum;
     }
-    public static int getNum()
+    /*public static int getNum()
     {
         return gameNum--;
-    }
+    }*/
 
     public void act()
     {
@@ -153,9 +149,8 @@ public class MyWorld extends World
         //showText("team 1 score: " + Games.getScoreOne(), 300, 50);
         //showText("team 2 score: " + Games.getScoreTwo(), 500, 50);
         
-        
-        
-        //textbox
+
+        //textbox updates for score
         widgetText1.update("team 1 score: " + Games.getScoreOne());
         
         widgetText2.update("team 2 score: " + Games.getScoreTwo());
@@ -166,9 +161,6 @@ public class MyWorld extends World
         
         //if Games.grtscoreOne = 100
         // setWorld to winWorld
-        
-        
-        
         
         
         /*if (Games.getScoreOne() >= scorTotal)
@@ -209,8 +201,6 @@ public class MyWorld extends World
         }*/
         
         
-        
-        
         /*if (k < numGames)
         {
             spawnGame();
@@ -223,27 +213,26 @@ public class MyWorld extends World
             e++;
         }*/
         
-         if (k < 4)
+         if (k < 4)//respawns games
         {
             spawnGame();
             k++;    
         }
-        if (e < 4)
+        if (e < 4)//respawns effects
         {
             spawnEffect();
             e++;
-        }
-        
+        }        
     }
     
-    public void win()//go to WinScreen if 
+    public void win()//go to WinScreen if the maxium score is hit
     {
         if (Games.getScoreOne() >= scorTotal)
         {
             WinScreen gameWorld = new WinScreen();
             Greenfoot.setWorld(gameWorld);
             
-            WinText1 w1 = new WinText1();
+            WinText1 w1 = new WinText1();//show team 1 wins
             gameWorld.addObject(w1, 350, 80);
             return;
         }
@@ -252,7 +241,7 @@ public class MyWorld extends World
             WinScreen gameWorld = new WinScreen();
             Greenfoot.setWorld(gameWorld);
             
-            WinText2 w2 = new WinText2();
+            WinText2 w2 = new WinText2();//show team 2 wins
             gameWorld.addObject(w2, 350, 80);
             return;
         }
@@ -261,7 +250,7 @@ public class MyWorld extends World
             WinScreen gameWorld = new WinScreen();
             Greenfoot.setWorld(gameWorld);
             
-            WinText3 w3 = new WinText3();
+            WinText3 w3 = new WinText3();//show team 3 wins
             gameWorld.addObject(w3, 350, 80);
             
             
@@ -273,7 +262,7 @@ public class MyWorld extends World
             WinScreen gameWorld = new WinScreen();
             Greenfoot.setWorld(gameWorld);
             
-            WinText4 w4 = new WinText4();
+            WinText4 w4 = new WinText4();//show team 4 wins
             gameWorld.addObject(w4, 350, 80);
             
             
@@ -291,6 +280,7 @@ public class MyWorld extends World
     {
         return k;
     }
+    
     public static void subE()
     {
         e = e -1;

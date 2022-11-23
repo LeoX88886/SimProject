@@ -37,7 +37,6 @@ public abstract class Games extends Actor
         //gameImage.scale(80,80);
         setImage(gameImage);
         
-        
         scoreMultiplier = 5;
         
         //scoreOneExtra = 0;
@@ -113,8 +112,7 @@ public abstract class Games extends Actor
         
     }
     
-    
-    public static int getScoreOne()
+    public static int getScoreOne()//score to record in myWorld
     {
         return scoreOne;
     }
@@ -131,7 +129,8 @@ public abstract class Games extends Actor
         return scoreFour;
     }
     
-    public static void resetScore()
+    
+    public static void resetScore()//resets the score for myWorld because it is static
     {
         scoreOne = 0;
         scoreTwo = 0;
@@ -143,14 +142,17 @@ public abstract class Games extends Actor
     {
         return scoreOneExtra;
     }
+    
     public static int getScoreTwoExtra()
     {
         return scoreTwoExtra;
     }
+    
     public static int getScoreThreeExtra()
     {
         return scoreThreeExtra;
     }
+    
     public static int getScoreFourExtra()
     {
         return scoreFourExtra;
@@ -160,6 +162,7 @@ public abstract class Games extends Actor
     {
         scoreOne = value;
     }
+    
     public static void setScoreTwo(int value)
     {
         scoreTwo = value;
@@ -168,6 +171,7 @@ public abstract class Games extends Actor
     {
         scoreThree = value;
     }
+    
     public static void setScoreFour(int value)
     {
         scoreFour = value;
