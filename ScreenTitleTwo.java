@@ -13,12 +13,9 @@ public class ScreenTitleTwo extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    private GreenfootImage ScreenImage = new GreenfootImage("images/screenTitle.png");
+    private GreenfootImage ScreenImage = new GreenfootImage("images/screenTitle2.png");
     public ScreenTitleTwo()
     {
-        
-        
-        
         setImage(ScreenImage);
     }
     public void act()

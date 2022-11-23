@@ -31,6 +31,7 @@ public class LobbyWorld extends World
     SettingButton sb = new SettingButton();
     InstructionButton ib = new InstructionButton();
     ScreenTitle st = new ScreenTitle();
+    ScreenTitleTwo stt = new ScreenTitleTwo();
 
     public LobbyWorld (int numTeams, int numGames, int scorTotal){
         this(); // regular no-parameter constructor
@@ -68,6 +69,7 @@ public class LobbyWorld extends World
         addObject(sb, 360, 300);
         addObject(ib, 280, 360);
         addObject(st, 400, 170);
+        addObject(stt, 60, 240);
         
         MouseInfo m = Greenfoot.getMouseInfo();
         if (m != null)
