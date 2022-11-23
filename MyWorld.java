@@ -169,6 +169,11 @@ public class MyWorld extends World
         
         //if Games.grtscoreOne = 100
         // setWorld to winWorld
+        
+        
+        
+        
+        
         if (Games.getScoreOne() >= scorTotal)
         {
             Greenfoot.stop();
@@ -189,12 +194,23 @@ public class MyWorld extends World
             Greenfoot.stop();
             return;
         }
-        if (k < numGames)
+        /*if (k < numGames)
         {
             spawnGame();
             k++;    
         }
         if (e < numEffects)
+        {
+            spawnEffect();
+            e++;
+        }*/
+        
+         if (k < 4)
+        {
+            spawnGame();
+            k++;    
+        }
+        if (e < 4)
         {
             spawnEffect();
             e++;
