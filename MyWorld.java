@@ -217,7 +217,7 @@ public class MyWorld extends World
             spawnEffect();
             e++;
         }
-        */
+        
     }
     
     public static void subK()
