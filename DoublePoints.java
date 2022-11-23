@@ -24,11 +24,11 @@ public class DoublePoints extends Effects
         }
     }
     
-    
     public boolean checkHitTeams(){
         Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
             //do something when hitting teams
+            Games.setSMultiplier(2);
             MyWorld.subK();
             delete = true;
             return true;

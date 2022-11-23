@@ -18,7 +18,10 @@ public abstract class Teams extends Actor
     protected int s = 2;
     protected int sUp = 4;
     protected int f = 1;
+    private static int scoreMultiplier = 1;
+    private static int ogMultiplier = 1;
     protected boolean speeding = false;
+    private static boolean doublePoints = false;
     
     //timer variable for speedup
     private SimpleTimer timer = new SimpleTimer();
@@ -36,6 +39,7 @@ public abstract class Teams extends Actor
         WallCollison();
         
         checkHitSpeedUp();
+        
         //speedup/slowdown when interacting with SpeedUp effects
         if(timer.millisElapsed() > 5000){
             returnOriginalSpeed();
@@ -188,6 +192,7 @@ public abstract class Teams extends Actor
             }
         }
     }
+    
     public void speedingUp(){
         //code to change the speed to the speed up version
         s = sUp;

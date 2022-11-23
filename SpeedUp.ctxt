@@ -5,6 +5,4 @@ comment1.params=
 comment1.target=void\ act()
 comment2.params=
 comment2.target=boolean\ checkHitTeams()
-comment3.params=
-comment3.target=void\ removeThis()
-numComments=4
+numComments=3

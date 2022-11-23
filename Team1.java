@@ -8,10 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Team1 extends Teams
 {
-    /**
-     * Act - do whatever the Team1 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     private GreenfootImage teamImage = new GreenfootImage("images/TeamsPic/GreenTeam.png");
     public Team1()
     {

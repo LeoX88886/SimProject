@@ -13,6 +13,8 @@ public abstract class Effects extends Actor
     
     public void act()
     {
-        
+        //
     }
+    
+    public abstract void removeThis();
 }
