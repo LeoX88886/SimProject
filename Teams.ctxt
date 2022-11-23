@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Teams
-comment0.text=\r\n\ The\ Teams\ calss\ is\ the\ main\ actor\ within\ the\ simulation\ that\ interacts\ with\ differnt\ actors.\r\n\ randomMove\ is\ the\ timer\ for\ the\ teams\ to\ change\ their\ movement\ direction\ when\ it\ reaches\ a\ certain\ number.\ wall\ is\ so\ the\ team\ can\ see\ if\ it\ \r\n\ is\ hitting\ a\ wall\ within\ the\ background\ of\ the\ play\ area.The\ s\ &\ sUp\ variables\ are\ for\ how\ fast\ the\ teams\ are\ moving\ and\ when\ it\ speeds\ up.\r\n\ f\ is\ for\ the\ direction\ the\ team\ moves\ (1\ is\ right,\ 2\ is\ left,\ 3\ is\ up,\ and\ 4\ is\ down).\r\n\ \r\n\ @author\ Tyson\ Darius\ Pellatt\r\n\ @version\ 1\r\n
+comment0.text=\r\n\ The\ Teams\ calss\ is\ the\ main\ actor\ within\ the\ simulation\ that\ interacts\ with\ differnt\ actors.\r\n\ randomMove\ is\ the\ timer\ for\ the\ teams\ to\ change\ their\ movement\ direction\ when\ it\ reaches\ a\ certain\ number.\ wall\ is\ so\ the\ team\ can\ see\ if\ it\ \r\n\ is\ hitting\ a\ wall\ within\ the\ background\ of\ the\ play\ area.The\ s\ &\ sUp\ variables\ are\ for\ how\ fast\ the\ teams\ are\ moving\ and\ when\ it\ speeds\ up.\r\n\ f\ is\ for\ the\ direction\ the\ team\ moves\ (1\ is\ right,\ 2\ is\ left,\ 3\ is\ up,\ and\ 4\ is\ down).\r\n\ \r\n\ \r\n\ @author\ Tyson\ Darius\ Pellatt\r\n\ @version\ 1\r\n
 comment1.params=
 comment1.target=int\ setF()
 comment2.params=

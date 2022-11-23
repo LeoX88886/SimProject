@@ -3,6 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * ButtonGroup is an actor that is bacicaly an array that holds differnt number of buttons (mainly 3) that is ued in the settings world
  * to alter the number of objects or scores within the actual play screen.
+ * @param size   The number of buttons in the group
+ * 
  * 
  * @author Tyson Darius Pellatt, Jordan Cohen
  * @version (a version number or a date)
@@ -27,15 +29,16 @@ public class ButtonGroup extends Actor
     }
     
     public void addButton (Button b){
+        ///adds a new button to the group
         if (nextIndex < buttons.length)
         {
             buttons [nextIndex] = b;
             nextIndex++;
         }
-        
     }
 
     public void setSelection (int value){
+        //change the vaue of the group and ther image
         if (value < buttons.length){
             currentSelection = value;
         }
@@ -48,6 +51,8 @@ public class ButtonGroup extends Actor
     }
     
     public void changeSelection (Button clicked){
+        //if another button is clicked that was not chosen the rest, all 
+        //become unchosen but the one that was clicked is now the chosen value.
         for (int i = 0; i < buttons.length; i++){
             Button b = buttons[i];
             if (b == clicked){
@@ -57,7 +62,6 @@ public class ButtonGroup extends Actor
                 b.unselect();
             }
         }
-        //if another button is clicked that was not chosen the rest, all become unchosen but the one that was clicked is now the chosen value.
     }
 
     /**

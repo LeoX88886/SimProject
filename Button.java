@@ -2,6 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * The button class is used to create the values that can be changes when creating the simmulation.
+ * @param value          The value of the button
+ * @param inselected     The image displayed when value is unselected
+ * @param selected       The image when value is selected
  * 
  * @author Tyson Darius Pellatt, Jordan Cohen 
  * @version (a version number or a date)

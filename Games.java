@@ -33,6 +33,7 @@ public abstract class Games extends Actor
     //sound for whenever team interacts with game
     protected GreenfootSound win = new GreenfootSound("sounds/gameWin.mp3");
     
+    //timer to stop the player when giving points.
     protected int deleteTimer;
     
     public Games()
@@ -113,6 +114,8 @@ public abstract class Games extends Actor
     }
     
     public void deleteMe (){
+        //if the timmer was originaly -1 and hasnt chaged it changes the 
+        //timer to 30 or about half a second 
         if (deleteTimer == -1){
             deleteTimer = 30;
         }

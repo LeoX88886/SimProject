@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Button
-comment0.text=\r\n\ The\ button\ class\ is\ used\ to\ create\ the\ values\ that\ can\ be\ changes\ when\ creating\ the\ simmulation.\r\n\ \r\n\ @author\ Tyson\ Darius\ Pellatt,\ Jordan\ Cohen\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ The\ button\ class\ is\ used\ to\ create\ the\ values\ that\ can\ be\ changes\ when\ creating\ the\ simmulation.\r\n\ @param\ value\ \ \ \ \ \ \ \ \ \ The\ value\ of\ the\ button\r\n\ @param\ inselected\ \ \ \ \ The\ image\ displayed\ when\ value\ is\ unselected\r\n\ @param\ selected\ \ \ \ \ \ \ The\ image\ when\ value\ is\ selected\r\n\ \r\n\ @author\ Tyson\ Darius\ Pellatt,\ Jordan\ Cohen\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=value\ unselected\ selected
 comment1.target=Button(int,\ greenfoot.GreenfootImage,\ greenfoot.GreenfootImage)
 comment2.params=

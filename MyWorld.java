@@ -91,7 +91,7 @@ public class MyWorld extends World
     protected static int gameNum = 0;
     protected static int teamNum = 2;
     protected static int scorTotal = 4;
-    protected int numGames = 53;
+    protected int numGames = 3;
     protected int numEffects = 3;
 
     //team instance

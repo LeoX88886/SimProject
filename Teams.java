@@ -6,24 +6,32 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * is hitting a wall within the background of the play area.The s & sUp variables are for how fast the teams are moving and when it speeds up.
  * f is for the direction the team moves (1 is right, 2 is left, 3 is up, and 4 is down).
  * 
+ * 
  * @author Tyson Darius Pellatt
  * @version 1
  */
 public abstract class Teams extends Actor
 {
+    //The timer to change the direction of the team 
     private int randomMove = 0;
-    GreenfootImage img = getImage();
+    
+    //the team needs to know the color of the wals in 
+    //the map so they can bounce of of them.
     Color wall = new Color(9,0,255);
-    // 1 = right, -1 = left
+    
+    //speed variables
     protected int s = 2;
     protected int sUp = 4;
+    protected boolean speeding = false;
+    protected GreenfootSound speedup = new GreenfootSound("sounds/SpeedUp.mp3");
+    
+    //the direction the team moves (1 = right, 2 = left, 3 = up, 4 = down)
     protected int f = 1;
+    
+    //score adjustments
     private static int scoreMultiplier = 1;
     private static int ogMultiplier = 1;
-    protected boolean speeding = false;
     private static boolean doublePoints = false;
-    
-    protected GreenfootSound speedup = new GreenfootSound("sounds/SpeedUp.mp3");
     
     //timer variable for speedup
     private SimpleTimer timer = new SimpleTimer();
@@ -91,8 +99,9 @@ public abstract class Teams extends Actor
             f = 1;
             setLocation(getX()-4,getY());
         }
+        //movement
         if((right.getRed() == wall.getRed() && right.getGreen() == wall.getGreen() && right.getBlue() == wall.getBlue()))
-        {//f == 1 && 
+        {
             //RIGHT
             shift = Greenfoot.getRandomNumber(3);
             if(shift == 1)
@@ -113,7 +122,7 @@ public abstract class Teams extends Actor
             }
         }
         else if((left.getRed() == wall.getRed() && left.getGreen() == wall.getGreen() && left.getBlue() == wall.getBlue()))
-        {//f == 2 &&
+        {
             //LEFT
             shift = Greenfoot.getRandomNumber(3);
             if(shift == 1)
@@ -134,7 +143,7 @@ public abstract class Teams extends Actor
             }
         }
         else if((up.getRed() == wall.getRed() && up.getGreen() == wall.getGreen() && up.getBlue() == wall.getBlue()))
-        {//f == 3 &&
+        {
             //UP
             shift = Greenfoot.getRandomNumber(3);
             if(shift == 1)
@@ -155,7 +164,7 @@ public abstract class Teams extends Actor
             }
         }
         else if((down.getRed() == wall.getRed() && down.getGreen() == wall.getGreen() && down.getBlue() == wall.getBlue()))
-        {//f == 4 &&
+        {
             //DOWN
             shift = Greenfoot.getRandomNumber(3);
             if(shift == 1)

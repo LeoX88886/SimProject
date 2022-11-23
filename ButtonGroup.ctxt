@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ButtonGroup
-comment0.text=\r\n\ ButtonGroup\ is\ an\ actor\ that\ is\ bacicaly\ an\ array\ that\ holds\ differnt\ number\ of\ buttons\ (mainly\ 3)\ that\ is\ ued\ in\ the\ settings\ world\r\n\ to\ alter\ the\ number\ of\ objects\ or\ scores\ within\ the\ actual\ play\ screen.\r\n\ \r\n\ @author\ Tyson\ Darius\ Pellatt,\ Jordan\ Cohen\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ ButtonGroup\ is\ an\ actor\ that\ is\ bacicaly\ an\ array\ that\ holds\ differnt\ number\ of\ buttons\ (mainly\ 3)\ that\ is\ ued\ in\ the\ settings\ world\r\n\ to\ alter\ the\ number\ of\ objects\ or\ scores\ within\ the\ actual\ play\ screen.\r\n\ @param\ size\ \ \ The\ number\ of\ buttons\ in\ the\ group\r\n\ \r\n\ \r\n\ @author\ Tyson\ Darius\ Pellatt,\ Jordan\ Cohen\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=size
 comment1.target=ButtonGroup(int)
 comment2.params=w
