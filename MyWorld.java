@@ -208,7 +208,12 @@ public class MyWorld extends World
         //Teams.get_sUp();
         //showText("team 1 score: " + Games.getScoreOne(), 300, 50);
         //showText("team 2 score: " + Games.getScoreTwo(), 500, 50);
-        
+        MouseInfo m = Greenfoot.getMouseInfo();
+        if (m != null)
+        {
+            showText(String.valueOf(m.getX()), 200, 200);
+            showText(String.valueOf(m.getY()), 300, 200);
+        }
 
         //textbox updates for score
         widgetText1.update("team 1 score: " + Games.getScoreOne());
@@ -284,7 +289,7 @@ public class MyWorld extends World
     public void started()//starts the theme sound when world starts
     {
         gameMusic.playLoop();
-        gameMusic.setVolume(25);
+        gameMusic.setVolume(15);
     }
     
     public void stopped()// stops the theme sound when paused
@@ -376,7 +381,7 @@ public class MyWorld extends World
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
         }
         if(gi == 10){
-            addObject(g3,950, 200);
+            addObject(g3,940, 210);
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
         }
         if(gi == 11){
