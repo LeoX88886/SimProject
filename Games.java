@@ -29,7 +29,7 @@ public abstract class Games extends Actor
     protected static int sMultiplier = 1;
     protected static int ogSMultiplier = 1;
     
-    protected GreenfootSound win = new GreenfootSound("sounds/gameWin.wav");
+    protected GreenfootSound win = new GreenfootSound("sounds/gameWin.mp3");
     
     private int deleteTimer;
     
