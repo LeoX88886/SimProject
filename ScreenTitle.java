@@ -1,26 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Image containing the words for the screen title
+ * Displays the image that contain the words "Arcade Simulation"
  * 
- * @author leo Xu, Tyson Pellatt
+ * @author leo Xu
  * @version 1
  */
 public class ScreenTitle extends Actor
 {
-    /**
-     * Act - do whatever the ScreenTitle wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    
     private GreenfootImage ScreenImage = new GreenfootImage("images/screenTitle.png");
+    
+    /**
+     *  ScreenTitle constructor
+     */
     public ScreenTitle()
     {
-        
-        
-        
         setImage(ScreenImage);
     }
+    
     public void act()
     {
         // Add your action code here.

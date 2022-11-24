@@ -9,16 +9,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class PlayButton extends Actor
 {
-    /**
-     * Act - do whatever the PlayButton wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     private GreenfootImage playImage = new GreenfootImage("images/LobbyWorld1/playButtonFade.png");
+    
+    /**
+     * PlayButton constructor
+     */
     public PlayButton()
     {
         setImage(playImage);
     }
     
+    
+    /**
+     * Act method used to go to MyWorld by mouse click
+     */
     public void act()
     {
         if (Greenfoot.mouseMoved(this))//if mouse is hovering
@@ -31,8 +35,6 @@ public class PlayButton extends Actor
             setImage(new GreenfootImage("images/LobbyWorld1/playButtonFade.png"));
             
         }
-              
-        
     }
 }
 

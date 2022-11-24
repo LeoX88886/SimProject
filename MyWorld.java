@@ -112,8 +112,8 @@ public class MyWorld extends World
     SwapPoints sp = new SwapPoints();
 
     //spawn instance
-    private static int k = 0 ;
-    private static int e = 0;
+    private static int k = 0 ;//Games spawn
+    private static int e = 0;//effect spawn
     
     //textbox instance
     private Font funFont, boringFont;
@@ -195,11 +195,8 @@ public class MyWorld extends World
         teamNum = x;
         return teamNum;
     }
-    /*public static int getNum()
-    {
-        return gameNum--;
-    }*/
-
+    
+    
     public void act()
     {
         win();
@@ -286,37 +283,60 @@ public class MyWorld extends World
         }
     }
     
-    public void started()//starts the theme sound when world starts
+    /**
+     * Starts the theme music when world starts
+     */
+    public void started()//starts the theme music when world starts
     {
         gameMusic.playLoop();
         gameMusic.setVolume(10);
     }
     
-    public void stopped()// stops the theme sound when paused
+    /**
+     * Stops the theme music when paused
+     */
+    public void stopped()// stops the theme music when paused
     {
         gameMusic.stop();
     }
     
-    public static void stopMusic()// stops the theme sound when paused
+    /**
+     * Stops the theme music for other worlds
+     */
+    public static void stopMusic()// stops the theme music for other worlds
     {
         gameMusic.stop();
     }
     
+    /**
+     * Subtract 1 from Games spawn value
+     */
     public static void subK()
     {
         k = k -1;
     }
     
+    
+    /**
+     * return k's value
+     */
     public static int getK()
     {
         return k;
     }
     
+    
+    /**
+     * Subtract 1 from Effects spawn value
+     */
     public static void subE()
     {
         e = e -1;
     }
     
+    /**
+     * return e's value
+     */
     public static int getE()
     {
         return e;
@@ -408,6 +428,7 @@ public class MyWorld extends World
             g1.setImage(new GreenfootImage("images/GamesIcon/game"+GameImg+".png"));
         }
     }
+    
     public void spawnEffect()
     {
         DoublePoints e1 = new DoublePoints();

@@ -43,17 +43,13 @@ public class LobbyWorld extends World
         MyWorld.setScorTotal(this.scorTotal);
     }
     
+    /**
+     * LobbyWorld constructor used to play set the starting background when nothing is runned
+     * 
+     */
     public LobbyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 400, 1);
-        /* Keeps repeating
-        music.setVolume(15);
-        if(playMusic == 0){
-            music.play();
-        }
-        playMusic++;
-        */
         
         themeMusic = new GreenfootSound("sounds/ChillMusic.mp3"); //instance of theme music
 
@@ -67,6 +63,10 @@ public class LobbyWorld extends World
         setBackground(background1);
     }
 
+    /**
+     * Act method for setting the animated back ground and all the interective buttons and other aesthetic images
+     * 
+     */
     public void act()
     {
         setBackground(background.getCurrentImage());//start the animation background  
@@ -90,17 +90,30 @@ public class LobbyWorld extends World
         }
     }
     
-    public void started()//starts the theme sound when world starts
+    /**
+     * Starts the theme music when world starts
+     * 
+     */
+    public void started()//starts the theme music when world starts
     {
         themeMusic.playLoop();
         themeMusic.setVolume(15);
     }
     
-    public void stopped()// stops the theme sound when paused
+    /**
+     * Stops the theme music when paused
+     * 
+     */
+    public void stopped()// stops the theme music when paused
     {
         themeMusic.stop();
     }
     
+    
+    /**
+     * Stops the theme music for other worlds
+     * 
+     */
     public static void stopMusic()// stops the theme sound when paused
     {
         themeMusic.stop();

@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=SettingButton
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ PlayButton\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Creates\ a\ button\ with\ the\ word\ "Setting"\ on\ it\r\n\ when\ pressed,\ brings\ the\ user\ to\ SettingsWorld\r\n\ \r\n\ @author\ Leo\ Xu\r\n\ @version\ 1\r\n
 comment1.params=
 comment1.target=SettingButton()
+comment1.text=\r\n\ SettingButton\ contructor\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ Act\ method\ used\ to\ go\ to\ SettingsWorld\ by\ mouse\ click\r\n
 numComments=3

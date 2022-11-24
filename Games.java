@@ -30,25 +30,33 @@ public abstract class Games extends Actor
     //instance of score multipliers
     protected static int sMultiplier = 1;
     protected static int ogSMultiplier = 1;
+    
     //sound for whenever team interacts with game
     protected GreenfootSound win = new GreenfootSound("sounds/gameWin.mp3");
     
     //timer to stop the player when giving points.
     protected int deleteTimer;
     
+    /***
+     * Games constructor used for base Image and playing win sound if Team class scores
+     * 
+     * 
+     */
     public Games()
     {
-        //gameImage.scale(80,80);
         setImage(gameImage);
         win.setVolume(30);
         
         deleteTimer = -1;
-        
     }
     
+    /***
+     * Act method used to update score for Teams class and to remove itself after
+     * 
+     * 
+     */
     public void act()
     {
-        // Add your action code here.
         if(dp >= 3){
             dp = 0;
             Games.resetSMultiplier();
@@ -58,12 +66,6 @@ public abstract class Games extends Actor
             deleteTimer--;
         }
         if(deleteTimer == 0){
-            /*int chance = Greenfoot.getRandomNumber(3);
-            if (chance == 0)
-            {
-                scoreOne = scoreOne + scoreMultiplier;
-            }*/
-            
             if(isTouching(Team1.class))
             {
                 scoreOne = scoreOne + (1 * sMultiplier);
@@ -101,9 +103,6 @@ public abstract class Games extends Actor
                 return;
             }
             
-            //getWorld().removeObject(this);
-            //MyWorld.subK();
-            //MyWorld.getNum();
             return;
         }
         //record all the values of scoreOne-Four in extras
@@ -112,6 +111,7 @@ public abstract class Games extends Actor
         scoreThreeExtra = scoreThree;
         scoreFourExtra = scoreFour;
     }
+    
     
     public void deleteMe (){
         //if the timmer was originaly -1 and hasnt chaged it changes the 
@@ -129,25 +129,43 @@ public abstract class Games extends Actor
         sMultiplier = ogSMultiplier;
     }
     
-    //getter method for retrievely scores
+    /**
+     * Getter method for retrieving first scores
+     *  
+     */
     public static int getScoreOne()
     {
         return scoreOne;
     }
+    /**
+     * Getter method for retrieving second scores
+     *  
+     */
     public static int getScoreTwo()
     {
         return scoreTwo;
     }
+    /**
+     * Getter method for retrieving third scores
+     *  
+     */
     public static int getScoreThree()
     {
         return scoreThree;
     }
+    /**
+     * Getter method for retrieving fourth scores
+     *  
+     */
     public static int getScoreFour()
     {
         return scoreFour;
     }
     
-    
+    /**
+     * Resets the score for myWorld because static does not reset itself
+     * 
+     */
     public static void resetScore()//resets the score for myWorld because it is static
     {
         scoreOne = 0;
@@ -156,37 +174,70 @@ public abstract class Games extends Actor
         scoreFour = 0;
     }
     
+    /**
+     * Getter methods for retrieving first extra scores
+     * 
+     */
     //getter methods for retrievely extra scores
     public static int getScoreOneExtra()
     {
         return scoreOneExtra;
     }
+    /**
+     * Getter methods for retrieving second extra scores
+     * 
+     */
     public static int getScoreTwoExtra()
     {
         return scoreTwoExtra;
     }
+    /**
+     * Getter methods for retrieving third extra scores
+     * 
+     */
     public static int getScoreThreeExtra()
     {
         return scoreThreeExtra;
     }
+    /**
+     * Getter methods for retrieving fourth extra scores
+     * 
+     */
     public static int getScoreFourExtra()
     {
         return scoreFourExtra;
     }
     
+    
+    /**
+     * Setter methods for setting the value of each score(mainly for SwapPoints)
+     * 
+     */
     //setter methods for setting the value of each score(mainly for SwapPoints)
     public static void setScoreOne(int value)
     {
         scoreOne = value;
     }
+    /**
+     * Setter methods for setting the value of each score(mainly for SwapPoints)
+     * 
+     */
     public static void setScoreTwo(int value)
     {
         scoreTwo = value;
     }
+    /**
+     * Setter methods for setting the value of each score(mainly for SwapPoints)
+     * 
+     */
     public static void setScoreThree(int value)
     {
         scoreThree = value;
     }
+    /**
+     * Setter methods for setting the value of each score(mainly for SwapPoints)
+     * 
+     */
     public static void setScoreFour(int value)
     {
         scoreFour = value;
