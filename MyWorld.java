@@ -328,9 +328,12 @@ public class MyWorld extends World
         Game2 g2 = new Game2();
         Game3 g3 = new Game3();
         Game4 g4 = new Game4();
+        //the random number determins where the effect spawns. k++ is so the effects dont spawn over the limit of effects.
         int gi = Greenfoot.getRandomNumber(15);
-        int GameImg = Greenfoot.getRandomNumber(4)+1;
         k++;
+        //to randomize the games image when on screen
+        int GameImg = Greenfoot.getRandomNumber(4)+1;
+        
         
         if(gi == 0)
         {
@@ -410,6 +413,7 @@ public class MyWorld extends World
         DoublePoints e1 = new DoublePoints();
         SpeedUp e2 = new SpeedUp();
         SwapPoints e3 = new SwapPoints();
+        //the random number determins where the effect spawns. e++ is so the effects dont spawn over the limit of effects.
         int ei = Greenfoot.getRandomNumber(15);
         e++;
         
