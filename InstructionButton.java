@@ -9,18 +9,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class InstructionButton extends Actor
 {
-    /**
-     * Act - do whatever the PlayButton wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     private GreenfootImage inImage = new GreenfootImage("images/LobbyWorld1/instructionButtonFade.png");
     private GreenfootSound button = new GreenfootSound("sounds/button.wav");
     
+    /**
+     * InstructionButton contructor
+     */
     public InstructionButton()
     {
         setImage(inImage);
     }
     
+    
+    /**
+     * Act method used to go to InstructionsWorld by mouse click
+     */
     public void act()
     {
         if (Greenfoot.mouseMoved(this))//if mouse is hovering

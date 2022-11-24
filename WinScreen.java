@@ -11,7 +11,7 @@ public class WinScreen extends World
 {
     private static GreenfootImage background = new GreenfootImage ("images/jenshin2.jpg");
     
-    MainMenuButton b = new MainMenuButton();
+    MainMenuButton b = new MainMenuButton();//back button
     
     private static GreenfootSound winSound;
     private GreenfootSound button = new GreenfootSound("sounds/button.wav");
@@ -37,6 +37,10 @@ public class WinScreen extends World
         
     }
     
+    /**
+     * Act method for displaying the Team number that wins
+     * 
+     */
     public void act()
     {
         MyWorld.stopMusic();
@@ -53,12 +57,20 @@ public class WinScreen extends World
         }
     }
     
-    public void stopped()// stops the theme sound when paused
+    /**
+     * stops the win sound when paused
+     * 
+     */
+    public void stopped()// stops the win sound when paused
     {
         winSound.stop();
     }
     
-    public static void stopSound()// stops the win sound when paused
+    /**
+     * stops the win sound for other worlds
+     * 
+     */
+    public static void stopSound()// stops the win sound for other worlds
     {
         winSound.stop();
     }

@@ -8,18 +8,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SettingButton extends Actor
 {
-    /**
-     * Act - do whatever the PlayButton wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     private GreenfootImage settImage = new GreenfootImage("images/LobbyWorld1/settingButtonFade.png");
     private GreenfootSound button = new GreenfootSound("sounds/button.wav");
     
+    
+    /**
+     * SettingWorld constructor
+     */
     public SettingButton()
     {
         setImage(settImage);
     }
     
+    /**
+     * Act method used to go to SettingsWorld by mouse click
+     */
     public void act()
     {
         if (Greenfoot.mouseMoved(this))//if mouse is hovering

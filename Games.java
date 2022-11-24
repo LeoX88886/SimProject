@@ -9,10 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Games extends Actor
 {
-    /**
-     * Act - do whatever the Games wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     //Game console icon
     private GreenfootImage gameImage = new GreenfootImage("images/GamesIcon/game2.png");
     
