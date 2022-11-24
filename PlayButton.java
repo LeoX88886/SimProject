@@ -16,9 +16,6 @@ public class PlayButton extends Actor
     private GreenfootImage playImage = new GreenfootImage("images/LobbyWorld1/playButtonFade.png");
     public PlayButton()
     {
-        
-        
-        
         setImage(playImage);
     }
     

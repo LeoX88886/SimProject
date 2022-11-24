@@ -14,11 +14,10 @@ public class InstructionButton extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private GreenfootImage inImage = new GreenfootImage("images/LobbyWorld1/instructionButtonFade.png");
+    private GreenfootSound button = new GreenfootSound("sounds/button.wav");
+    
     public InstructionButton()
     {
-        
-        
-        
         setImage(inImage);
     }
     
@@ -35,8 +34,10 @@ public class InstructionButton extends Actor
             
         }
               
-        if (Greenfoot.mouseClicked(this)) 
+        if (Greenfoot.mouseClicked(this))
         {
+            button.setVolume(70);
+            button.play();
             Greenfoot.setWorld(new InstructionsWorld());
         }
     }

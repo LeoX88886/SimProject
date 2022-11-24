@@ -13,11 +13,10 @@ public class SettingButton extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private GreenfootImage settImage = new GreenfootImage("images/LobbyWorld1/settingButtonFade.png");
+    private GreenfootSound button = new GreenfootSound("sounds/button.wav");
+    
     public SettingButton()
     {
-        
-        
-        
         setImage(settImage);
     }
     
@@ -36,6 +35,8 @@ public class SettingButton extends Actor
               
         if (Greenfoot.mouseClicked(this)) 
         {
+            button.setVolume(70);
+            button.play();
             Greenfoot.setWorld(new SettingsWorld());
         }
     }

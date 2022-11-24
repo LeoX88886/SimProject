@@ -22,7 +22,7 @@ public class SettingsWorld extends World
     ButtonGroup numGamesButton;
     ButtonGroup numScorButton;
     //sound for button press
-    private GreenfootSound button = new GreenfootSound("sounds/button.mp3");
+    private GreenfootSound button = new GreenfootSound("sounds/button.wav");
     
     
     public SettingsWorld()
@@ -70,10 +70,9 @@ public class SettingsWorld extends World
         LobbyWorld.stopMusic();
         if (Greenfoot.mouseClicked(b)) 
         {
-            /*
-            button.setVolume(50);
+            button.setVolume(70);
             button.play();
-            */
+            
             Greenfoot.setWorld(new LobbyWorld(numTeamsButton.getCurrentValue(),numGamesButton.getCurrentValue(), numScorButton.getCurrentValue()));
             SwapPoints.setNumTeams(numTeamsButton.getCurrentValue());
         }

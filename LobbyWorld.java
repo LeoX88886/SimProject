@@ -29,7 +29,7 @@ public class LobbyWorld extends World
     ScreenTitle st = new ScreenTitle(); //Title "Arcade Siumlation
     ScreenTitleTwo stt = new ScreenTitleTwo();// Title groups number, class, teachers full name
     //sounds for button press
-    private GreenfootSound button = new GreenfootSound("sounds/button.mp3");
+    private GreenfootSound button = new GreenfootSound("sounds/button.wav");
     private GreenfootSound music = new GreenfootSound("sounds/NahidaMusic.mp3");
     
     private static GreenfootSound themeMusic;
@@ -81,10 +81,8 @@ public class LobbyWorld extends World
 
         if (Greenfoot.mouseClicked(pb))// go to myWorld when playbutton is pressed
         {
-            /* Creates a weird noise when pressed(removed)
-            button.setVolume(50);
+            button.setVolume(70);
             button.play();
-            */
             Greenfoot.setWorld(new MyWorld(numTeams,numGames,scorTotal));
             
             background.pause();//stops the animation

@@ -12,6 +12,7 @@ public class InstructionsWorld extends World
 {
     protected static GreenfootImage background = new GreenfootImage ("images/InstructionsScreen.png");
     BackButton b = new BackButton();
+    private GreenfootSound button = new GreenfootSound("sounds/button.wav");
     
     /**
      * Constructor for objects of class InstructionsWorld.
@@ -31,6 +32,8 @@ public class InstructionsWorld extends World
         LobbyWorld.stopMusic();
         if (Greenfoot.mouseClicked(b)) 
         {   
+            button.setVolume(70);
+            button.play();
             Greenfoot.setWorld(new LobbyWorld());
         }
     }

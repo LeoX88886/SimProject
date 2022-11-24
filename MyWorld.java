@@ -72,7 +72,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * NahidaMusic.mp3 (https://www.youtube.com/watch?v=byxB8G_k3DI)
  * DoublePoints.mp3 (https://pixabay.com/sound-effects/search/8-bit/?duration=0-30c)
  * gameWin.mp3, gameLose.wav, SpeedUp.mp3, SwapPoints.mp3 (https://freesound.org/people/LittleRobotSoundFactory/packs/16681/)(https://www.storyblocks.com/audio/search/8bit )
- * 
+ * ChillMusic.mp3 (https://www.youtube.com/watch?v=0dP7cdf-EgI)
  * 
  * 
  * Did you notice where we put the class code and teacher name?
@@ -289,7 +289,7 @@ public class MyWorld extends World
     public void started()//starts the theme sound when world starts
     {
         gameMusic.playLoop();
-        gameMusic.setVolume(15);
+        gameMusic.setVolume(10);
     }
     
     public void stopped()// stops the theme sound when paused

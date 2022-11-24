@@ -14,7 +14,7 @@ public class WinScreen extends World
     MainMenuButton b = new MainMenuButton();
     
     private static GreenfootSound winSound;
-    
+    private GreenfootSound button = new GreenfootSound("sounds/button.wav");
     /**
      * Constructor for objects of class WinScreen.
      * 
@@ -45,6 +45,9 @@ public class WinScreen extends World
         
         if (Greenfoot.mouseClicked(b)) 
         {
+            button.setVolume(70);
+            button.play();
+            
             stopped();
             Greenfoot.setWorld(new LobbyWorld());
         }
