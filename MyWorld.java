@@ -74,6 +74,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * gameWin.mp3, gameLose.wav, SpeedUp.mp3, SwapPoints.mp3 (https://freesound.org/people/LittleRobotSoundFactory/packs/16681/)(https://www.storyblocks.com/audio/search/8bit )
  * ChillMusic.mp3 (https://www.youtube.com/watch?v=0dP7cdf-EgI)
  * 
+ * Notes: (part of the simulation; not a glitch)
+ * Effects should not respawn(to prevent simulation from finishing too quickly)
+ * Music should stop when in InstructionsWorld or SettingsWorld
  * 
  * Did you notice where we put the class code and teacher name?
  * 
@@ -123,11 +126,7 @@ public class MyWorld extends World
     private SuperTextBox widgetText3;
     private SuperTextBox widgetText4;
     
-    private static GreenfootSound gameMusic;//gameplay msuic
-    
-    public static void setScorTotal(int num){
-        scorTotal = num;
-    }
+    private static GreenfootSound gameMusic;//gameplay music
 
     public MyWorld(int teamNum,int numGames, int scorTotal)
     {   
@@ -190,6 +189,9 @@ public class MyWorld extends World
         
     }
     
+    /**
+     * setter method to change the # of teams that will spawn in MyWorld
+     */
     public int setTeams(int x)
     {
         teamNum = x;
@@ -231,7 +233,10 @@ public class MyWorld extends World
         }        
     }
     
-    public void win()//go to WinScreen if the maximum score is hit
+    /**
+     * go to WinScreen if the maximum score is hit
+     */
+    public void win()
     {
         if (Games.getScoreOne() >= scorTotal)
         {
@@ -301,6 +306,13 @@ public class MyWorld extends World
     }
     
     /**
+     * A setter method to allow other classes to change the required score amount to win
+     */
+    public static void setScorTotal(int num){
+        scorTotal = num;
+    }
+    
+    /**
      * Stops the theme music for other worlds
      */
     public static void stopMusic()// stops the theme music for other worlds
@@ -342,6 +354,9 @@ public class MyWorld extends World
         return e;
     }
 
+    /**
+     * A method that spawns the Games subclasses in random set locations
+     */
     public void spawnGame()
     {
         Game1 g1 = new Game1();
@@ -429,6 +444,9 @@ public class MyWorld extends World
         }
     }
     
+    /**
+     * A method that spawns the Effects subclasses in random set locations
+     */
     public void spawnEffect()
     {
         DoublePoints e1 = new DoublePoints();

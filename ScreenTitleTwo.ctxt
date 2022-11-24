@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ScreenTitleTwo
-comment0.text=\r\n\ Displays\ the\ image\ that\ contain\ the\ group\ number,\ class\ name,\ teacher\ name\r\n\ \r\n\ @author\ leo\ Xu\r\n\ @version\ 1\r\n
+comment0.text=\r\n\ Displays\ the\ image\ that\ contain\ the\ group\ number,\ class\ name,\ teacher\ name\r\n\ surprise\!\ -Justin\r\n\ \r\n\ @author\ leo\ Xu\r\n\ @version\ 1\r\n
 comment1.params=
 comment1.target=ScreenTitleTwo()
 comment1.text=\r\n\ \ ScreenTitleTwo\ constructor\r\n

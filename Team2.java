@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Team2 extends Teams
 {
+    //red version of teams
     private GreenfootImage teamImage = new GreenfootImage("images/TeamsPic/RedTeam.png");
     public Team2()
     {

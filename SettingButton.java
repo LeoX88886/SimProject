@@ -11,7 +11,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SettingButton extends Actor
 {
+    //image for Settings Button
     private GreenfootImage settImage = new GreenfootImage("images/LobbyWorld1/settingButtonFade.png");
+    //sound for when button is pressed
     private GreenfootSound button = new GreenfootSound("sounds/button.wav");
     
     
@@ -30,7 +32,7 @@ public class SettingButton extends Actor
     {
         if (Greenfoot.mouseMoved(this))//if mouse is hovering
         {
-            setImage(new GreenfootImage("images/LobbyWorld1/settingButton.png"));
+            setImage(new GreenfootImage("images/LobbyWorld1/settingButton.png"));//image of SettingsButton when mouse is hovering over it
         }
         
         if (Greenfoot.mouseMoved(null) && !Greenfoot.mouseMoved(this))//if not hovering

@@ -10,6 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SpeedUp extends Effects
 {
+    //image for SpeedUp
     private GreenfootImage effectImage = new GreenfootImage("images/Effects/SpeedUp.png");
     
     public void act()
@@ -26,12 +27,17 @@ public class SpeedUp extends Effects
         }
     }
     
-    //Check if hitting team
+    /**
+     * code for checkHitTeams is in teams superclass and named checkHitSpeedUp due to a glitch that causes the speed to not increase
+     */
     public boolean checkHitTeams(){
         //this is left blank as an error requires the checkHit to be in Teams class
         return false;
     }
     
+    /**
+     * remove this object when called
+     */
     public void removeThis(){
         getWorld().removeObject(this);
     }

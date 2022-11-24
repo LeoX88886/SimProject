@@ -9,7 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DoublePoints extends Effects
 {
+    //image for DoublePoints
     private GreenfootImage effectImage = new GreenfootImage("images/Effects/pointup.png");
+    
+    //sound for DoublePoints
     private GreenfootSound dp = new GreenfootSound("sounds/DoublePoints.mp3");
     
     public void act()
@@ -25,6 +28,9 @@ public class DoublePoints extends Effects
         }
     }
     
+    /**
+     * if DoublePoints touches the teams subclasses, it will play a sound, delete the DoublePoints object and set the score multiplier as 2x
+     */
     public boolean checkHitTeams(){
         Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
@@ -39,6 +45,9 @@ public class DoublePoints extends Effects
         return false;
     }
     
+    /**
+     * remove object if called
+     */
     public void removeThis(){
         getWorld().removeObject(this);
     }

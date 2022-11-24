@@ -9,7 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class InstructionButton extends Actor
 {
+    //image of Instruction Button
     private GreenfootImage inImage = new GreenfootImage("images/LobbyWorld1/instructionButtonFade.png");
+    //sound for when button is clicked on
     private GreenfootSound button = new GreenfootSound("sounds/button.wav");
     
     /**
@@ -28,7 +30,7 @@ public class InstructionButton extends Actor
     {
         if (Greenfoot.mouseMoved(this))//if mouse is hovering
         {
-            setImage(new GreenfootImage("images/LobbyWorld1/instructionButton.png"));
+            setImage(new GreenfootImage("images/LobbyWorld1/instructionButton.png"));//image for when mouse is hovering over the button
         }
         
         if (Greenfoot.mouseMoved(null) && !Greenfoot.mouseMoved(this))//if not hovering

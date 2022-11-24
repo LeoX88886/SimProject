@@ -28,9 +28,9 @@ public class LobbyWorld extends World
     InstructionButton ib = new InstructionButton(); //intruction button
     ScreenTitle st = new ScreenTitle(); //Title "Arcade Siumlation
     ScreenTitleTwo stt = new ScreenTitleTwo();// Title groups number, class, teachers full name
-    //sounds for button press
-    private GreenfootSound button = new GreenfootSound("sounds/button.wav");
-    private GreenfootSound music = new GreenfootSound("sounds/NahidaMusic.mp3");
+    //Sounds
+    private GreenfootSound button = new GreenfootSound("sounds/button.wav");//button
+    private GreenfootSound music = new GreenfootSound("sounds/NahidaMusic.mp3");//music for MyWorld
     
     private static GreenfootSound themeMusic;
     

@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * f is for the direction the team moves (1 is right, 2 is left, 3 is up, and 4 is down).
  * 
  * 
- * @author Tyson Darius Pellatt
+ * @author Tyson Darius Pellatt, Justin Sin(Effects)
  * @version 1
  */
 public abstract class Teams extends Actor
@@ -55,6 +55,9 @@ public abstract class Teams extends Actor
             returnOriginalSpeed();
         }
     }
+    /**
+     * Allows the Teams subclasses to move around the world
+     */
     public void Walk()
     {
         //movement code
@@ -75,6 +78,9 @@ public abstract class Teams extends Actor
         }
         randomMove++;
     }
+    /**
+     * method to make sure that Teams subclasses does not walk into walls
+     */
     public void WallCollison(){
         //color to detect when the team is touching the walls on the map.
         int shift = Greenfoot.getRandomNumber(3);
@@ -204,18 +210,11 @@ public abstract class Teams extends Actor
         }
     }
     
-    public void speedingUp(){
-        //code to change the speed to the speed up version
-        s = sUp;
-        speeding = true;
-    }
-    
-    public void returnOriginalSpeed(){
-        //code to change the added speed back to normal
-        s = 2;
-        speeding = false;
-    }
-    
+    /**
+     * if Teams subclass is touching SpeedUp class from Effects, plays a sound, removes the SpeedUp from world and
+     * doubles the speed of the subclass for 5 seconds
+     * (Check SpeedUp for more details on why this is here)
+     */
     public boolean checkHitSpeedUp(){
         //code to see if the team is touching a speed up. it didnt work int he actual speedUp actor for some reason
         SpeedUp su = (SpeedUp)getOneObjectAtOffset(0, 0, SpeedUp.class);
@@ -229,5 +228,23 @@ public abstract class Teams extends Actor
             return true;
         }
         return false;
+    }
+    
+    /**
+     * Method to change speed into SpeedUp speed
+     */
+    public void speedingUp(){
+        //code to change the speed to the speed up version
+        s = sUp;
+        speeding = true;
+    }
+    
+    /**
+     * method to return speed into it's original state(2)
+     */
+    public void returnOriginalSpeed(){
+        //code to change the added speed back to normal
+        s = 2;
+        speeding = false;
     }
 }

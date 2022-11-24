@@ -10,8 +10,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class InstructionsWorld extends World
 {
+    //image for the background of this class
     protected static GreenfootImage background = new GreenfootImage ("images/InstructionsScreen.png");
+    //back button to return to LobbyWorld
     BackButton b = new BackButton();
+    //play this sound when backbutton is pressed
     private GreenfootSound button = new GreenfootSound("sounds/button.wav");
     
     /**

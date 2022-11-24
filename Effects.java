@@ -7,13 +7,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Effects extends Actor
 {
+    //boolean for deleting the spawned object
     protected boolean delete = false;
     
+    /**
+     * Abstract method for subclasses
+     */
     public abstract boolean checkHitTeams();
+    
+    /**
+     * Abstract method for subclasses
+     */
     public abstract void removeThis();
     
     public void act()
     {
-        //
+        
     }
 }

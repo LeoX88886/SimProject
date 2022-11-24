@@ -8,8 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SwapPoints extends Effects
 {
+    //image for SwapPoints
     private GreenfootImage effectImage = new GreenfootImage("images/Effects/pointswap.png");
+    
+    //sound for SwapPoints
     private GreenfootSound sp = new GreenfootSound("sounds/SwapPoints.mp3");
+    
+    //instance variable for checking how many teams are in MyWorld
     private static int numTeams;
     
     public void act()
@@ -25,7 +30,9 @@ public class SwapPoints extends Effects
         }
     }
     
-    
+    /**
+     * if SwapPoints touches a teams subclass, depending on the number of teams, will play a sound, switch the score of the teams and delete itself
+     */
     public boolean checkHitTeams(){
         Teams t = (Teams)getOneObjectAtOffset(0, 0, Teams.class);
         if(t != null){
@@ -64,10 +71,16 @@ public class SwapPoints extends Effects
         return false;
     }
     
+    /**
+     * setter method for other classes to set the number of teams present in MyWorld
+     */
     public static void setNumTeams(int num){
         numTeams = num;
     }
     
+    /**
+     * remove object if called
+     */
     public void removeThis(){
         getWorld().removeObject(this);
     }

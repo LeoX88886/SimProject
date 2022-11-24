@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Games superclass to create subclasses that increases points for whichever
  * Teams subclass interacts with them
  * 
- * @author Leo Xu
+ * @author Leo Xu, Justin Sin(Effects)
  * @version 1
  */
 public abstract class Games extends Actor
@@ -17,6 +17,7 @@ public abstract class Games extends Actor
     protected static int scoreTwo = 0;
     protected static int scoreThree = 0;
     protected static int scoreFour = 0;
+    //extra scores to store the original scores for SwapPoints subclass
     protected static int scoreOneExtra;
     protected static int scoreTwoExtra;
     protected static int scoreThreeExtra;
@@ -25,6 +26,7 @@ public abstract class Games extends Actor
     
     //instance of score multipliers
     protected static int sMultiplier = 1;
+    //og = original
     protected static int ogSMultiplier = 1;
     
     //sound for whenever team interacts with game
@@ -108,25 +110,32 @@ public abstract class Games extends Actor
         scoreFourExtra = scoreFour;
     }
     
-    
+    /**
+     * delete itself when timer is up
+     */
     public void deleteMe (){
-        //if the timmer was originaly -1 and hasnt chaged it changes the 
+        //if the timer was originaly -1 and hasnt chaged it changes the 
         //timer to 30 or about half a second 
         if (deleteTimer == -1){
             deleteTimer = 30;
         }
     }
     
-    //getter and setter methods for setting and resetting the score multiplier
+    /**
+     * setter method for setting the score multiplier (Used in DoublePoints class)
+     */
     public static void setSMultiplier(int num){
         sMultiplier = num;
     }
+    /**
+     * setter method for reseting the score multiplier back to the original multiplier(1x) (Used in DoublePoints class)
+     */
     public static void resetSMultiplier(){
         sMultiplier = ogSMultiplier;
     }
     
     /**
-     * Getter method for retrieving first scores
+     * Getter method for retrieving first scores (SwapPoints)
      *  
      */
     public static int getScoreOne()
@@ -134,7 +143,7 @@ public abstract class Games extends Actor
         return scoreOne;
     }
     /**
-     * Getter method for retrieving second scores
+     * Getter method for retrieving second scores (SwapPoints)
      *  
      */
     public static int getScoreTwo()
@@ -142,7 +151,7 @@ public abstract class Games extends Actor
         return scoreTwo;
     }
     /**
-     * Getter method for retrieving third scores
+     * Getter method for retrieving third scores (SwapPoints)
      *  
      */
     public static int getScoreThree()
@@ -150,7 +159,7 @@ public abstract class Games extends Actor
         return scoreThree;
     }
     /**
-     * Getter method for retrieving fourth scores
+     * Getter method for retrieving fourth scores (SwapPoints)
      *  
      */
     public static int getScoreFour()
@@ -171,7 +180,7 @@ public abstract class Games extends Actor
     }
     
     /**
-     * Getter methods for retrieving first extra scores
+     * Getter methods for retrieving first extra scores (SwapPoints)
      * 
      */
     //getter methods for retrievely extra scores
@@ -180,7 +189,7 @@ public abstract class Games extends Actor
         return scoreOneExtra;
     }
     /**
-     * Getter methods for retrieving second extra scores
+     * Getter methods for retrieving second extra scores (SwapPoints)
      * 
      */
     public static int getScoreTwoExtra()
@@ -188,7 +197,7 @@ public abstract class Games extends Actor
         return scoreTwoExtra;
     }
     /**
-     * Getter methods for retrieving third extra scores
+     * Getter methods for retrieving third extra scores (SwapPoints)
      * 
      */
     public static int getScoreThreeExtra()
@@ -196,7 +205,7 @@ public abstract class Games extends Actor
         return scoreThreeExtra;
     }
     /**
-     * Getter methods for retrieving fourth extra scores
+     * Getter methods for retrieving fourth extra scores (SwapPoints)
      * 
      */
     public static int getScoreFourExtra()

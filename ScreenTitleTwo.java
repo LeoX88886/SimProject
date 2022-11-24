@@ -2,6 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Displays the image that contain the group number, class name, teacher name
+ * surprise! -Justin
  * 
  * @author leo Xu
  * @version 1
