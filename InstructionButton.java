@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Creates a button with the word "Instruction" on it
+ * Creates a button with the word "INSTRUCTION" on it
  * when pressed, brings the user to InstructionWorld
  * 
  * @author leo Xu(code), Justin Sin(image)

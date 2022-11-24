@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Creates a button with the word "Play" on it
- * when pressed, brings the user to MyWOrld(simulation)
+ * Creates a button with the word "PLAY" on it
+ * when pressed, brings the user to MyWorld(simulation)
  * 
- * @author Leo Xu(code), Justin Sin(image)
+ * @author Leo Xu
  * @version 1
  */
 public class PlayButton extends Actor

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=InstructionButton
-comment0.text=\r\n\ Creates\ a\ button\ with\ the\ word\ "Instruction"\ on\ it\r\n\ when\ pressed,\ brings\ the\ user\ to\ InstructionWorld\r\n\ \r\n\ @author\ leo\ Xu(code),\ Justin\ Sin(image)\r\n\ @version\ 1\r\n
+comment0.text=\r\n\ Creates\ a\ button\ with\ the\ word\ "INSTRUCTION"\ on\ it\r\n\ when\ pressed,\ brings\ the\ user\ to\ InstructionWorld\r\n\ \r\n\ @author\ leo\ Xu(code),\ Justin\ Sin(image)\r\n\ @version\ 1\r\n
 comment1.params=
 comment1.target=InstructionButton()
 comment1.text=\r\n\ InstructionButton\ contructor\r\n
