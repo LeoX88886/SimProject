@@ -204,16 +204,6 @@ public class MyWorld extends World
         win();
         started();
 
-        //Teams.get_sUp();
-        //showText("team 1 score: " + Games.getScoreOne(), 300, 50);
-        //showText("team 2 score: " + Games.getScoreTwo(), 500, 50);
-        MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText(String.valueOf(m.getX()), 200, 200);
-            showText(String.valueOf(m.getY()), 300, 200);
-        }
-
         //textbox updates for score
         widgetText1.update("team 1 score: " + Games.getScoreOne());
         
