@@ -30,7 +30,6 @@ public class LobbyWorld extends World
     ScreenTitleTwo stt = new ScreenTitleTwo();// Title groups number, class, teachers full name
     //Sounds
     private GreenfootSound button = new GreenfootSound("sounds/button.wav");//button
-    private GreenfootSound music = new GreenfootSound("sounds/NahidaMusic.mp3");//music for MyWorld
     
     private static GreenfootSound themeMusic;
     
